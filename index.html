@@ -202,8 +202,13 @@ a{color:#7A5516}a:hover{color:#5C3F0E}
       form.reset();
       note.textContent = 'תודה! הפנייה נשלחה, ונחזור אליכם בהקדם.';
       btn.textContent = 'נשלח';
-    }).catch(function () {
-      note.textContent = 'השליחה לא הצליחה. אפשר לנסות שוב, או להתקשר: 054-849-7089';
+    }).catch(function (err) {
+      var m = (err && err.message) || '';
+      if (/activat/i.test(m)) {
+        note.textContent = 'הטופס ממתין להפעלה: נשלח מייל אימות ל-' + TO + ' (כדאי לבדוק גם בספאם). אחרי לחיצה על Activate Form הפניות יגיעו.';
+      } else {
+        note.textContent = 'השליחה לא הצליחה. אפשר לנסות שוב, או להתקשר: 054-849-7089' + (m ? ' (' + m + ')' : '');
+      }
       btn.disabled = false;
       btn.textContent = 'שליחת פנייה';
     });
