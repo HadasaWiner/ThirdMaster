@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#071829" />
+<title>סדנת Skills ל-Claude למשרדים פיננסיים · המאסטר השלישי</title>
+<meta name="description" content="סדנת זום של שעתיים למשרדים פיננסיים: בוחרים תהליך אחד מהמשרד, ויוצאים עם Skill ראשון ב-Claude שעובד, כך שהידע של המומחה מתחיל לעבוד בשביל כל הצוות." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="he_IL" />
+<meta property="og:site_name" content="המאסטר השלישי" />
+<meta property="og:title" content="סדנת Skills ל-Claude למשרדים פיננסיים · המאסטר השלישי" />
+<meta property="og:description" content="שעתיים בזום. תהליך אחד מהמשרד שלכם. Skill ראשון שעובד, כך שהידע של המומחה מתחיל לעבוד בשביל כל הצוות." />
+<meta property="og:url" content="https://www.thirdmaster.com/" />
+<style>
+:root{--ink:#10263a;--muted:#6f7a87;--dark:#071829;--dark2:#0c2640;--mint:#48e3c8;--teal:#09afae;--orange:#f7a969;--cream:#faf7f1;--line:rgba(13,37,58,.14);--shadow:0 30px 90px rgba(4,26,43,.14)}
+*{box-sizing:border-box} html,body{height:100%;margin:0;overflow:hidden} body{font-family:Arial,"Segoe UI",sans-serif;color:var(--ink);background:var(--dark);-webkit-font-smoothing:antialiased} button,a{font:inherit} button{cursor:pointer} a{text-decoration:none} button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:5px} ::selection{background:#36d7c5;color:#042036}
+.shell{position:relative;height:100dvh;min-height:600px;isolation:isolate;overflow:hidden;background:var(--dark)}
+.header{position:absolute;top:0;left:0;right:0;z-index:40;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(28px,5vw,88px);border-bottom:1px solid rgba(255,255,255,.12);color:white;transition:color .3s,border-color .3s,background .3s}
+.header.light{color:var(--ink);border-bottom-color:rgba(8,29,46,.09)}
+.brand{display:flex;gap:13px;align-items:center;font-size:22px;font-weight:800;letter-spacing:-.7px;white-space:nowrap} .logo{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;color:#06253b;background:var(--mint);font-size:26px;font-weight:900;box-shadow:0 8px 28px rgba(52,215,187,.22)}
+.brand small{display:block;font-size:10px;letter-spacing:2.1px;color:var(--mint);margin-top:4px;font-weight:700}.header.light .brand small{color:var(--teal)}
+.header-actions{display:flex;gap:14px;align-items:center} .header-state{font-size:12px;letter-spacing:.4px;opacity:.72;margin-left:12px} .outline-btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;border:1px solid currentColor;background:transparent;color:inherit;min-height:39px;padding:0 16px;border-radius:50px;font-size:13px;font-weight:700;opacity:.9} .outline-btn:hover{background:rgba(128,128,128,.08)}
+.stage{height:100%;position:relative}
+.slide{position:absolute;inset:0;display:grid;grid-template-rows:78px minmax(0,1fr) 84px;opacity:0;visibility:hidden;transform:scale(1.018);transition:opacity .36s ease,transform .5s ease,visibility .36s;overflow:hidden;isolation:isolate}
+.slide.active{opacity:1;visibility:visible;transform:scale(1);z-index:3}.slide.dark{background:var(--dark);color:#f9fbfc}.slide.light{background:#fffefa;color:var(--ink)}.slide.cream{background:var(--cream);color:var(--ink)}.slide.deep{background:#0d2840;color:#fff}
+.slide:before{content:"";position:absolute;width:50vw;height:50vw;max-width:800px;max-height:800px;right:-35vw;top:-30vw;border-radius:50%;background:radial-gradient(circle,rgba(72,227,200,.08),transparent 68%);pointer-events:none;z-index:-1}
+.slide-inner{grid-row:2;display:flex;align-items:stretch;gap:4vw;padding:clamp(24px,4vh,48px) clamp(36px,6.2vw,105px);min-height:0;height:100%;position:relative}
+.main-copy{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;min-width:0}.visual{position:relative;flex:1;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center}
+.eyebrow{display:inline-flex;gap:10px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.8px;color:var(--teal);margin-bottom:20px;text-transform:uppercase}.dark .eyebrow,.deep .eyebrow{color:var(--mint)}.eyebrow:before{content:"";width:26px;height:2px;background:currentColor}
+h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h1{font-size:clamp(44px,5.3vw,82px)}h2{font-size:clamp(40px,4.65vw,73px)}.accent{color:var(--teal)}.dark .accent,.deep .accent{color:var(--mint)}.warm{color:var(--orange)}.sub{font-size:clamp(16px,1.55vw,22px);font-weight:500;line-height:1.66;max-width:560px;margin-top:24px;color:var(--muted)}.dark .sub,.deep .sub{color:#afc2d1}.chip{font-size:13px;border:1px solid rgba(39,126,142,.18);border-radius:50px;display:inline-flex;align-items:center;gap:9px;padding:10px 15px;background:#e9f7f4;font-weight:700;color:#187f83}.dark .chip,.deep .chip{background:rgba(72,227,200,.09);color:var(--mint);border-color:rgba(72,227,200,.27)}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:18px;background:var(--mint);color:#08243a;border:0;padding:15px 23px;border-radius:100px;font-weight:800;font-size:15px;box-shadow:0 12px 32px rgba(38,212,186,.25);width:fit-content;transition:transform .2s,background .2s}.btn-primary:hover{transform:translateY(-3px);background:#78f9df}.btn-primary svg{width:17px;height:17px}.text-link{background:none;border:0;color:inherit;font-weight:700;font-size:14px;text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:8px;width:fit-content}
+.slidefoot{grid-row:3;display:flex;justify-content:space-between;align-items:center;padding:0 clamp(36px,6.2vw,105px);position:relative;z-index:4}.footnote{font-size:12px;opacity:.59;max-width:700px;line-height:1.6}.tag{font-size:11px;letter-spacing:1.5px;opacity:.62;font-weight:700}
+.controls{position:absolute;bottom:17px;left:clamp(28px,5vw,88px);z-index:45;display:flex;align-items:center;gap:16px;color:#fff}.controls.light{color:var(--ink)}.step-btn{border:1px solid currentColor;color:inherit;background:transparent;border-radius:50%;width:42px;height:42px;display:grid;place-items:center;opacity:.78;transition:background .2s,opacity .2s}.step-btn:hover{opacity:1;background:rgba(128,128,128,.1)} .step-btn:disabled{opacity:.2;cursor:not-allowed}.step-btn svg{width:18px;height:18px}.count{font-size:14px;min-width:43px;text-align:center;font-weight:800;direction:ltr}.progress{display:flex;gap:5px;align-items:center;margin-inline-start:5px;direction:rtl}.progress button{width:19px;height:5px;border-radius:5px;background:currentColor;border:0;opacity:.21;padding:0;transition:.3s;width:.25s}.progress button.active{background:var(--teal);width:35px;opacity:1}.dark .progress button.active{background:var(--mint)}
+/* hero */
+.hero-main{flex:1.12}.hero-line{display:block}.hero-line:nth-child(2){color:var(--mint)}.hero-line:nth-child(3){color:var(--orange)}.hero-main h1{font-size:clamp(44px,4.9vw,79px);line-height:1.19}.hero-main .sub{font-size:clamp(15px,1.35vw,19px);max-width:530px;margin-top:22px}.hero-actions{margin-top:26px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.hero-art{flex:.88}.orbit{position:relative;width:min(39vw,520px);aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,rgba(60,225,194,.06) 0 34%,transparent 36% 100%);border:1px dashed rgba(145,221,221,.2)}.orbit:before,.orbit:after{content:"";position:absolute;inset:14%;border:1px solid rgba(75,225,205,.16);border-radius:50%}.orbit:after{inset:31%;border-style:dashed}.orbit-node{position:absolute;z-index:2;width:132px;height:115px;border-radius:26px;background:#112b3e;border:1px solid rgba(127,224,206,.24);box-shadow:0 23px 40px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}.orbit-node svg{width:31px;height:31px;stroke:var(--mint);fill:none;stroke-width:1.6}.orbit-node strong{font-size:15px}.orbit-node.top{top:0;right:50%;transform:translateX(50%)}.orbit-node.left{bottom:18%;left:-5%}.orbit-node.right{bottom:18%;right:-5%}.orbit-core{z-index:3;width:38%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 28% 25%,#62f8de,#1ca9ac 70%,#006b81);box-shadow:0 0 0 14px rgba(49,199,189,.09),0 0 80px rgba(52,221,193,.32);display:flex;flex-direction:column;justify-content:center;align-items:center;color:#053147;text-align:center;transform:translateY(7%)}.orbit-core strong{font-size:clamp(22px,2.4vw,35px);letter-spacing:-.6px}.orbit-core small{font-size:12px;opacity:.8;margin-top:5px;direction:ltr;font-weight:900;letter-spacing:2px}.orbit-dots{position:absolute;inset:0;animation:rotate 28s linear infinite;pointer-events:none}.orbit-dots:before,.orbit-dots:after{content:"";width:9px;height:9px;position:absolute;background:var(--orange);box-shadow:0 0 20px var(--orange);border-radius:50%;left:25%;top:14%}.orbit-dots:after{background:var(--mint);left:76%;top:74%;width:7px;height:7px;box-shadow:0 0 16px var(--mint)}@keyframes rotate{to{transform:rotate(360deg)}}
+/* audience */
+.center-heading{text-align:center;max-width:930px;margin:0 auto 30px}.center-heading .eyebrow{justify-content:center}.center-heading .eyebrow:before{display:none}.center-heading h2{font-size:clamp(38px,4.1vw,61px)}.center-heading .sub{max-width:none;margin:11px auto 0;font-size:17px}.aud-layout{display:flex;flex-direction:column;justify-content:center;align-items:stretch;width:100%;max-width:1170px;margin:auto}.sector-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px;width:100%}.sector{height:225px;padding:23px 14px 20px;border:1px solid rgba(8,44,65,.08);border-radius:21px;background:linear-gradient(170deg,#fff,#f3f6f3);display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;box-shadow:0 12px 36px rgba(15,42,62,.05);transition:transform .2s,box-shadow .2s}.sector:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(15,42,62,.12)}.sector .ico{width:76px;height:76px;border-radius:22px;background:#e7f5f0;color:#118b8a;display:grid;place-items:center}.sector .ico svg{width:37px;height:37px;stroke:currentColor;fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.sector strong{font-size:18px;line-height:1.35}.aud-note{margin-top:27px;text-align:center;font-weight:700;color:#267d81;font-size:15px}
+/* pain */
+.pain-layout{width:100%;display:grid;grid-template-columns:.85fr 1.15fr;gap:6vw;align-items:center}.pain-quote{border-right:5px solid var(--teal);padding-right:26px;margin-top:35px;font-size:clamp(23px,2.35vw,35px);font-weight:800;line-height:1.4}.pain-stack{display:flex;flex-direction:column;gap:17px}.pain-card{display:flex;align-items:center;gap:21px;padding:19px 23px;background:white;border:1px solid rgba(15,45,65,.1);border-radius:20px;box-shadow:0 12px 35px rgba(29,59,66,.06)}.pain-icon{width:68px;height:68px;flex:0 0 auto;display:grid;place-items:center;border-radius:19px;background:#eef7f5;color:#119b9d;font-size:29px}.pain-card strong{font-size:clamp(18px,1.65vw,25px)}.pain-card small{display:block;color:#687b85;font-size:14px;margin-top:7px;line-height:1.5}.pain-card:nth-child(2) .pain-icon{background:#fff1e6;color:#bc6c30}.pain-card:nth-child(3) .pain-icon{background:#eaf1f9;color:#447baa}
+/* solution */
+.solution-layout{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;gap:12px}.solution-row{width:100%;display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;gap:20px;margin:15px 0 8px}.solution-box{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:185px;padding:23px;border-radius:25px;border:1px solid rgba(128,231,222,.24);background:linear-gradient(150deg,rgba(255,255,255,.085),rgba(255,255,255,.015));text-align:center}.solution-box:nth-child(2){background:linear-gradient(150deg,rgba(72,227,200,.16),rgba(72,227,200,.025));border-color:rgba(72,227,200,.54)}.solution-box .big-icon{height:53px;display:grid;place-items:center;font-size:40px;color:var(--mint)}.solution-box strong{font-size:25px}.solution-box small{font-size:14px;color:#b8cdd6;display:block;margin-top:12px}.solution-answer{border-radius:100px;background:var(--mint);color:#083248;padding:15px 32px;font-weight:900;font-size:25px;letter-spacing:-.5px;box-shadow:0 15px 55px rgba(36,224,201,.18)}.solution-small{color:#a9c8ce;font-size:15px;margin-top:12px;text-align:center;line-height:1.55}.triple-connect{height:35px;position:relative;width:66%;border-bottom:2px solid rgba(72,227,200,.55);border-right:2px solid rgba(72,227,200,.55);border-left:2px solid rgba(72,227,200,.55);border-radius:0 0 30px 30px;margin-top:-3px}.triple-connect:after{content:"";position:absolute;width:2px;height:28px;top:100%;right:50%;background:rgba(72,227,200,.55)}
+/* demo */
+.demo-layout{display:grid;width:100%;grid-template-columns:.76fr 1.24fr;gap:4vw;align-items:center}.demo-copy h2{font-size:clamp(41px,4.2vw,66px)}.demo-copy .sub{font-size:17px}.demo-workspace{width:100%;min-height:420px;max-height:100%;background:#fff;border-radius:25px;box-shadow:0 28px 75px rgba(14,58,69,.15);border:1px solid #e3ebec;overflow:hidden;display:flex;flex-direction:column}.window-top{height:49px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #edf0f0;background:#fbfdfb;flex:0 0 auto}.window-title{font-size:14px;font-weight:800}.window-badge{font-size:11px;border-radius:15px;background:#e7f7f3;color:#0f8182;padding:7px 11px;font-weight:700}.demo-body{display:grid;grid-template-columns:175px 1fr;min-height:0;flex:1}.demo-rail{background:#f5f7f7;padding:16px 13px;border-left:1px solid #e7eded}.demo-rail b{font-size:12px;color:#60747a;display:block;margin-bottom:16px}.demo-task{background:none;border:0;width:100%;text-align:right;color:#617782;display:flex;align-items:center;gap:9px;padding:12px 8px;border-radius:12px;font-size:12px;margin-bottom:3px;transition:background .2s}.demo-task:hover,.demo-task.selected{background:#dcf5ee;color:#066a71;font-weight:800}.demo-task span{width:18px;height:18px;border:1px solid #a5b8b7;border-radius:6px;display:grid;place-items:center;font-size:10px;flex:0 0 auto}.demo-task.selected span{background:#0fa39b;color:white;border-color:#0fa39b}.demo-main{padding:25px;overflow:auto;scrollbar-width:thin}.demo-h{font-size:18px;font-weight:900;margin-bottom:12px;line-height:1.35}.demo-q{display:flex;background:#f4f8fa;border:1px solid #e9f0ef;padding:11px 14px;border-radius:13px;font-size:14px;color:#3e5a64;width:fit-content;max-width:100%;margin-bottom:16px}.insight{border-radius:15px;padding:16px 17px;background:#e9f8f4;border-right:4px solid #19bfa7;margin-bottom:10px}.insight.alt{background:#fff5ea;border-color:#efac65}.insight small{font-size:11px;font-weight:800;color:#168e87}.insight.alt small{color:#af7334}.insight p{font-size:13px;line-height:1.65;margin-top:5px}.demo-action{display:inline-block;background:#0b7581;color:#fff;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:700;margin-top:5px}.demo-status{font-size:11px;color:#738d91;padding-top:11px}
+/* method */
+.method-layout{display:flex;flex-direction:column;justify-content:center;width:100%}.method-row{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:44px}.method-step{position:relative;border:1px solid rgba(134,229,223,.21);background:rgba(255,255,255,.055);border-radius:23px;padding:22px;min-height:206px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}.method-step:before{content:attr(data-no);position:absolute;font-size:104px;font-weight:900;letter-spacing:-10px;color:rgba(69,218,195,.1);top:-30px;left:22px;direction:ltr}.method-step strong{font-size:27px;color:white;z-index:2}.method-step p{font-size:14px;color:#bdd1db;margin-top:12px;line-height:1.5}.method-step:nth-child(4){border-color:rgba(72,227,200,.5);background:rgba(36,215,182,.12)}.method-sign{display:inline-flex;align-items:center;gap:12px;margin-top:27px;font-size:17px;font-weight:800;color:var(--mint)}.method-sign:before{content:"✓";width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:rgba(72,227,200,.15)}
+/* proof */
+.proof-layout{display:grid;width:100%;grid-template-columns:1.04fr .96fr;gap:42px;align-items:center}.proof-main{border-radius:32px;background:linear-gradient(130deg,#e7fcf7,#fffdfa);border:1px solid #cfe6e1;box-shadow:var(--shadow);height:min(46vh,370px);padding:30px 42px;display:flex;flex-direction:column;justify-content:center}.proof-no{font-size:clamp(120px,13vw,208px);line-height:.85;letter-spacing:-10px;color:#108c8f;font-weight:900;direction:ltr;text-align:right}.proof-main strong{font-size:clamp(18px,2vw,28px);margin-top:18px}.proof-main small{font-size:13px;line-height:1.55;color:#617884;margin-top:9px}.proof-side{display:flex;flex-direction:column;justify-content:center;gap:25px}.proof-side h2{font-size:clamp(43px,4.8vw,72px)}.proof-case{background:#fff;border-right:4px solid var(--orange);padding:19px 22px;border-radius:16px;box-shadow:0 10px 30px rgba(20,50,60,.06)}.proof-case b{font-size:19px}.proof-case p{font-size:14px;color:#667985;line-height:1.65;margin-top:10px}.proof-asterisk{font-size:11px;color:#72808a;line-height:1.5}
+/* safety */
+.safety-layout{width:100%;display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center}.shield-art{width:340px;aspect-ratio:1;margin:auto;display:grid;place-items:center;position:relative;background:radial-gradient(circle,rgba(72,227,200,.12),transparent 67%)}.shield-art:before,.shield-art:after{content:"";position:absolute;inset:18px;border:1px dashed rgba(65,223,192,.34);border-radius:50%}.shield-art:after{inset:54px;border-style:solid;border-color:rgba(65,223,192,.14)}.shield-art svg{width:160px;height:160px;filter:drop-shadow(0 10px 35px rgba(74,236,201,.26))}.safety-list{display:flex;flex-direction:column;gap:12px;margin-top:27px}.safety-row{display:flex;align-items:center;gap:15px;font-size:19px;font-weight:750}.safety-row span{width:32px;height:32px;display:grid;place-items:center;border:1px solid rgba(72,227,200,.25);border-radius:11px;background:rgba(72,227,200,.09);color:var(--mint);font-size:17px}.safety-detail{font-size:13px;color:#91b8c1;line-height:1.7;margin-top:24px;max-width:630px}
+/* about */
+.about-layout{width:100%;display:grid;grid-template-columns:.92fr 1.08fr;gap:7vw;align-items:center}.about-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.about-tile{border-radius:25px;min-height:170px;background:#f0f6f4;border:1px solid #e0ece8;padding:26px;display:flex;flex-direction:column;justify-content:space-between}.about-tile:nth-child(2){background:#fff0e5;border-color:#f5dfc8}.about-tile:nth-child(3){background:#eff1fb;border-color:#e0e7f2}.about-tile:nth-child(4){background:#e8f7f2;border-color:#cbebe2}.about-tile .about-k{font-size:clamp(33px,3.4vw,54px);font-weight:900;color:#0b8184;direction:ltr;align-self:flex-start;line-height:1}.about-tile:nth-child(2) .about-k{color:#bc7a38}.about-tile:nth-child(3) .about-k{color:#5874b2}.about-tile span{font-size:17px;font-weight:800;line-height:1.35}
+/* final */
+.final-layout{width:100%;display:grid;grid-template-columns:1.3fr .7fr;gap:4vw;align-items:center}.final-layout h2{font-size:clamp(45px,5.2vw,78px);max-width:840px}.final-loop{position:relative;width:min(330px,30vw);height:min(330px,30vw);border-radius:50%;border:2px solid #a7e9db;background:#e6f9f1;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 35px rgba(40,181,164,.055),0 0 0 73px rgba(40,181,164,.035)}.final-loop strong{font-size:70px;color:#139b97}.final-loop:after{content:"להתחיל בקטן. להשפיע בגדול.";position:absolute;bottom:-75px;text-align:center;font-size:15px;font-weight:800;white-space:nowrap;color:#287679}.final-ctas{display:flex;gap:16px;align-items:center;margin-top:31px}.contact-hint{font-size:12px;color:#74828c;margin-top:19px}.btn-primary.onlight{background:var(--ink);color:white;box-shadow:0 13px 35px rgba(5,42,58,.15)}.btn-primary.onlight:hover{background:#1a5770}.feedback{font-size:13px;color:#0c8e81;font-weight:700;min-height:20px;margin-top:10px}
+.contact-line{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;margin-top:22px}.contact-phone{display:inline-flex;align-items:center;gap:10px;color:var(--ink);font-weight:800;font-size:clamp(20px,2vw,28px)}.contact-phone svg{width:24px;height:24px;color:var(--teal)}@media(max-width:740px){.contact-line{margin-top:12px;gap:8px 16px}.contact-phone{font-size:18px}.contact-phone svg{width:18px;height:18px}}
+.slidefoot .tag{display:none}
+/* drawer */
+.drawer-veil{position:absolute;inset:0;background:rgba(0,16,28,.68);z-index:70;opacity:0;pointer-events:none;transition:opacity .25s}.drawer-veil.show{opacity:1;pointer-events:auto}.drawer{position:absolute;top:0;right:0;bottom:0;width:min(440px,100vw);background:#fdfcf8;color:var(--ink);z-index:75;transform:translateX(105%);transition:transform .3s ease;padding:27px 29px;display:flex;flex-direction:column;box-shadow:-20px 0 70px rgba(0,0,0,.16)}.drawer.show{transform:translateX(0)}.drawer-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px}.drawer-head strong{font-size:26px}.close{width:38px;height:38px;border:1px solid #d8e2e0;border-radius:50%;background:#fff;font-size:26px;color:#4c626b}.menu-list{overflow:auto;display:flex;flex-direction:column;gap:7px;padding-bottom:20px}.menu-item{width:100%;background:transparent;border:1px solid transparent;border-radius:13px;padding:12px 14px;text-align:right;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#2a4757;font-size:15px;font-weight:700}.menu-item span{font-size:12px;color:#82929b;direction:ltr}.menu-item:hover,.menu-item.current{background:#e8f6f2;border-color:#cfe9e2;color:#098b8f}.drawer-caption{font-size:12px;color:#69808c;padding-top:18px;margin-top:auto;border-top:1px solid #e5edeb;line-height:1.65}
+@media(max-width:1060px){.slide-inner{padding-inline:4.5vw}.hero-main h1{font-size:5.2vw}.orbit{width:42vw}.sector-grid{grid-template-columns:repeat(3,1fr)}.sector{height:160px;padding:18px}.sector .ico{width:56px;height:56px}.sector .ico svg{width:28px;height:28px}.sector strong{font-size:16px}.aud-layout .center-heading{margin-bottom:20px}.method-step{min-height:186px;padding:16px}.method-step strong{font-size:22px}.demo-body{grid-template-columns:145px 1fr}}
+@media(max-width:740px){.shell{min-height:480px}.header{height:64px;padding:0 20px}.brand{font-size:17px}.brand small{font-size:8px}.logo{width:32px;height:32px}.header-state{display:none}.header-actions{gap:5px}.outline-btn{font-size:11px;padding:0 10px}.slide{grid-template-rows:64px minmax(0,1fr) 70px}.slide-inner{padding:16px 22px;gap:12px}.slidefoot{padding:0 20px}.footnote{font-size:10px}.controls{left:20px;bottom:13px;gap:7px}.step-btn{width:35px;height:35px}.progress{display:none}.slide-inner:has(.hero-main),.pain-layout,.demo-layout,.safety-layout,.about-layout,.proof-layout,.final-layout{grid-template-columns:1fr;display:flex;flex-direction:column;justify-content:center}.main-copy{flex:unset}.visual{flex:unset}.hero-main h1,h1,h2{font-size:clamp(34px,7.1vw,56px)}.sub{font-size:14px;margin-top:12px}.eyebrow{margin-bottom:10px}.hero-art{display:none}.hero-main .sub{font-size:14px}.hero-actions{margin-top:20px}.aud-layout .center-heading h2{font-size:29px}.center-heading .sub{font-size:12px}.sector-grid{grid-template-columns:repeat(3,1fr);gap:8px}.sector{height:110px;padding:10px}.sector .ico{width:35px;height:35px;border-radius:10px}.sector .ico svg{width:21px;height:21px}.sector strong{font-size:12px}.aud-note{font-size:12px;margin-top:12px}.pain-layout{gap:18px}.pain-quote{margin-top:15px;font-size:18px}.pain-stack{gap:7px}.pain-card{padding:10px;gap:10px}.pain-card strong{font-size:14px}.pain-card small{font-size:11px;margin-top:3px}.pain-icon{height:37px;width:37px;font-size:19px}.solution-row{gap:6px}.solution-box{min-height:112px;padding:7px}.solution-box strong{font-size:16px}.solution-box small{font-size:10px}.solution-box .big-icon{font-size:24px;height:32px}.solution-answer{font-size:17px;padding:11px}.solution-small{font-size:11px}.triple-connect{height:17px}.demo-copy .sub{display:none}.demo-layout{gap:12px}.demo-copy h2{font-size:29px}.demo-workspace{min-height:220px;max-height:43vh}.window-top{height:30px}.demo-body{grid-template-columns:105px 1fr}.demo-rail{padding:8px}.demo-task{font-size:10px;padding:6px 1px;gap:3px}.demo-task span{width:14px;height:14px}.demo-main{padding:10px}.demo-q{margin-bottom:8px;font-size:10px}.insight{padding:8px;margin-bottom:5px}.insight p{font-size:10px;line-height:1.3}.insight small{font-size:9px}.demo-h{font-size:12px}.demo-status{font-size:9px}.method-row{grid-template-columns:repeat(2,1fr);gap:8px;margin-top:15px}.method-step{min-height:120px}.method-step:before{font-size:70px}.method-step strong{font-size:16px}.method-step p{font-size:11px;margin-top:5px}.method-sign{font-size:12px;margin-top:12px}.proof-layout{gap:10px}.proof-side h2{font-size:31px}.proof-main{height:155px;padding:17px}.proof-no{font-size:88px;letter-spacing:-7px}.proof-main strong{font-size:13px;margin-top:5px}.proof-main small{font-size:10px}.proof-case{padding:11px}.proof-case b{font-size:14px}.proof-case p{font-size:11px;margin-top:3px}.proof-side{gap:8px}.shield-art{display:none}.safety-row{font-size:14px}.safety-list{gap:6px;margin-top:13px}.safety-detail{font-size:11px;margin-top:12px}.about-layout{gap:14px}.about-tiles{gap:7px}.about-tile{min-height:85px;padding:11px;border-radius:12px}.about-tile .about-k{font-size:25px}.about-tile span{font-size:12px}.final-loop{display:none}.final-ctas{margin-top:19px}.contact-hint{font-size:10px}.btn-primary{padding:11px 16px;font-size:12px}}
+@media(max-height:720px) and (min-width:741px){.slide-inner{padding-top:15px;padding-bottom:8px}.eyebrow{margin-bottom:12px}.sub{margin-top:12px}.sector{height:185px}.center-heading{margin-bottom:14px}.method-row{margin-top:22px}.method-step{min-height:175px}.demo-workspace{min-height:370px}.proof-main{height:320px}.about-tile{min-height:140px}.pain-card{padding-block:13px}}
+
+/* fixes */
+.logo svg{width:60%;height:60%;display:block}.shell,.stage,.slide{overflow:clip}
+#prev,#next,#count{display:none}.pos{display:none;font-size:12px;font-weight:800;letter-spacing:.5px;direction:ltr;opacity:.75}
+.demo-main{overflow:hidden;display:flex;flex-direction:column}.demo-main .demo-h{margin-bottom:10px}.demo-main .demo-q{margin-bottom:12px}.demo-action{width:fit-content}
+.lead-modal{position:absolute;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(0,16,28,.68);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}.lead-modal.show{opacity:1;visibility:visible}
+.lead-card{position:relative;width:min(560px,100%);max-height:100%;background:#fdfcf8;color:var(--ink);border-radius:25px;box-shadow:0 30px 90px rgba(0,0,0,.28);padding:26px 28px;display:flex;flex-direction:column;overflow:hidden;transform:translateY(12px);transition:transform .3s ease}.lead-modal.show .lead-card{transform:none}
+.lead-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px}.lead-head .eyebrow{margin-bottom:8px}.lead-head strong{font-size:clamp(22px,2.2vw,28px);font-weight:800;letter-spacing:-.6px;line-height:1.2;display:block}
+#leadForm{display:flex;flex-direction:column;gap:12px}.lead-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}.field label{font-size:13px;font-weight:800;color:#2a4757}.field label i{color:var(--teal);font-style:normal}
+.field input,.field textarea{font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid #d8e2e0;border-radius:13px;padding:10px 13px;width:100%;min-width:0;transition:border-color .2s,box-shadow .2s}.field textarea{resize:none;height:76px;line-height:1.45}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(9,175,174,.16)}.field input[dir=ltr]{text-align:right}
+.field [aria-invalid=true]{border-color:#c4553a;box-shadow:0 0 0 3px rgba(196,85,58,.12)}.err{font-style:normal;font-size:12px;color:#b4472e;min-height:0}.err:empty{display:none}
+.hp{position:absolute!important;width:1px;height:1px;opacity:0;pointer-events:none;left:-9999px}
+.lead-submit{width:100%;margin-top:4px}.lead-submit:disabled{opacity:.6;cursor:wait;transform:none}
+.lead-status{font-size:13px;line-height:1.55;color:#b4472e;font-weight:700}.lead-status:empty{display:none}.lead-status a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:4px}
+.lead-done{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:18px 0 8px}.lead-done[hidden]{display:none}.lead-done strong{font-size:22px;line-height:1.35}.lead-check{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#e6f9f1;color:#139b97;font-size:28px;font-weight:900}
+.outline-btn{white-space:nowrap}.window-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.window-badge{white-space:nowrap;flex:0 0 auto}.window-top{gap:10px}
+@media(max-width:740px){.brand{gap:8px}.header-actions .outline-btn{padding:0 9px}.window-title{font-size:10px}.window-badge{font-size:9px;padding:4px 8px}.header-actions .outline-btn{min-height:34px}.pos{display:block}.slidefoot{padding-left:78px}.lead-card{padding:20px 18px;border-radius:20px}.lead-head{margin-bottom:12px}.lead-head strong{font-size:20px}#leadForm{gap:10px}.lead-row{grid-template-columns:1fr;gap:10px}.field input,.field textarea{font-size:16px;padding:9px 12px}.field textarea{height:64px}}
+
+/* workshop */
+.ph{display:inline-block;background:#fff1c7;color:#7a4b00;border:1.5px dashed #d99a1e;border-radius:7px;padding:0 7px;font-weight:800;line-height:1.5;white-space:nowrap}
+.hero-chip{margin-top:20px;flex-wrap:wrap;row-gap:6px}.hero-main .hero-actions{margin-top:22px}
+.tl{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:none}
+.tl-step{position:relative;border:1px solid rgba(134,229,223,.21);background:rgba(255,255,255,.055);border-radius:20px;padding:18px 16px;display:flex;flex-direction:column;gap:8px;min-height:180px}
+.tl-step:last-child{border-color:rgba(72,227,200,.5);background:rgba(36,215,182,.12)}
+.tl-time{font-size:13px;font-weight:900;color:var(--mint);direction:ltr;align-self:flex-start;letter-spacing:.5px;background:rgba(72,227,200,.1);border-radius:20px;padding:3px 10px}
+.tl-step strong{font-size:20px;color:#fff;line-height:1.25}.tl-step p{font-size:13.5px;color:#bdd1db;line-height:1.5}
+.demo-note{margin-top:14px;font-size:16px;font-weight:800;color:#0b7581}
+.bring .safety-row{font-size:18px;align-items:flex-start;line-height:1.45}.bring .safety-row span{flex:0 0 auto;margin-top:-2px}.dark .sub .ph{font-size:.9em}
+.host-side{display:flex;flex-direction:column;gap:14px}.host-side .about-tiles{grid-template-columns:repeat(4,1fr);gap:12px}.host-side .about-tile{min-height:120px;padding:18px}.host-side .about-tile span{font-size:14px}.host-side .about-tile .about-k{font-size:clamp(26px,2.4vw,38px)}
+.host-proof{display:flex;align-items:center;gap:22px;border-radius:22px;background:linear-gradient(130deg,#e7fcf7,#fffdfa);border:1px solid #cfe6e1;padding:18px 24px;box-shadow:0 12px 35px rgba(29,59,66,.06)}
+.host-no{font-size:clamp(54px,5.6vw,84px);font-weight:900;color:#108c8f;letter-spacing:-4px;line-height:1;direction:ltr;flex:0 0 auto}.host-proof strong{font-size:18px;display:block}.host-proof small{display:block;font-size:13px;color:#617884;line-height:1.55;margin-top:5px}
+.faq-layout{width:100%;max-width:1120px;margin:auto;display:flex;flex-direction:column;justify-content:center}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.faq{background:linear-gradient(170deg,#fff,#f3f6f3);border:1px solid rgba(8,44,65,.08);border-radius:21px;padding:22px 24px;box-shadow:0 12px 36px rgba(15,42,62,.05)}.faq strong{font-size:20px;display:block;line-height:1.35}.faq p{font-size:15px;color:#5f707b;line-height:1.6;margin-top:8px}.faq a{color:var(--ink);font-weight:800;text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:4px}
+.reg-layout{grid-template-columns:1.05fr .95fr}.reg-card{background:#fff;border:1px solid #e3ebec;border-radius:25px;box-shadow:0 28px 75px rgba(14,58,69,.12);padding:12px 26px}
+.reg-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #edf0f0;font-size:15px}.reg-row:last-child{border-bottom:0}.reg-row span{color:#617884;font-weight:700}.reg-row b{font-size:15px}
+@media(max-width:1060px){.tl{grid-template-columns:repeat(3,1fr);margin-top:22px}.tl-step{min-height:0;padding:14px}.tl-step strong{font-size:17px}.tl-step p{font-size:12.5px}.host-side .about-tile{min-height:96px;padding:13px}.host-side .about-tile span{font-size:12.5px}.faq{padding:18px}.faq strong{font-size:18px}.faq p{font-size:14px}.bring .safety-row{font-size:16px}}
+@media(max-height:800px) and (min-width:741px){.tl{margin-top:18px}.method-sign{margin-top:16px}.faq{padding:16px 20px}.reg-row{padding:9px 0}}
+@media(max-width:740px){.hero-chip{margin-top:12px;font-size:11px;padding:7px 10px}.ph{padding:0 4px}
+ .tl{grid-template-columns:1fr;gap:5px;margin-top:12px}.tl-step{display:grid;grid-template-columns:44px 1fr;column-gap:10px;row-gap:1px;padding:7px 11px;border-radius:13px;min-height:0}.tl-time{grid-row:span 2;align-self:center;font-size:11px;padding:2px 6px}.tl-step strong{font-size:14px}.tl-step p{font-size:11px;line-height:1.35}.method-layout .method-sign{margin-top:10px}
+ .demo-note{font-size:12px;margin-top:6px}.demo-copy .chip{display:none}
+ .bring .safety-row{font-size:13px}.safety-detail{margin-top:10px}
+ .host-side{gap:8px}.host-side .about-tiles{grid-template-columns:repeat(4,1fr);gap:5px}.host-side .about-tile{min-height:62px;padding:7px;border-radius:11px}.host-side .about-tile .about-k{font-size:19px;letter-spacing:-1px}.host-side .about-tile span{font-size:9.5px;line-height:1.25}.host-proof{padding:10px 13px;gap:12px;border-radius:14px}.host-no{font-size:40px;letter-spacing:-2px}.host-proof strong{font-size:13px}.host-proof small{font-size:10.5px;line-height:1.4}
+ .faq-layout .center-heading{margin-bottom:12px}.faq-layout .center-heading h2{font-size:26px}.faq-grid{grid-template-columns:1fr;gap:7px}.faq{padding:10px 13px;border-radius:14px}.faq strong{font-size:14px}.faq p{font-size:12px;line-height:1.45;margin-top:3px}
+ .reg-layout{gap:14px}.reg-card{padding:4px 14px;border-radius:16px}.reg-row{padding:6px 0;font-size:12px}.reg-row b{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell" id="app">
+<header class="header" id="header">
+  <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3.5" width="18" height="2.4" rx="1.2"/><rect x="5" y="7.8" width="3" height="10.4" rx="1"/><rect x="10.5" y="7.8" width="3" height="10.4" rx="1"/><rect x="16" y="7.8" width="3" height="10.4" rx="1"/><rect x="3" y="18.6" width="18" height="2.4" rx="1.2"/></svg></div><div>המאסטר השלישי<small>THE THIRD MASTER</small></div></div>
+  <div class="header-actions"><div class="header-state" id="headerState">החזון</div><button class="outline-btn" id="allSlides" type="button" aria-label="פתיחת תוכן העניינים">☷ &nbsp; כל הפרקים</button><button class="outline-btn talk-btn" type="button" data-lead>להרשמה</button></div>
+</header>
+<main class="stage" id="stage" aria-label="סדנת המאסטר השלישי">
+
+<section class="slide dark active" data-title="פתיחה" aria-label="פתיחה" aria-hidden="false">
+ <div class="slide-inner">
+  <div class="main-copy hero-main">
+   <div class="eyebrow">סדנת זום · שעתיים · למשרדים פיננסיים</div>
+   <h1><span class="hero-line">שעתיים.</span><span class="hero-line">תהליך אחד מהמשרד.</span><span class="hero-line">Skill שעובד.</span></h1>
+   <p class="sub">לוקחים את הדרך שבה המומחה במשרד עובד, והופכים אותה ל־Skill ב־Claude שכל עובד יכול להפעיל.</p>
+   <div class="chip hero-chip"><span class="ph">[למלא: תאריך]</span> · <span class="ph">[למלא: שעה]</span> · <span class="ph">[למלא: מחיר]</span></div>
+   <div class="hero-actions"><button class="btn-primary" type="button" data-lead>שמרו לי מקום <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button><button class="text-link" type="button" data-goto="4">מה עושים בסדנה?</button></div>
+  </div>
+  <div class="visual hero-art">
+   <div class="orbit"><div class="orbit-dots"></div>
+    <div class="orbit-node top"><svg viewBox="0 0 36 36"><circle cx="18" cy="10" r="6"/><path d="M6 30c1-9 7-13 12-13s11 4 12 13"/></svg><strong>המומחה</strong></div>
+    <div class="orbit-node left"><svg viewBox="0 0 36 36"><rect x="8" y="7" width="20" height="22" rx="4"/><path d="M13 14h10M13 19h10M13 24h5"/></svg><strong>ה־Skill</strong></div>
+    <div class="orbit-node right"><svg viewBox="0 0 36 36"><circle cx="18" cy="11" r="5"/><path d="M8 30c0-8 4-12 10-12s10 4 10 12"/><path d="M5 17l-3 3 3 3M31 17l3 3-3 3"/></svg><strong>כל עובד</strong></div>
+    <div class="orbit-core"><strong>Claude</strong><small>POWERED BY SKILLS</small></div>
+   </div>
+  </div>
+ </div><div class="slidefoot"><div class="footnote">בסוף השעתיים יש לכם Skill ראשון שעובד, על תהליך אמיתי מהמשרד שלכם.</div></div>
+</section>
+
+<section class="slide light" data-title="למי זה מתאים" aria-label="למי זה מתאים" aria-hidden="true">
+ <div class="slide-inner"><div class="aud-layout">
+  <div class="center-heading"><div class="eyebrow">למי זה מתאים</div><h2>למשרדים שבהם <span class="accent">הידע הוא הנכס.</span></h2><p class="sub">למנהלות ומנהלי משרדים, ולמומחים שרוצים שהידע שלהם יעבוד בשביל כל הצוות.</p></div>
+  <div class="sector-grid">
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><path d="M9 35V6h22v29M5 35h30M15 13h4m5 0h3m-12 7h4m5 0h3m-12 7h4m5 0h3"/></svg></div><strong>רואי חשבון</strong></div>
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><rect x="10" y="5" width="20" height="30" rx="3"/><path d="M15 12h10M15 18h10M15 24h5m7-1 5 6-5 6-5-6 5-6"/></svg></div><strong>יועצי מס</strong></div>
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="26" rx="3"/><path d="M14 5v7m12-7v7M8 16h24M14 22h4m5 0h4m-13 7h4"/></svg></div><strong>חשבות שכר</strong></div>
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 12v9l6 4M10 8l-4-3M30 8l4-3"/></svg></div><strong>יועצי פרישה</strong></div>
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><path d="M6 20L20 8l14 12M10 18v16h20V18M17 34V24h6v10"/></svg></div><strong>יועצי משכנתאות</strong></div>
+   <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><rect x="5" y="12" width="30" height="23" rx="3"/><path d="M5 19h30M11 12V8h18v4M12 26h6M23 26h6"/></svg></div><strong>ארגונים פיננסיים</strong></div>
+  </div><div class="aud-note">לא צריך רקע טכני. צריך תהליך אחד שחוזר על עצמו במשרד.</div>
+ </div></div><div class="slidefoot"><div class="footnote">מתאים גם למי שעוד לא עבד עם Claude, וגם למי שכבר התחיל.</div></div>
+</section>
+
+<section class="slide cream" data-title="למה דווקא עכשיו" aria-label="למה דווקא עכשיו" aria-hidden="true">
+ <div class="slide-inner"><div class="pain-layout">
+  <div class="main-copy"><div class="eyebrow">למה דווקא עכשיו</div><h2>הכלי כבר כאן.<br/><span class="accent">חסרה רק השיטה.</span></h2><div class="pain-quote">מתחילים מתהליך אחד.<br/>ורואים אותו עובד.</div></div>
+  <div class="pain-stack">
+   <div class="pain-card"><div class="pain-icon">?</div><div><strong>רוצים להתחיל. לא יודעים איך.</strong><small>איזה כלי לבחור? איזה תהליך להטמיע ראשון?</small></div></div>
+   <div class="pain-card"><div class="pain-icon">◎</div><div><strong>הידע נשאר אצל הבכירים.</strong><small>אותן שאלות, שוב ושוב. צוואר בקבוק מקצועי.</small></div></div>
+   <div class="pain-card"><div class="pain-icon">⌛</div><div><strong>תיקים מורכבים גוזלים שעות.</strong><small>מסמכים, בדיקות, מידע מפוזר ועבודה חוזרת.</small></div></div>
+  </div>
+ </div></div><div class="slidefoot"><div class="footnote">שעתיים של עבודה מרוכזת, ותהליך אחד במשרד כבר זז קדימה.</div></div>
+</section>
+
+<section class="slide dark" data-title="מה זה Skill" aria-label="מה זה Skill" aria-hidden="true">
+ <div class="slide-inner"><div class="solution-layout">
+  <div class="center-heading"><div class="eyebrow">מה זה Skill</div><h2>שלושה כוחות. <span class="accent">שיטת עבודה אחת.</span></h2><p class="sub">Skill הוא הדרך שבה המומחה חושב, כתובה כך ש־Claude מבצע אותה עם העובד, שלב אחרי שלב.</p></div>
+  <div class="solution-row">
+   <div class="solution-box"><div class="big-icon">◉</div><strong>המומחה</strong><small>הידע, הבדיקות ושיקול הדעת</small></div>
+   <div class="solution-box"><div class="big-icon">✳</div><strong>המאסטר · Skill</strong><small>השלבים, השאלות ובקרות האיכות</small></div>
+   <div class="solution-box"><div class="big-icon">⌘</div><strong>Claude</strong><small>מבצע את השלבים יחד עם העובד</small></div>
+  </div>
+  <div class="triple-connect"></div><div class="solution-answer">אותה מומחיות. זמינה לכל הצוות.</div>
+  <div class="solution-small">העובד נשאר בעל שיקול הדעת. ה־Skill מכוון את העבודה לפי השיטה שלכם.</div>
+ </div></div><div class="slidefoot"><div class="footnote">לא מאמנים מודל חדש. כותבים ל־Claude את הדרך שבה המומחה שלכם עובד.</div></div>
+</section>
+
+<section class="slide deep" data-title="מה עושים בשעתיים" aria-label="מה עושים בשעתיים" aria-hidden="true">
+ <div class="slide-inner"><div class="method-layout">
+  <div class="eyebrow">מה עושים בשעתיים</div><h2>מתהליך במשרד<br/><span class="accent">ל־Skill שעובד.</span></h2>
+  <ol class="tl"><li class="tl-step"><span class="tl-time">0:00</span><strong>פתיחה והיכרות</strong><p>מי בסדנה, ומה כל אחד רוצה לקחת למשרד.</p></li><li class="tl-step"><span class="tl-time">0:15</span><strong>בוחרים תהליך</strong><p>תהליך אחד שחוזר אצלכם, ושהכי כדאי להתחיל ממנו.</p></li><li class="tl-step"><span class="tl-time">0:30</span><strong>מחלצים את הידע</strong><p>מה המומחה בודק, מה הוא שואל ואיך הוא מחליט.</p></li><li class="tl-step"><span class="tl-time">0:55</span><strong>בונים את ה־Skill</strong><p>כותבים יחד את השלבים, השאלות והבדיקות.</p></li><li class="tl-step"><span class="tl-time">1:30</span><strong>מריצים ומתקנים</strong><p>מפעילים על תיק לדוגמה, ומשפרים עד שזה עובד.</p></li><li class="tl-step"><span class="tl-time">1:50</span><strong>ממשיכים מכאן</strong><p>איך מכניסים את ה־Skill לעבודה היומיומית.</p></li></ol>
+  <div class="method-sign">בסוף השעתיים: Skill ראשון שעובד, על תהליך שלכם.</div>
+ </div></div><div class="slidefoot"><div class="footnote">עובדים יחד בזום, כל משתתף על התהליך שלו.</div></div>
+</section>
+
+<section class="slide light" data-title="דוגמה" aria-label="דוגמה" aria-hidden="true">
+ <div class="slide-inner"><div class="demo-layout">
+  <div class="main-copy demo-copy"><div class="eyebrow">דוגמה · Skill לייעוץ פרישה</div><h2>ככה נראה<br/><span class="accent">Skill בעבודה.</span></h2><p class="sub">במקום להתחיל כל פעם מאפס, העובד מקבל את הבדיקות, השאלות והשלבים הנכונים, מתוך השיטה של המומחה.</p><p class="demo-note">בסדנה תבנו Skill כזה לתהליך שלכם.</p><div class="chip" style="margin-top:20px;width:fit-content">לחצו על השלבים בהדמיה ←</div></div>
+  <div class="demo-workspace">
+   <div class="window-top"><span class="window-title">המאסטר השלישי / תיק פרישה #1048</span><span class="window-badge">תהליך מקצועי מודרך</span></div>
+   <div class="demo-body">
+    <div class="demo-rail"><b>שלבי התיק</b>
+     <button class="demo-task" data-demo="0"><span>✓</span>פתיחת תיק</button>
+     <button class="demo-task" data-demo="1"><span>✓</span>בדיקת מסמכים</button>
+     <button class="demo-task selected" data-demo="2"><span>3</span>הכנה לפגישה</button>
+     <button class="demo-task" data-demo="3"><span>4</span>סיכום והמשך</button>
+    </div>
+    <div class="demo-main"><div class="demo-h" id="demoH">מוכנים לפגישה?</div><div class="demo-q" id="demoQ">אפשר להתחיל להכין את הפגישה?</div><div class="insight"><small id="insightLabel1">בדיקה לפי נוהל המשרד</small><p id="insight1">חסר נספח קצבה לפוליסה הוותיקה. יש לבקש אותו לפני הפגישה כדי להשלים את הבדיקה.</p></div><div class="insight alt"><small id="insightLabel2">תזכורת מניסיון מקצועי</small><p id="insight2">כדאי לבדוק גם תקופות עבודה קודמות ומקורות זכויות נוספים.</p></div><span class="demo-action" id="demoAction">הכן רשימת שאלות לפגישה</span><div class="demo-status">הדמיה רעיונית בלבד · אינה משתמשת בנתוני לקוח אמיתיים</div></div>
+   </div>
+  </div>
+ </div></div><div class="slidefoot"><div class="footnote">העובד בודק, מאשר ומקבל החלטות מקצועיות. ה־AI לא מחליף אחריות מקצועית.</div></div>
+</section>
+
+<section class="slide dark" data-title="מה מביאים" aria-label="מה מביאים" aria-hidden="true">
+ <div class="slide-inner"><div class="safety-layout">
+  <div class="main-copy"><div class="eyebrow">מה מביאים לסדנה</div><h2>שלושה דברים.<br/><span class="accent">וזה הכול.</span></h2><p class="sub">דרישות מקדימות: מנוי Claude Pro בתשלום (20 דולר לחודש)</p><div class="safety-detail">בסדנה לא עובדים עם מידע אמיתי של לקוחות. שימוש במידע רגיש במשרד נבדק בנפרד, מול הגורמים המוסמכים.</div></div>
+  <div class="visual" style="flex-direction:column;align-items:flex-start;justify-content:center"><div class="shield-art" style="position:absolute;opacity:.65;left:-2vw"><svg viewBox="0 0 180 180" fill="none"><path d="M90 13 152 38v45c0 39-23 69-62 86C51 152 28 122 28 83V38L90 13Z" stroke="#48e3c8" stroke-width="9" fill="rgba(72,227,200,.08)"/><path d="m60 88 20 20 39-43" stroke="#48e3c8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="safety-list bring" style="position:relative;z-index:2"><div class="safety-row"><span>✓</span>מחשב עם Claude מוכן לפי הדרישות המקדימות</div><div class="safety-row"><span>✓</span>תהליך אחד שחוזר במשרד, שכדאי לבחור מראש</div><div class="safety-row"><span>✓</span>תיק לדוגמה בלי פרטי לקוחות אמיתיים (נתונים מומצאים או מושחרים)</div></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">אם משהו לא מוכן מראש, נעזור לכם לסדר אותו לפני שמתחילים.</div></div>
+</section>
+
+<section class="slide cream" data-title="מי מנחה" aria-label="מי מנחה" aria-hidden="true">
+ <div class="slide-inner"><div class="about-layout host-layout">
+  <div class="main-copy"><div class="eyebrow">מי מנחה</div><h2>מכירים את ה־AI.<br/><span class="accent">ואת העולם שלכם.</span></h2><p class="sub">שילוב של ניסיון בפיתוח ובמערכות פיננסיות מורכבות, עם הובלת תהליכי AI ושיטות עבודה בארגון גדול.</p></div>
+  <div class="host-side"><div class="about-tiles">
+   <div class="about-tile"><div class="about-k">10+</div><span>שנות ניסיון במערכות ופיתוח</span></div>
+   <div class="about-tile"><div class="about-k">FIN</div><span>בנקאות, משכנתאות ופיננסים</span></div>
+   <div class="about-tile"><div class="about-k">AI</div><span>הובלת הטמעה ומתודולוגיות</span></div>
+   <div class="about-tile"><div class="about-k">EDU</div><span>הדרכה והעברת ידע לצוותים</span></div>
+  </div>
+   <div class="host-proof"><div class="host-no">60%</div><div><strong>חיסכון בזמן העבודה שנמדד</strong><small>בתהליכי ניתוח ואפיון מערכות בארגון גדול, לצד שיפור ביעילות ובבהירות התוצרים.</small></div></div>
+  </div>
+ </div></div><div class="slidefoot"><div class="footnote">גם בעולם הפיננסי: הידע והשלבים של מומחה פרישה כבר הוסבו לתהליך עבודה מונחה AI.</div></div>
+</section>
+
+<section class="slide light" data-title="שאלות נפוצות" aria-label="שאלות נפוצות" aria-hidden="true">
+ <div class="slide-inner"><div class="faq-layout">
+  <div class="center-heading"><div class="eyebrow">שאלות נפוצות</div><h2>מה ששואלים אותנו <span class="accent">לפני הסדנה.</span></h2></div>
+  <div class="faq-grid"><div class="faq"><strong>אני לא טכנולוגית, זה בשבילי?</strong><p>כן. עובדים בשפה פשוטה, צעד אחרי צעד. מה שצריך זה להכיר את התהליך במשרד, לא לדעת לתכנת.</p></div><div class="faq"><strong>מה אם לא אסיים את ה־Skill בשעתיים?</strong><p>יוצאים עם שלד שכבר עובד, ועם הוראות ברורות איך להשלים אותו.</p></div><div class="faq"><strong>אפשר סדנה סגורה לצוות המשרד?</strong><p>כן. דברו איתנו ונתאים מועד ותהליך לצוות שלכם: <a href="tel:+972548497089" dir="ltr">054-849-7089</a></p></div><div class="faq"><strong>מה קורה אחרי הסדנה?</strong><p>מי שרוצה הטמעה מלאה במשרד, עם חיבור למערכות, ידע ארגוני וליווי, יכול להמשיך איתנו.</p></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">יש שאלה שלא מופיעה כאן? אפשר פשוט להתקשר.</div></div>
+</section>
+
+<section class="slide light" data-title="הרשמה" aria-label="הרשמה" aria-hidden="true">
+ <div class="slide-inner"><div class="final-layout reg-layout">
+  <div class="main-copy"><div class="eyebrow">הרשמה</div><h2>שומרים <span class="accent">מקום.</span></h2><p class="sub">ממלאים פרטים, ואנחנו חוזרים אליכם עם פרטי התשלום והקישור לזום.</p><div class="final-ctas"><button class="btn-primary onlight" type="button" data-lead>שמרו לי מקום <span>←</span></button></div><div class="contact-line"><a class="contact-phone" href="tel:+972548497089"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span dir="ltr">054-849-7089</span></a><a class="text-link" href="https://wa.me/972548497089" target="_blank" rel="noopener">וואטסאפ</a></div></div>
+  <div class="reg-card"><div class="reg-row"><span>הסדנה</span><b>המאסטר השלישי</b></div><div class="reg-row"><span>תאריך</span><b><span class="ph">[למלא: תאריך]</span></b></div><div class="reg-row"><span>שעה</span><b><span class="ph">[למלא: שעה]</span></b></div><div class="reg-row"><span>מחיר למשתתף</span><b><span class="ph">[למלא: מחיר]</span></b></div><div class="reg-row"><span>מקומות במחזור</span><b><span class="ph">[למלא: מקסימום משתתפים]</span></b></div><div class="reg-row"><span>תשלום</span><b><span class="ph">[למלא: אופן תשלום]</span></b></div><div class="reg-row"><span>הקלטה</span><b><span class="ph">[למלא: הקלטה זמינה כן/לא]</span></b></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">המאסטר השלישי · הידע של המומחה, בשביל כל הצוות.</div></div>
+</section>
+
+</main>
+<div class="controls" id="controls"><button class="step-btn" id="prev" aria-label="המסך הקודם"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button><div class="count" id="count">01 / 10</div><button class="step-btn" id="next" aria-label="המסך הבא"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button><div class="progress" id="progress" aria-label="מיקום באתר"></div><div class="pos" id="pos" aria-hidden="true">1 / 10</div></div>
+<div class="drawer-veil" id="veil"></div><aside class="drawer" id="drawer" aria-label="תוכן העניינים" aria-modal="true" role="dialog"><div class="drawer-head"><strong>תוכן העניינים</strong><button class="close" id="closeDrawer" aria-label="סגירה">×</button></div><div class="menu-list" id="menuList"></div><div class="drawer-caption">10 מסכים</div></aside>
+<div class="lead-modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" aria-hidden="true">
+ <div class="lead-card">
+  <div class="lead-head"><div><div class="eyebrow">סדנת זום · שעתיים</div><strong id="leadTitle">הרשמה לסדנה</strong></div><button class="close" type="button" id="leadClose" aria-label="סגירה">×</button></div>
+  <form id="leadForm" novalidate>
+   <div class="lead-row">
+    <div class="field"><label for="leadName">שם מלא <i>*</i></label><input id="leadName" name="name" autocomplete="name" required aria-describedby="errName"><em class="err" id="errName"></em></div>
+    <div class="field"><label for="leadPhone">טלפון <i>*</i></label><input id="leadPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required aria-describedby="errPhone"><em class="err" id="errPhone"></em></div>
+   </div>
+   <div class="lead-row">
+    <div class="field"><label for="leadEmail">מייל <i>*</i></label><input id="leadEmail" name="email" type="email" inputmode="email" autocomplete="email" dir="ltr" required aria-describedby="errEmail"><em class="err" id="errEmail"></em></div>
+    <div class="field"><label for="leadOffice">שם המשרד ותחום</label><input id="leadOffice" name="office" autocomplete="organization"></div>
+   </div>
+   <div class="field"><label for="leadMsg">איזה תהליך הייתם רוצים להפוך ל־Skill?</label><textarea id="leadMsg" name="msg" rows="2"></textarea></div>
+   <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <button class="btn-primary onlight lead-submit" type="submit" id="leadSubmit">שליחת הרשמה <span>←</span></button>
+   <div class="lead-status" id="leadStatus" role="status" aria-live="polite"></div>
+  </form>
+  <div class="lead-done" id="leadDone" hidden><div class="lead-check" aria-hidden="true">✓</div><strong>קיבלנו! נחזור אליכם עם פרטי התשלום והקישור לזום.</strong><button class="text-link" type="button" id="leadDoneClose">סגירה</button></div>
+ </div>
+</div>
+</div>
+<script>
+(function(){
+ const slides=Array.from(document.querySelectorAll('.slide'));
+ const h=document.getElementById('header'), controls=document.getElementById('controls'), stage=document.getElementById('stage'), count=document.getElementById('count'),state=document.getElementById('headerState'),prev=document.getElementById('prev'),next=document.getElementById('next'),progress=document.getElementById('progress'),menuList=document.getElementById('menuList'),drawer=document.getElementById('drawer'),veil=document.getElementById('veil'),pos=document.getElementById('pos');
+ let current=0;
+ slides.forEach((s,i)=>{const dot=document.createElement('button');dot.type='button';dot.title=s.dataset.title;dot.setAttribute('aria-label','מעבר אל '+s.dataset.title);dot.onclick=()=>go(i);progress.appendChild(dot);const item=document.createElement('button');item.type='button';item.className='menu-item';item.innerHTML='<b>'+s.dataset.title+'</b><span>'+String(i+1).padStart(2,'0')+'</span>';item.onclick=()=>{go(i);closeDrawer()};menuList.appendChild(item)});
+ function go(i){if(i<0||i>=slides.length)return;current=i;slides.forEach((s,j)=>{let active=j===i;s.classList.toggle('active',active);s.setAttribute('aria-hidden',active?'false':'true')});count.textContent=String(i+1).padStart(2,'0')+' / '+slides.length;pos.textContent=(i+1)+' / '+slides.length;state.textContent=slides[i].dataset.title;let isLight=!slides[i].classList.contains('dark')&&!slides[i].classList.contains('deep');h.classList.toggle('light',isLight);controls.classList.toggle('light',isLight);Array.from(progress.children).forEach((x,j)=>{x.classList.toggle('active',j===i);x.setAttribute('aria-current',j===i?'step':'false')});Array.from(menuList.children).forEach((x,j)=>x.classList.toggle('current',j===i));prev.disabled=i===0;next.disabled=i===slides.length-1;try{history.replaceState(null,'','#'+(i+1))}catch(e){} }
+ function openDrawer(){drawer.classList.add('show');veil.classList.add('show');document.getElementById('closeDrawer').focus()}
+ function closeDrawer(){drawer.classList.remove('show');veil.classList.remove('show')}
+ document.getElementById('allSlides').onclick=openDrawer;document.getElementById('closeDrawer').onclick=closeDrawer;veil.onclick=closeDrawer;prev.onclick=()=>go(current-1);next.onclick=()=>go(current+1);document.querySelectorAll('[data-goto]').forEach(x=>x.addEventListener('click',()=>go(Number(x.dataset.goto))));
+ const modalOpen=()=>document.getElementById('leadModal').classList.contains('show');
+ const busy=()=>modalOpen()||drawer.classList.contains('show');
+ let lastNav=0;
+ function step(d){const now=Date.now();if(now-lastNav<450)return;lastNav=now;go(current+d)}
+ window.addEventListener('keydown',e=>{
+  if(modalOpen())return;
+  if(drawer.classList.contains('show')){if(e.key==='Escape')closeDrawer();return;}
+  if(e.altKey||e.ctrlKey||e.metaKey)return;
+  const t=e.target,tag=t&&t.tagName;
+  if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(t&&t.isContentEditable))return;
+  const k=e.key;
+  if(k===' '&&(tag==='BUTTON'||tag==='A'))return;
+  if(k==='ArrowDown'||k==='ArrowLeft'||k==='PageDown'||(k===' '&&!e.shiftKey)){e.preventDefault();go(current+1)}
+  else if(k==='ArrowUp'||k==='ArrowRight'||k==='PageUp'||(k===' '&&e.shiftKey)){e.preventDefault();go(current-1)}
+  else if(k==='Home'){e.preventDefault();go(0)}
+  else if(k==='End'){e.preventDefault();go(slides.length-1)}
+ });
+ // wheel: one screen per gesture; stays locked until the wheel has been quiet for 220ms and 700ms passed
+ let wheelLock=false,wheelTimer=null,wheelAt=0;
+ function releaseWheel(){const left=700-(Date.now()-wheelAt);if(left>0){wheelTimer=setTimeout(releaseWheel,left);return}wheelLock=false}
+ window.addEventListener('wheel',e=>{
+  if(busy())return;
+  e.preventDefault();
+  if(wheelLock){clearTimeout(wheelTimer);wheelTimer=setTimeout(releaseWheel,220);return}
+  const d=Math.abs(e.deltaY)>=Math.abs(e.deltaX)?e.deltaY:-e.deltaX;
+  if(Math.abs(d)<8)return;
+  wheelLock=true;wheelAt=Date.now();go(current+(d>0?1:-1));
+  clearTimeout(wheelTimer);wheelTimer=setTimeout(releaseWheel,220);
+ },{passive:false});
+ const demo=[
+ {h:'תיק חדש נפתח',q:'מה צריך לבדוק בשלב הראשון?',l1:'פתיחת תיק',a:'נאסוף פרטי יסוד, מטרות ומסמכים לפי רשימת הפתיחה שהוגדרה במשרד.',l2:'בקרת איכות',b:'נזהה מראש מידע חסר כדי להימנע מסבב שאלות מיותר.',act:'הכן רשימת מסמכים'},
+ {h:'בדיקת מסמכים',q:'האם כל החומר הדרוש התקבל?',l1:'בדיקה לפי נוהל המשרד',a:'נזהה אילו מסמכים התקבלו, מה חסר ומה דורש אימות נוסף.',l2:'נקודת בקרה',b:'מסמך חסר לא מסומן כתקין — הוא מועבר להשלמה על ידי העובד.',act:'הכן רשימת השלמות'},
+ {h:'מוכנים לפגישה?',q:'אפשר להתחיל להכין את הפגישה?',l1:'בדיקה לפי נוהל המשרד',a:'חסר נספח קצבה לפוליסה הוותיקה. יש לבקש אותו לפני הפגישה כדי להשלים את הבדיקה.',l2:'תזכורת מניסיון מקצועי',b:'כדאי לבדוק גם תקופות עבודה קודמות ומקורות זכויות נוספים.',act:'הכן רשימת שאלות לפגישה'},
+ {h:'סיכום והמשך טיפול',q:'איך מוודאים שלא פספסנו שלב?',l1:'סיכום מובנה',a:'נרכז את הנושאים שטופלו ואת המשימות להשלמה, בהתאם למבנה הסיכום המקצועי.',l2:'בקרת מסירה',b:'הטיוטה מסומנת לאישור היועץ לפני שליחה ללקוח.',act:'הכן טיוטה לאישור'}
+ ];
+ document.querySelectorAll('[data-demo]').forEach(b=>b.onclick=()=>{let j=Number(b.dataset.demo),d=demo[j];document.querySelectorAll('[data-demo]').forEach(x=>x.classList.toggle('selected',x===b));for(const [id,k] of [['demoH','h'],['demoQ','q'],['insightLabel1','l1'],['insight1','a'],['insightLabel2','l2'],['insight2','b'],['demoAction','act']])document.getElementById(id).textContent=d[k]});
+  let tx=null,ty=null;
+ stage.addEventListener('touchstart',e=>{if(e.touches.length!==1){tx=null;return}tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+ stage.addEventListener('touchend',e=>{if(tx===null||busy())return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3)step(dx>0?1:-1);      // RTL: swipe toward the right = next
+  else if(Math.abs(dy)>60&&Math.abs(dy)>Math.abs(dx)*1.3)step(dy<0?1:-1); // swipe up = next
+ },{passive:true});
+ stage.addEventListener('touchmove',e=>{if(e.cancelable)e.preventDefault()},{passive:false});
+ [document.getElementById('app'),stage].forEach(el=>el.addEventListener('scroll',()=>{if(el.scrollTop||el.scrollLeft){el.scrollTop=0;el.scrollLeft=0}}));
+ function fromHash(){const n=parseInt(location.hash.slice(1),10);return Number.isInteger(n)&&n>0&&n<=slides.length?n-1:null}
+ window.addEventListener('hashchange',()=>{const i=fromHash();if(i!==null&&i!==current)go(i)});
+ go(fromHash()??0);
+
+ // lead form
+ const TO='rishum.pashut@gmail.com',modal=document.getElementById('leadModal'),form=document.getElementById('leadForm'),done=document.getElementById('leadDone'),statusEl=document.getElementById('leadStatus'),submit=document.getElementById('leadSubmit');
+ let opener=null;
+ function openLead(btn){opener=btn||document.activeElement;if(drawer.classList.contains('show'))closeDrawer();form.hidden=false;done.hidden=true;statusEl.innerHTML='';modal.classList.add('show');modal.setAttribute('aria-hidden','false');setTimeout(()=>document.getElementById('leadName').focus(),60)}
+ function closeLead(){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');if(opener&&opener.focus)opener.focus()}
+ document.querySelectorAll('[data-lead]').forEach(b=>b.addEventListener('click',()=>openLead(b)));
+ document.getElementById('leadClose').onclick=closeLead;document.getElementById('leadDoneClose').onclick=closeLead;
+ modal.addEventListener('mousedown',e=>{if(e.target===modal)closeLead()});
+ modal.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){e.preventDefault();closeLead();return}
+  if(e.key!=='Tab')return;
+  const f=Array.from(modal.querySelectorAll('button,input:not(.hp),textarea,a[href]')).filter(x=>!x.disabled&&x.offsetParent!==null);
+  if(!f.length)return;const first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+ });
+ const phoneOk=v=>/^(?:\+?972|0)(?:5\d|7\d|[23489])\d{7}$/.test(v.replace(/[\s\-().]/g,''));
+ function setErr(input,msg){const em=document.getElementById(input.getAttribute('aria-describedby'));em.textContent=msg;input.setAttribute('aria-invalid',msg?'true':'false')}
+ const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+ function validate(){const n=form.elements.name,ph=form.elements.phone,em=form.elements.email;let ok=true;
+  if(!n.value.trim()){setErr(n,'נא למלא שם מלא');ok=false}else setErr(n,'');
+  if(!ph.value.trim()){setErr(ph,'נא למלא מספר טלפון');ok=false}else if(!phoneOk(ph.value)){setErr(ph,'מספר הטלפון לא תקין. לדוגמה: 050-1234567');ok=false}else setErr(ph,'');
+  if(!em.value.trim()){setErr(em,'נא למלא כתובת מייל');ok=false}else if(!emailOk(em.value)){setErr(em,'כתובת המייל לא תקינה');ok=false}else setErr(em,'');
+  if(!ok)form.querySelector('[aria-invalid=true]').focus();return ok}
+ ['name','phone','email'].forEach(k=>form.elements[k].addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='true')setErr(e.target,'')}));
+ form.addEventListener('submit',e=>{e.preventDefault();statusEl.innerHTML='';if(!validate())return;
+  const f=form.elements;
+  if(f._honey.value){form.hidden=true;done.hidden=false;return}
+  submit.disabled=true;const label=submit.innerHTML;submit.textContent='שולח...';
+  fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
+   'שם מלא':f.name.value.trim(),'טלפון':f.phone.value.trim(),'מייל':f.email.value.trim(),'משרד ותחום':f.office.value.trim(),'תהליך ל־Skill':f.msg.value.trim(),
+   _replyto:f.email.value.trim(),_subject:'הרשמה לסדנה — המאסטר השלישי',_template:'table',_honey:f._honey.value})})
+  .then(r=>r.json().catch(()=>({})).then(d=>{if(!r.ok||!(d.success===true||d.success==='true'))throw new Error(d.message||('HTTP '+r.status))}))
+  .then(()=>{form.reset();form.hidden=true;done.hidden=false;document.getElementById('leadDoneClose').focus()})
+  .catch(()=>{statusEl.innerHTML='ההרשמה לא נשלחה. אפשר לנסות שוב, או לפנות ישירות: <a href="tel:+972548497089" dir="ltr">054-849-7089</a> · <a href="mailto:'+TO+'">'+TO+'</a>'})
+  .finally(()=>{submit.disabled=false;submit.innerHTML=label});
+ });
+})();
+</script>
+</body>
+</html>
