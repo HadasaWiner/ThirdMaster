@@ -229,7 +229,7 @@ html,body{height:100%;overflow:hidden}
       'שם':qs('#fullname').value.trim(),'טלפון':qs('#phone').value.trim(),'אני':qs('#audience').value,'תחום עבודה':qs('#industry').value||'לא צוין','תהליך שמעניין אותי':qs('#process').value.trim()||'לא צוין',
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value});
     // first through our own domain (/api/contact on Vercel), and only if that endpoint does not exist, directly
-    send('/api/contact',data).catch(err=>send('https://formsubmit.co/ajax/'+TO,data).catch(err2=>{throw /activat/i.test(err.message)?err:err2}))
+    send('/api/contact',data).catch(err=>send('https://formsubmit.co/ajax/'+TO,data).catch(err2=>{if(/activat/i.test(err.message))throw err;throw new Error('site: '+err.message+' | direct: '+err2.message)}))
     .then(()=>{f.reset();f.hidden=true;qs('#form-done').hidden=false})
     .catch(err=>{const m=String((err&&err.message)||'');let why='';
       if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
