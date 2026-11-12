@@ -228,7 +228,10 @@ html,body{height:100%;overflow:hidden}
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value})})
     .then(r=>r.json().catch(()=>({})).then(d=>{if(!r.ok||!(d.success===true||d.success==='true'))throw new Error(d.message||'HTTP '+r.status)}))
     .then(()=>{f.reset();f.hidden=true;qs('#form-done').hidden=false})
-    .catch(()=>{st.innerHTML='השליחה לא הצליחה. אפשר לנסות שוב, או להתקשר: <a href="tel:+972548497089" dir="ltr">054-849-7089</a>'})
+    .catch(err=>{const m=String((err&&err.message)||'');let why='';
+      if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
+      else if(err instanceof TypeError||/fetch|network|load/i.test(m))why='לא הצלחנו להתחבר לשירות השליחה. ייתכן שסינון האינטרנט חוסם אותו.';
+      st.innerHTML='השליחה לא הצליחה. '+why+' אפשר לנסות שוב, או להתקשר: <a href="tel:+972548497089" dir="ltr">054-849-7089</a>'+(m?'<br><small dir="ltr" style="opacity:.7">'+m.replace(/[<>&]/g,'')+'</small>':'')})
     .finally(()=>{btn.disabled=false;btn.innerHTML=label});
   });
   window.addEventListener('hashchange',()=>show(location.hash.replace('#',''),false));document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.altKey||e.metaKey||e.ctrlKey)return;if(e.key==='ArrowLeft'){show(pages[Math.min(pages.length-1,current+1)])}if(e.key==='ArrowRight'){show(pages[Math.max(0,current-1)])}if(e.key==='Escape'){qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false')}});
