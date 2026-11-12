@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="theme-color" content="#091a2b" />
-<title>המאסטר השלישי — מומחיות של הטובים ביותר. יכולת של כולם.</title>
+<meta name="theme-color" content="#071829" />
+<title>סדנת Skills ל-Claude למשרדים פיננסיים · המאסטר השלישי</title>
+<meta name="description" content="סדנת זום של שעתיים למשרדים פיננסיים: בוחרים תהליך אחד מהמשרד, ויוצאים עם Skill ראשון ב-Claude שעובד, כך שהידע של המומחה מתחיל לעבוד בשביל כל הצוות." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="he_IL" />
+<meta property="og:site_name" content="המאסטר השלישי" />
+<meta property="og:title" content="סדנת Skills ל-Claude למשרדים פיננסיים · המאסטר השלישי" />
+<meta property="og:description" content="שעתיים בזום. תהליך אחד מהמשרד שלכם. Skill ראשון שעובד, כך שהידע של המומחה מתחיל לעבוד בשביל כל הצוות." />
+<meta property="og:url" content="https://www.thirdmaster.com/" />
 <style>
 :root{--ink:#10263a;--muted:#6f7a87;--dark:#071829;--dark2:#0c2640;--mint:#48e3c8;--teal:#09afae;--orange:#f7a969;--cream:#faf7f1;--line:rgba(13,37,58,.14);--shadow:0 30px 90px rgba(4,26,43,.14)}
 *{box-sizing:border-box} html,body{height:100%;margin:0;overflow:hidden} body{font-family:Arial,"Segoe UI",sans-serif;color:var(--ink);background:var(--dark);-webkit-font-smoothing:antialiased} button,a{font:inherit} button{cursor:pointer} a{text-decoration:none} button:focus-visible,a:focus-visible{outline:3px solid var(--orange);outline-offset:5px} ::selection{background:#36d7c5;color:#042036}
@@ -72,6 +79,33 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
 .lead-done{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:18px 0 8px}.lead-done[hidden]{display:none}.lead-done strong{font-size:22px;line-height:1.35}.lead-check{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#e6f9f1;color:#139b97;font-size:28px;font-weight:900}
 .outline-btn{white-space:nowrap}.window-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.window-badge{white-space:nowrap;flex:0 0 auto}.window-top{gap:10px}
 @media(max-width:740px){.brand{gap:8px}.header-actions .outline-btn{padding:0 9px}.window-title{font-size:10px}.window-badge{font-size:9px;padding:4px 8px}.header-actions .outline-btn{min-height:34px}.pos{display:block}.slidefoot{padding-left:78px}.lead-card{padding:20px 18px;border-radius:20px}.lead-head{margin-bottom:12px}.lead-head strong{font-size:20px}#leadForm{gap:10px}.lead-row{grid-template-columns:1fr;gap:10px}.field input,.field textarea{font-size:16px;padding:9px 12px}.field textarea{height:64px}}
+
+/* workshop */
+.ph{display:inline-block;background:#fff1c7;color:#7a4b00;border:1.5px dashed #d99a1e;border-radius:7px;padding:0 7px;font-weight:800;line-height:1.5;white-space:nowrap}
+.hero-chip{margin-top:20px;flex-wrap:wrap;row-gap:6px}.hero-main .hero-actions{margin-top:22px}
+.tl{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:none}
+.tl-step{position:relative;border:1px solid rgba(134,229,223,.21);background:rgba(255,255,255,.055);border-radius:20px;padding:18px 16px;display:flex;flex-direction:column;gap:8px;min-height:180px}
+.tl-step:last-child{border-color:rgba(72,227,200,.5);background:rgba(36,215,182,.12)}
+.tl-time{font-size:13px;font-weight:900;color:var(--mint);direction:ltr;align-self:flex-start;letter-spacing:.5px;background:rgba(72,227,200,.1);border-radius:20px;padding:3px 10px}
+.tl-step strong{font-size:20px;color:#fff;line-height:1.25}.tl-step p{font-size:13.5px;color:#bdd1db;line-height:1.5}
+.demo-note{margin-top:14px;font-size:16px;font-weight:800;color:#0b7581}
+.bring .safety-row{font-size:18px;align-items:flex-start;line-height:1.45}.bring .safety-row span{flex:0 0 auto;margin-top:-2px}.dark .sub .ph{font-size:.9em}
+.host-side{display:flex;flex-direction:column;gap:14px}.host-side .about-tiles{grid-template-columns:repeat(4,1fr);gap:12px}.host-side .about-tile{min-height:120px;padding:18px}.host-side .about-tile span{font-size:14px}.host-side .about-tile .about-k{font-size:clamp(26px,2.4vw,38px)}
+.host-proof{display:flex;align-items:center;gap:22px;border-radius:22px;background:linear-gradient(130deg,#e7fcf7,#fffdfa);border:1px solid #cfe6e1;padding:18px 24px;box-shadow:0 12px 35px rgba(29,59,66,.06)}
+.host-no{font-size:clamp(54px,5.6vw,84px);font-weight:900;color:#108c8f;letter-spacing:-4px;line-height:1;direction:ltr;flex:0 0 auto}.host-proof strong{font-size:18px;display:block}.host-proof small{display:block;font-size:13px;color:#617884;line-height:1.55;margin-top:5px}
+.faq-layout{width:100%;max-width:1120px;margin:auto;display:flex;flex-direction:column;justify-content:center}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.faq{background:linear-gradient(170deg,#fff,#f3f6f3);border:1px solid rgba(8,44,65,.08);border-radius:21px;padding:22px 24px;box-shadow:0 12px 36px rgba(15,42,62,.05)}.faq strong{font-size:20px;display:block;line-height:1.35}.faq p{font-size:15px;color:#5f707b;line-height:1.6;margin-top:8px}.faq a{color:var(--ink);font-weight:800;text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:4px}
+.reg-layout{grid-template-columns:1.05fr .95fr}.reg-card{background:#fff;border:1px solid #e3ebec;border-radius:25px;box-shadow:0 28px 75px rgba(14,58,69,.12);padding:12px 26px}
+.reg-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #edf0f0;font-size:15px}.reg-row:last-child{border-bottom:0}.reg-row span{color:#617884;font-weight:700}.reg-row b{font-size:15px}
+@media(max-width:1060px){.tl{grid-template-columns:repeat(3,1fr);margin-top:22px}.tl-step{min-height:0;padding:14px}.tl-step strong{font-size:17px}.tl-step p{font-size:12.5px}.host-side .about-tile{min-height:96px;padding:13px}.host-side .about-tile span{font-size:12.5px}.faq{padding:18px}.faq strong{font-size:18px}.faq p{font-size:14px}.bring .safety-row{font-size:16px}}
+@media(max-height:800px) and (min-width:741px){.tl{margin-top:18px}.method-sign{margin-top:16px}.faq{padding:16px 20px}.reg-row{padding:9px 0}}
+@media(max-width:740px){.hero-chip{margin-top:12px;font-size:11px;padding:7px 10px}.ph{padding:0 4px}
+ .tl{grid-template-columns:1fr;gap:5px;margin-top:12px}.tl-step{display:grid;grid-template-columns:44px 1fr;column-gap:10px;row-gap:1px;padding:7px 11px;border-radius:13px;min-height:0}.tl-time{grid-row:span 2;align-self:center;font-size:11px;padding:2px 6px}.tl-step strong{font-size:14px}.tl-step p{font-size:11px;line-height:1.35}.method-layout .method-sign{margin-top:10px}
+ .demo-note{font-size:12px;margin-top:6px}.demo-copy .chip{display:none}
+ .bring .safety-row{font-size:13px}.safety-detail{margin-top:10px}
+ .host-side{gap:8px}.host-side .about-tiles{grid-template-columns:repeat(4,1fr);gap:5px}.host-side .about-tile{min-height:62px;padding:7px;border-radius:11px}.host-side .about-tile .about-k{font-size:19px;letter-spacing:-1px}.host-side .about-tile span{font-size:9.5px;line-height:1.25}.host-proof{padding:10px 13px;gap:12px;border-radius:14px}.host-no{font-size:40px;letter-spacing:-2px}.host-proof strong{font-size:13px}.host-proof small{font-size:10.5px;line-height:1.4}
+ .faq-layout .center-heading{margin-bottom:12px}.faq-layout .center-heading h2{font-size:26px}.faq-grid{grid-template-columns:1fr;gap:7px}.faq{padding:10px 13px;border-radius:14px}.faq strong{font-size:14px}.faq p{font-size:12px;line-height:1.45;margin-top:3px}
+ .reg-layout{gap:14px}.reg-card{padding:4px 14px;border-radius:16px}.reg-row{padding:6px 0;font-size:12px}.reg-row b{font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -79,17 +113,18 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
 <div class="shell" id="app">
 <header class="header" id="header">
   <div class="brand"><div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3.5" width="18" height="2.4" rx="1.2"/><rect x="5" y="7.8" width="3" height="10.4" rx="1"/><rect x="10.5" y="7.8" width="3" height="10.4" rx="1"/><rect x="16" y="7.8" width="3" height="10.4" rx="1"/><rect x="3" y="18.6" width="18" height="2.4" rx="1.2"/></svg></div><div>המאסטר השלישי<small>THE THIRD MASTER</small></div></div>
-  <div class="header-actions"><div class="header-state" id="headerState">החזון</div><button class="outline-btn" id="allSlides" type="button" aria-label="פתיחת תוכן העניינים">☷ &nbsp; כל הפרקים</button><button class="outline-btn talk-btn" type="button" data-lead>בואו נדבר</button></div>
+  <div class="header-actions"><div class="header-state" id="headerState">החזון</div><button class="outline-btn" id="allSlides" type="button" aria-label="פתיחת תוכן העניינים">☷ &nbsp; כל הפרקים</button><button class="outline-btn talk-btn" type="button" data-lead>להרשמה</button></div>
 </header>
-<main class="stage" id="stage" aria-label="המאסטר השלישי">
+<main class="stage" id="stage" aria-label="סדנת המאסטר השלישי">
 
-<section class="slide dark active" data-title="החזון" aria-label="החזון" aria-hidden="false">
+<section class="slide dark active" data-title="פתיחה" aria-label="פתיחה" aria-hidden="false">
  <div class="slide-inner">
   <div class="main-copy hero-main">
-   <div class="eyebrow">שיטת עבודה חדשה לעולם הפיננסי</div>
-   <h1><span class="hero-line">המומחיות של הטובים ביותר.</span><span class="hero-line">העוצמה של Claude.</span><span class="hero-line">היכולת של כולם.</span></h1>
-   <p class="sub">לוקחים את הידע של המומחים במשרד, הופכים אותו ל־Skills מקצועיים, ומנגישים אותו לכל הצוות.</p>
-   <div class="hero-actions"><button class="btn-primary" data-goto="3">איך זה עובד? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button><button class="text-link" data-goto="6">ראו תוצאות מהשטח</button></div>
+   <div class="eyebrow">סדנת זום · שעתיים · למשרדים פיננסיים</div>
+   <h1><span class="hero-line">שעתיים.</span><span class="hero-line">תהליך אחד מהמשרד.</span><span class="hero-line">Skill שעובד.</span></h1>
+   <p class="sub">לוקחים את הדרך שבה המומחה במשרד עובד, והופכים אותה ל־Skill ב־Claude שכל עובד יכול להפעיל.</p>
+   <div class="chip hero-chip"><span class="ph">[למלא: תאריך]</span> · <span class="ph">[למלא: שעה]</span> · <span class="ph">[למלא: מחיר]</span></div>
+   <div class="hero-actions"><button class="btn-primary" type="button" data-lead>שמרו לי מקום <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m7 7-7-7 7-7"/></svg></button><button class="text-link" type="button" data-goto="4">מה עושים בסדנה?</button></div>
   </div>
   <div class="visual hero-art">
    <div class="orbit"><div class="orbit-dots"></div>
@@ -99,12 +134,12 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
     <div class="orbit-core"><strong>Claude</strong><small>POWERED BY SKILLS</small></div>
    </div>
   </div>
- </div><div class="slidefoot"><div class="footnote">ידע מקצועי × AI × עובדים — השיטה שלכם, בקנה מידה חדש.</div><div class="tag">01 / THE VISION</div></div>
+ </div><div class="slidefoot"><div class="footnote">בסוף השעתיים יש לכם Skill ראשון שעובד, על תהליך אמיתי מהמשרד שלכם.</div></div>
 </section>
 
-<section class="slide light" data-title="למי מתאים" aria-label="למי מתאים" aria-hidden="true">
+<section class="slide light" data-title="למי זה מתאים" aria-label="למי זה מתאים" aria-hidden="true">
  <div class="slide-inner"><div class="aud-layout">
-  <div class="center-heading"><div class="eyebrow">למי זה מתאים</div><h2>בדיוק לעולם <span class="accent">שבו דיוק הוא הכול.</span></h2><p class="sub">משרדים וארגונים שהמומחיות המקצועית היא הנכס הכי חשוב שלהם.</p></div>
+  <div class="center-heading"><div class="eyebrow">למי זה מתאים</div><h2>למשרדים שבהם <span class="accent">הידע הוא הנכס.</span></h2><p class="sub">למנהלות ומנהלי משרדים, ולמומחים שרוצים שהידע שלהם יעבוד בשביל כל הצוות.</p></div>
   <div class="sector-grid">
    <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><path d="M9 35V6h22v29M5 35h30M15 13h4m5 0h3m-12 7h4m5 0h3m-12 7h4m5 0h3"/></svg></div><strong>רואי חשבון</strong></div>
    <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><rect x="10" y="5" width="20" height="30" rx="3"/><path d="M15 12h10M15 18h10M15 24h5m7-1 5 6-5 6-5-6 5-6"/></svg></div><strong>יועצי מס</strong></div>
@@ -112,37 +147,45 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
    <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><path d="M20 12v9l6 4M10 8l-4-3M30 8l4-3"/></svg></div><strong>יועצי פרישה</strong></div>
    <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><path d="M6 20L20 8l14 12M10 18v16h20V18M17 34V24h6v10"/></svg></div><strong>יועצי משכנתאות</strong></div>
    <div class="sector"><div class="ico"><svg viewBox="0 0 40 40"><rect x="5" y="12" width="30" height="23" rx="3"/><path d="M5 19h30M11 12V8h18v4M12 26h6M23 26h6"/></svg></div><strong>ארגונים פיננסיים</strong></div>
-  </div><div class="aud-note">לא צריך להיות מומחי AI. צריך לדעת איך לרתום אותו למומחיות שכבר קיימת.</div>
- </div></div><div class="slidefoot"><div class="footnote">מתאים גם למשרד בתחילת הדרך וגם לצוות שכבר עובד עם כלי AI.</div><div class="tag">02 / THE AUDIENCE</div></div>
+  </div><div class="aud-note">לא צריך רקע טכני. צריך תהליך אחד שחוזר על עצמו במשרד.</div>
+ </div></div><div class="slidefoot"><div class="footnote">מתאים גם למי שעוד לא עבד עם Claude, וגם למי שכבר התחיל.</div></div>
 </section>
 
-<section class="slide cream" data-title="האתגר" aria-label="האתגר" aria-hidden="true">
+<section class="slide cream" data-title="למה דווקא עכשיו" aria-label="למה דווקא עכשיו" aria-hidden="true">
  <div class="slide-inner"><div class="pain-layout">
-  <div class="main-copy"><div class="eyebrow">האתגר</div><h2>כולם מדברים על AI.<br/><span class="accent">אבל איפה התוצאה?</span></h2><div class="pain-quote">הכלי כבר קיים.<br/>מה שחסר זו השיטה.</div></div>
+  <div class="main-copy"><div class="eyebrow">למה דווקא עכשיו</div><h2>הכלי כבר כאן.<br/><span class="accent">חסרה רק השיטה.</span></h2><div class="pain-quote">מתחילים מתהליך אחד.<br/>ורואים אותו עובד.</div></div>
   <div class="pain-stack">
    <div class="pain-card"><div class="pain-icon">?</div><div><strong>רוצים להתחיל. לא יודעים איך.</strong><small>איזה כלי לבחור? איזה תהליך להטמיע ראשון?</small></div></div>
    <div class="pain-card"><div class="pain-icon">◎</div><div><strong>הידע נשאר אצל הבכירים.</strong><small>אותן שאלות, שוב ושוב. צוואר בקבוק מקצועי.</small></div></div>
    <div class="pain-card"><div class="pain-icon">⌛</div><div><strong>תיקים מורכבים גוזלים שעות.</strong><small>מסמכים, בדיקות, מידע מפוזר ועבודה חוזרת.</small></div></div>
   </div>
- </div></div><div class="slidefoot"><div class="footnote">המהפכה האמיתית אינה עוד צ'אט. היא שינוי בתהליך העבודה.</div><div class="tag">03 / THE CHALLENGE</div></div>
+ </div></div><div class="slidefoot"><div class="footnote">שעתיים של עבודה מרוכזת, ותהליך אחד במשרד כבר זז קדימה.</div></div>
 </section>
 
-<section class="slide dark" data-title="הפתרון" aria-label="הפתרון" aria-hidden="true">
+<section class="slide dark" data-title="מה זה Skill" aria-label="מה זה Skill" aria-hidden="true">
  <div class="slide-inner"><div class="solution-layout">
-  <div class="center-heading"><div class="eyebrow">הפתרון</div><h2>שלושה כוחות. <span class="accent">שיטת עבודה אחת.</span></h2><p class="sub">אנחנו מפתחים Skills שמעבירים את הדרך שבה המומחה חושב — אל תוך העבודה היומיומית.</p></div>
+  <div class="center-heading"><div class="eyebrow">מה זה Skill</div><h2>שלושה כוחות. <span class="accent">שיטת עבודה אחת.</span></h2><p class="sub">Skill הוא הדרך שבה המומחה חושב, כתובה כך ש־Claude מבצע אותה עם העובד, שלב אחרי שלב.</p></div>
   <div class="solution-row">
    <div class="solution-box"><div class="big-icon">◉</div><strong>המומחה</strong><small>הידע, הבדיקות ושיקול הדעת</small></div>
    <div class="solution-box"><div class="big-icon">✳</div><strong>המאסטר · Skill</strong><small>השלבים, השאלות ובקרות האיכות</small></div>
-   <div class="solution-box"><div class="big-icon">⌘</div><strong>Claude Code</strong><small>מבצע את ההנחיות עם העובד</small></div>
+   <div class="solution-box"><div class="big-icon">⌘</div><strong>Claude</strong><small>מבצע את השלבים יחד עם העובד</small></div>
   </div>
   <div class="triple-connect"></div><div class="solution-answer">אותה מומחיות. זמינה לכל הצוות.</div>
-  <div class="solution-small">העובד נשאר בעל שיקול הדעת. ה־Skill מכוון את העבודה לפי המתודולוגיה שלכם.</div>
- </div></div><div class="slidefoot"><div class="footnote">לא מאמנים מודל חדש — מגדירים ל־Claude תהליך מומחה מקצועי ומובנה.</div><div class="tag">04 / THE METHOD</div></div>
+  <div class="solution-small">העובד נשאר בעל שיקול הדעת. ה־Skill מכוון את העבודה לפי השיטה שלכם.</div>
+ </div></div><div class="slidefoot"><div class="footnote">לא מאמנים מודל חדש. כותבים ל־Claude את הדרך שבה המומחה שלכם עובד.</div></div>
 </section>
 
-<section class="slide light" data-title="הדגמה" aria-label="הדגמה" aria-hidden="true">
+<section class="slide deep" data-title="מה עושים בשעתיים" aria-label="מה עושים בשעתיים" aria-hidden="true">
+ <div class="slide-inner"><div class="method-layout">
+  <div class="eyebrow">מה עושים בשעתיים</div><h2>מתהליך במשרד<br/><span class="accent">ל־Skill שעובד.</span></h2>
+  <ol class="tl"><li class="tl-step"><span class="tl-time">0:00</span><strong>פתיחה והיכרות</strong><p>מי בסדנה, ומה כל אחד רוצה לקחת למשרד.</p></li><li class="tl-step"><span class="tl-time">0:15</span><strong>בוחרים תהליך</strong><p>תהליך אחד שחוזר אצלכם, ושהכי כדאי להתחיל ממנו.</p></li><li class="tl-step"><span class="tl-time">0:30</span><strong>מחלצים את הידע</strong><p>מה המומחה בודק, מה הוא שואל ואיך הוא מחליט.</p></li><li class="tl-step"><span class="tl-time">0:55</span><strong>בונים את ה־Skill</strong><p>כותבים יחד את השלבים, השאלות והבדיקות.</p></li><li class="tl-step"><span class="tl-time">1:30</span><strong>מריצים ומתקנים</strong><p>מפעילים על תיק לדוגמה, ומשפרים עד שזה עובד.</p></li><li class="tl-step"><span class="tl-time">1:50</span><strong>ממשיכים מכאן</strong><p>איך מכניסים את ה־Skill לעבודה היומיומית.</p></li></ol>
+  <div class="method-sign">בסוף השעתיים: Skill ראשון שעובד, על תהליך שלכם.</div>
+ </div></div><div class="slidefoot"><div class="footnote">עובדים יחד בזום, כל משתתף על התהליך שלו.</div></div>
+</section>
+
+<section class="slide light" data-title="דוגמה" aria-label="דוגמה" aria-hidden="true">
  <div class="slide-inner"><div class="demo-layout">
-  <div class="main-copy demo-copy"><div class="eyebrow">הדגמה · תיק ייעוץ פרישה</div><h2>לא עוד שאלה לצ'אט.<br/><span class="accent">תהליך שמוביל את התיק.</span></h2><p class="sub">במקום להתחיל בכל פעם מאפס, העובד מקבל את הבדיקות, השאלות והשלבים הנכונים — מתוך השיטה של המומחה.</p><div class="chip" style="margin-top:24px;width:fit-content">לחצו על השלבים בהדמיה ←</div></div>
+  <div class="main-copy demo-copy"><div class="eyebrow">דוגמה · Skill לייעוץ פרישה</div><h2>ככה נראה<br/><span class="accent">Skill בעבודה.</span></h2><p class="sub">במקום להתחיל כל פעם מאפס, העובד מקבל את הבדיקות, השאלות והשלבים הנכונים, מתוך השיטה של המומחה.</p><p class="demo-note">בסדנה תבנו Skill כזה לתהליך שלכם.</p><div class="chip" style="margin-top:20px;width:fit-content">לחצו על השלבים בהדמיה ←</div></div>
   <div class="demo-workspace">
    <div class="window-top"><span class="window-title">המאסטר השלישי / תיק פרישה #1048</span><span class="window-badge">תהליך מקצועי מודרך</span></div>
    <div class="demo-body">
@@ -155,52 +198,42 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
     <div class="demo-main"><div class="demo-h" id="demoH">מוכנים לפגישה?</div><div class="demo-q" id="demoQ">אפשר להתחיל להכין את הפגישה?</div><div class="insight"><small id="insightLabel1">בדיקה לפי נוהל המשרד</small><p id="insight1">חסר נספח קצבה לפוליסה הוותיקה. יש לבקש אותו לפני הפגישה כדי להשלים את הבדיקה.</p></div><div class="insight alt"><small id="insightLabel2">תזכורת מניסיון מקצועי</small><p id="insight2">כדאי לבדוק גם תקופות עבודה קודמות ומקורות זכויות נוספים.</p></div><span class="demo-action" id="demoAction">הכן רשימת שאלות לפגישה</span><div class="demo-status">הדמיה רעיונית בלבד · אינה משתמשת בנתוני לקוח אמיתיים</div></div>
    </div>
   </div>
- </div></div><div class="slidefoot"><div class="footnote">העובד בודק, מאשר ומקבל החלטות מקצועיות. ה־AI לא מחליף אחריות מקצועית.</div><div class="tag">05 / LIVE DEMO</div></div>
+ </div></div><div class="slidefoot"><div class="footnote">העובד בודק, מאשר ומקבל החלטות מקצועיות. ה־AI לא מחליף אחריות מקצועית.</div></div>
 </section>
 
-<section class="slide deep" data-title="איך מתחילים" aria-label="איך מתחילים" aria-hidden="true">
- <div class="slide-inner"><div class="method-layout">
-  <div class="eyebrow">המסלול שלנו</div><h2>מתחילים מהשיטה שלכם.<br/><span class="accent">לא מהטכנולוגיה.</span></h2>
-  <div class="method-row">
-   <div class="method-step" data-no="01"><strong>ממפים</strong><p>מזהים את התהליך והכאב הכי משמעותי.</p></div>
-   <div class="method-step" data-no="02"><strong>מזקקים</strong><p>מחלצים את הידע והשאלות של המומחה.</p></div>
-   <div class="method-step" data-no="03"><strong>מפתחים</strong><p>בונים Skill עם שלבים ובקרות איכות.</p></div>
-   <div class="method-step" data-no="04"><strong>מטמיעים</strong><p>מריצים פיילוט, בודקים ומרחיבים.</p></div>
-  </div><div class="method-sign">מתחילים בתהליך אחד. מתקדמים לפי תוצאות.</div>
- </div></div><div class="slidefoot"><div class="footnote">ה־Skills מותאמים לסטנדרטים של הלקוח ופועלים בכלי העבודה שאושרו בארגון.</div><div class="tag">06 / THE JOURNEY</div></div>
-</section>
-
-<section class="slide light" data-title="תוצאות בשטח" aria-label="תוצאות בשטח" aria-hidden="true">
- <div class="slide-inner"><div class="proof-layout">
-  <div class="proof-main"><div class="proof-no">60%</div><strong>חיסכון בזמן העבודה שנמדד</strong><small>בתהליכי ניתוח ואפיון מערכות בארגון גדול, לצד שיפור ביעילות ובבהירות התוצרים.</small></div>
-  <div class="proof-side"><div class="eyebrow">אבני דרך שכבר כבשנו</div><h2>לא רק רעיון.<br/><span class="accent">ניסיון מהשטח.</span></h2><div class="proof-case"><b>גם בעולם הפיננסי: ייעוץ פרישה</b><p>הידע והשלבים המקצועיים של מומחה פרישה הוסבו לתהליך עבודה מונחה AI.</p></div></div>
- </div></div><div class="slidefoot"><div class="footnote">בכל משרד נגדיר מראש תהליך, מדד הצלחה ובקרות מקצועיות.</div><div class="tag">07 / REAL RESULTS</div></div>
-</section>
-
-<section class="slide dark" data-title="אבטחת מידע" aria-label="אבטחת מידע" aria-hidden="true">
+<section class="slide dark" data-title="מה מביאים" aria-label="מה מביאים" aria-hidden="true">
  <div class="slide-inner"><div class="safety-layout">
-  <div class="main-copy"><div class="eyebrow">אחריות מקצועית</div><h2>חדשנות בלי קיצורי דרך.<br/><span class="accent">גם באבטחת מידע.</span></h2><p class="sub">אנחנו מפתחים את ה־Skills. הלקוח מפעיל אותם בסביבת Claude Code שאושרה עבורו.</p><div class="safety-detail">עבודה עם מידע רגיש דורשת בדיקה פרטנית של הספק, המדיניות, אופן עיבוד המידע וההרשאות. אין הבטחה לאישור אבטחה גורף.</div></div>
-  <div class="visual" style="flex-direction:column;align-items:flex-start;justify-content:center"><div class="shield-art" style="position:absolute;opacity:.65;left:-2vw"><svg viewBox="0 0 180 180" fill="none"><path d="M90 13 152 38v45c0 39-23 69-62 86C51 152 28 122 28 83V38L90 13Z" stroke="#48e3c8" stroke-width="9" fill="rgba(72,227,200,.08)"/><path d="m60 88 20 20 39-43" stroke="#48e3c8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="safety-list" style="position:relative;z-index:2"><div class="safety-row"><span>✓</span>בחירת סביבת AI מאושרת</div><div class="safety-row"><span>✓</span>הרשאות וגישה מבוקרת</div><div class="safety-row"><span>✓</span>מדיניות מידע ופרטיות</div><div class="safety-row"><span>✓</span>בקרה ואישור מקצועי</div></div></div>
- </div></div><div class="slidefoot"><div class="footnote">אישור השימוש במידע פיננסי ורגיש נשאר בידי הגורמים המוסמכים אצל הלקוח.</div><div class="tag">08 / TRUST BY DESIGN</div></div>
+  <div class="main-copy"><div class="eyebrow">מה מביאים לסדנה</div><h2>שלושה דברים.<br/><span class="accent">וזה הכול.</span></h2><p class="sub">דרישות מקדימות: <span class="ph">[למלא: איזה מנוי Claude ומה מותקן מראש]</span></p><div class="safety-detail">בסדנה לא עובדים עם מידע אמיתי של לקוחות. שימוש במידע רגיש במשרד נבדק בנפרד, מול הגורמים המוסמכים.</div></div>
+  <div class="visual" style="flex-direction:column;align-items:flex-start;justify-content:center"><div class="shield-art" style="position:absolute;opacity:.65;left:-2vw"><svg viewBox="0 0 180 180" fill="none"><path d="M90 13 152 38v45c0 39-23 69-62 86C51 152 28 122 28 83V38L90 13Z" stroke="#48e3c8" stroke-width="9" fill="rgba(72,227,200,.08)"/><path d="m60 88 20 20 39-43" stroke="#48e3c8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="safety-list bring" style="position:relative;z-index:2"><div class="safety-row"><span>✓</span>מחשב עם Claude מוכן לפי הדרישות המקדימות</div><div class="safety-row"><span>✓</span>תהליך אחד שחוזר במשרד, שכדאי לבחור מראש</div><div class="safety-row"><span>✓</span>תיק לדוגמה בלי פרטי לקוחות אמיתיים (נתונים מומצאים או מושחרים)</div></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">אם משהו לא מוכן מראש, נעזור לכם לסדר אותו לפני שמתחילים.</div></div>
 </section>
 
-<section class="slide cream" data-title="מי אנחנו" aria-label="מי אנחנו" aria-hidden="true">
- <div class="slide-inner"><div class="about-layout">
-  <div class="main-copy"><div class="eyebrow">מי עומד מאחורי השיטה</div><h2>אנחנו מכירים את ה־AI.<br/><span class="accent">ואת העולם שלכם.</span></h2><p class="sub">שילוב של ניסיון בפיתוח ובמערכות פיננסיות מורכבות, עם הובלת תהליכי AI ומתודולוגיות עבודה בארגון גדול.</p><div class="chip" style="margin-top:24px;width:fit-content">טכנולוגיה שפוגשת תהליך עסקי אמיתי</div></div>
-  <div class="about-tiles">
+<section class="slide cream" data-title="מי מנחה" aria-label="מי מנחה" aria-hidden="true">
+ <div class="slide-inner"><div class="about-layout host-layout">
+  <div class="main-copy"><div class="eyebrow">מי מנחה</div><h2>מכירים את ה־AI.<br/><span class="accent">ואת העולם שלכם.</span></h2><p class="sub">שילוב של ניסיון בפיתוח ובמערכות פיננסיות מורכבות, עם הובלת תהליכי AI ושיטות עבודה בארגון גדול.</p></div>
+  <div class="host-side"><div class="about-tiles">
    <div class="about-tile"><div class="about-k">10+</div><span>שנות ניסיון במערכות ופיתוח</span></div>
    <div class="about-tile"><div class="about-k">FIN</div><span>בנקאות, משכנתאות ופיננסים</span></div>
    <div class="about-tile"><div class="about-k">AI</div><span>הובלת הטמעה ומתודולוגיות</span></div>
    <div class="about-tile"><div class="about-k">EDU</div><span>הדרכה והעברת ידע לצוותים</span></div>
   </div>
- </div></div><div class="slidefoot"><div class="footnote">מכירים את המורכבות האמיתית של מערכות ליבה, תיעוד, רגולציה ותהליכים ארגוניים.</div><div class="tag">09 / WHO WE ARE</div></div>
+   <div class="host-proof"><div class="host-no">60%</div><div><strong>חיסכון בזמן העבודה שנמדד</strong><small>בתהליכי ניתוח ואפיון מערכות בארגון גדול, לצד שיפור ביעילות ובבהירות התוצרים.</small></div></div>
+  </div>
+ </div></div><div class="slidefoot"><div class="footnote">גם בעולם הפיננסי: הידע והשלבים של מומחה פרישה כבר הוסבו לתהליך עבודה מונחה AI.</div></div>
 </section>
 
-<section class="slide light" data-title="בואו נתחיל" aria-label="בואו נתחיל" aria-hidden="true">
- <div class="slide-inner"><div class="final-layout">
-  <div class="main-copy"><div class="eyebrow">השלב הבא</div><h2>המומחיות כבר אצלכם.<br/><span class="accent">בואו ניתן לה לעבוד בשביל כולם.</span></h2><p class="sub">נבחר יחד תהליך אחד עם פוטנציאל ברור לשיפור — ונראה מה אפשר לעשות איתו.</p><div class="final-ctas"><button class="btn-primary onlight" type="button" data-lead>בואו נדבר <span>←</span></button><button class="text-link" data-goto="0">חזרה להתחלה</button></div><div class="contact-line"><a class="contact-phone" href="tel:+972548497089"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span dir="ltr">054-849-7089</span></a><a class="text-link" href="mailto:rishum.pashut@gmail.com">rishum.pashut@gmail.com</a></div></div>
-  <div class="visual"><div class="final-loop"><strong>Ⅲ</strong></div></div>
- </div></div><div class="slidefoot"><div class="footnote">המאסטר השלישי · מומחיות של הטובים ביותר. היכולת של כולם.</div><div class="tag">10 / LET'S BEGIN</div></div>
+<section class="slide light" data-title="שאלות נפוצות" aria-label="שאלות נפוצות" aria-hidden="true">
+ <div class="slide-inner"><div class="faq-layout">
+  <div class="center-heading"><div class="eyebrow">שאלות נפוצות</div><h2>מה ששואלים אותנו <span class="accent">לפני הסדנה.</span></h2></div>
+  <div class="faq-grid"><div class="faq"><strong>אני לא טכנולוגית, זה בשבילי?</strong><p>כן. עובדים בשפה פשוטה, צעד אחרי צעד. מה שצריך זה להכיר את התהליך במשרד, לא לדעת לתכנת.</p></div><div class="faq"><strong>מה אם לא אסיים את ה־Skill בשעתיים?</strong><p>יוצאים עם שלד שכבר עובד, ועם הוראות ברורות איך להשלים אותו.</p></div><div class="faq"><strong>אפשר סדנה סגורה לצוות המשרד?</strong><p>כן. דברו איתנו ונתאים מועד ותהליך לצוות שלכם: <a href="tel:+972548497089" dir="ltr">054-849-7089</a></p></div><div class="faq"><strong>מה קורה אחרי הסדנה?</strong><p>מי שרוצה הטמעה מלאה במשרד, עם חיבור למערכות, ידע ארגוני וליווי, יכול להמשיך איתנו.</p></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">יש שאלה שלא מופיעה כאן? אפשר פשוט להתקשר.</div></div>
+</section>
+
+<section class="slide light" data-title="הרשמה" aria-label="הרשמה" aria-hidden="true">
+ <div class="slide-inner"><div class="final-layout reg-layout">
+  <div class="main-copy"><div class="eyebrow">הרשמה</div><h2>שומרים <span class="accent">מקום.</span></h2><p class="sub">ממלאים פרטים, ואנחנו חוזרים אליכם עם פרטי התשלום והקישור לזום.</p><div class="final-ctas"><button class="btn-primary onlight" type="button" data-lead>שמרו לי מקום <span>←</span></button></div><div class="contact-line"><a class="contact-phone" href="tel:+972548497089"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span dir="ltr">054-849-7089</span></a><a class="text-link" href="https://wa.me/972548497089" target="_blank" rel="noopener">וואטסאפ</a></div></div>
+  <div class="reg-card"><div class="reg-row"><span>הסדנה</span><b><span class="ph">[למלא: שם הסדנה]</span></b></div><div class="reg-row"><span>תאריך</span><b><span class="ph">[למלא: תאריך]</span></b></div><div class="reg-row"><span>שעה</span><b><span class="ph">[למלא: שעה]</span></b></div><div class="reg-row"><span>מחיר למשתתף</span><b><span class="ph">[למלא: מחיר]</span></b></div><div class="reg-row"><span>מקומות במחזור</span><b><span class="ph">[למלא: מקסימום משתתפים]</span></b></div><div class="reg-row"><span>תשלום</span><b><span class="ph">[למלא: אופן תשלום]</span></b></div><div class="reg-row"><span>הקלטה</span><b><span class="ph">[למלא: הקלטה זמינה כן/לא]</span></b></div></div>
+ </div></div><div class="slidefoot"><div class="footnote">המאסטר השלישי · הידע של המומחה, בשביל כל הצוות.</div></div>
 </section>
 
 </main>
@@ -208,19 +241,22 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
 <div class="drawer-veil" id="veil"></div><aside class="drawer" id="drawer" aria-label="תוכן העניינים" aria-modal="true" role="dialog"><div class="drawer-head"><strong>תוכן העניינים</strong><button class="close" id="closeDrawer" aria-label="סגירה">×</button></div><div class="menu-list" id="menuList"></div><div class="drawer-caption">10 מסכים</div></aside>
 <div class="lead-modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" aria-hidden="true">
  <div class="lead-card">
-  <div class="lead-head"><div><div class="eyebrow">בואו נדבר</div><strong id="leadTitle">ספרו לנו על המשרד שלכם</strong></div><button class="close" type="button" id="leadClose" aria-label="סגירה">×</button></div>
+  <div class="lead-head"><div><div class="eyebrow">סדנת זום · שעתיים</div><strong id="leadTitle">הרשמה לסדנה</strong></div><button class="close" type="button" id="leadClose" aria-label="סגירה">×</button></div>
   <form id="leadForm" novalidate>
    <div class="lead-row">
     <div class="field"><label for="leadName">שם מלא <i>*</i></label><input id="leadName" name="name" autocomplete="name" required aria-describedby="errName"><em class="err" id="errName"></em></div>
     <div class="field"><label for="leadPhone">טלפון <i>*</i></label><input id="leadPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required aria-describedby="errPhone"><em class="err" id="errPhone"></em></div>
    </div>
-   <div class="field"><label for="leadOffice">שם המשרד ותחום</label><input id="leadOffice" name="office" autocomplete="organization"></div>
-   <div class="field"><label for="leadMsg">מה הכי מעכב אתכם היום?</label><textarea id="leadMsg" name="msg" rows="3"></textarea></div>
+   <div class="lead-row">
+    <div class="field"><label for="leadEmail">מייל <i>*</i></label><input id="leadEmail" name="email" type="email" inputmode="email" autocomplete="email" dir="ltr" required aria-describedby="errEmail"><em class="err" id="errEmail"></em></div>
+    <div class="field"><label for="leadOffice">שם המשרד ותחום</label><input id="leadOffice" name="office" autocomplete="organization"></div>
+   </div>
+   <div class="field"><label for="leadMsg">איזה תהליך הייתם רוצים להפוך ל־Skill?</label><textarea id="leadMsg" name="msg" rows="2"></textarea></div>
    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-   <button class="btn-primary onlight lead-submit" type="submit" id="leadSubmit">שליחת פנייה <span>←</span></button>
+   <button class="btn-primary onlight lead-submit" type="submit" id="leadSubmit">שליחת הרשמה <span>←</span></button>
    <div class="lead-status" id="leadStatus" role="status" aria-live="polite"></div>
   </form>
-  <div class="lead-done" id="leadDone" hidden><div class="lead-check" aria-hidden="true">✓</div><strong>תודה! קיבלנו את הפנייה ונחזור אליכם בהקדם</strong><button class="text-link" type="button" id="leadDoneClose">סגירה</button></div>
+  <div class="lead-done" id="leadDone" hidden><div class="lead-check" aria-hidden="true">✓</div><strong>קיבלנו! נחזור אליכם עם פרטי התשלום והקישור לזום.</strong><button class="text-link" type="button" id="leadDoneClose">סגירה</button></div>
  </div>
 </div>
 </div>
@@ -299,21 +335,23 @@ h1,h2,h3,p{margin:0}h1,h2{font-weight:800;letter-spacing:-2px;line-height:1.09}h
  });
  const phoneOk=v=>/^(?:\+?972|0)(?:5\d|7\d|[23489])\d{7}$/.test(v.replace(/[\s\-().]/g,''));
  function setErr(input,msg){const em=document.getElementById(input.getAttribute('aria-describedby'));em.textContent=msg;input.setAttribute('aria-invalid',msg?'true':'false')}
- function validate(){const n=form.elements.name,ph=form.elements.phone;let ok=true;
+ const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+ function validate(){const n=form.elements.name,ph=form.elements.phone,em=form.elements.email;let ok=true;
   if(!n.value.trim()){setErr(n,'נא למלא שם מלא');ok=false}else setErr(n,'');
   if(!ph.value.trim()){setErr(ph,'נא למלא מספר טלפון');ok=false}else if(!phoneOk(ph.value)){setErr(ph,'מספר הטלפון לא תקין. לדוגמה: 050-1234567');ok=false}else setErr(ph,'');
+  if(!em.value.trim()){setErr(em,'נא למלא כתובת מייל');ok=false}else if(!emailOk(em.value)){setErr(em,'כתובת המייל לא תקינה');ok=false}else setErr(em,'');
   if(!ok)form.querySelector('[aria-invalid=true]').focus();return ok}
- ['name','phone'].forEach(k=>form.elements[k].addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='true')setErr(e.target,'')}));
+ ['name','phone','email'].forEach(k=>form.elements[k].addEventListener('input',e=>{if(e.target.getAttribute('aria-invalid')==='true')setErr(e.target,'')}));
  form.addEventListener('submit',e=>{e.preventDefault();statusEl.innerHTML='';if(!validate())return;
   const f=form.elements;
   if(f._honey.value){form.hidden=true;done.hidden=false;return}
   submit.disabled=true;const label=submit.innerHTML;submit.textContent='שולח...';
   fetch('https://formsubmit.co/ajax/'+TO,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({
-   'שם מלא':f.name.value.trim(),'טלפון':f.phone.value.trim(),'משרד ותחום':f.office.value.trim(),'מה מעכב':f.msg.value.trim(),
-   _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f._honey.value})})
+   'שם מלא':f.name.value.trim(),'טלפון':f.phone.value.trim(),'מייל':f.email.value.trim(),'משרד ותחום':f.office.value.trim(),'תהליך ל־Skill':f.msg.value.trim(),
+   _replyto:f.email.value.trim(),_subject:'הרשמה לסדנה — המאסטר השלישי',_template:'table',_honey:f._honey.value})})
   .then(r=>r.json().catch(()=>({})).then(d=>{if(!r.ok||!(d.success===true||d.success==='true'))throw new Error(d.message||('HTTP '+r.status))}))
   .then(()=>{form.reset();form.hidden=true;done.hidden=false;document.getElementById('leadDoneClose').focus()})
-  .catch(()=>{statusEl.innerHTML='השליחה לא הצליחה. אפשר לנסות שוב, או לפנות ישירות: <a href="tel:+972548497089" dir="ltr">054-849-7089</a> · <a href="mailto:'+TO+'">'+TO+'</a>'})
+  .catch(()=>{statusEl.innerHTML='ההרשמה לא נשלחה. אפשר לנסות שוב, או לפנות ישירות: <a href="tel:+972548497089" dir="ltr">054-849-7089</a> · <a href="mailto:'+TO+'">'+TO+'</a>'})
   .finally(()=>{submit.disabled=false;submit.innerHTML=label});
  });
 })();
