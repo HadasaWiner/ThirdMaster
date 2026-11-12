@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g transform="rotate(-9 32 33)">
+    <circle cx="32" cy="33" r="25" fill="#f7f5ef" stroke="#171a18" stroke-width="5"/>
+    <rect x="21" y="21" width="5.5" height="24" rx="1.5" fill="#171a18"/>
+    <rect x="29.25" y="21" width="5.5" height="24" rx="1.5" fill="#171a18"/>
+    <rect x="37.5" y="21" width="5.5" height="24" rx="1.5" fill="#171a18"/>
+    <circle cx="11" cy="12" r="6.5" fill="#fc693f" stroke="#f7f5ef" stroke-width="3"/>
+  </g>
+</svg>
