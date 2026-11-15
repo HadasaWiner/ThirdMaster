@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- The Third Master mark: ring, single bar, orange dot (as in the site header) -->
+  <g transform="rotate(-9 50 52)">
+    <circle cx="50" cy="52" r="40" fill="none" stroke="#171a18" stroke-width="6"/>
+    <rect x="44" y="32" width="15" height="34" fill="#171a18"/>
+  </g>
+  <circle cx="22" cy="22" r="9" fill="#fc693f" stroke="#f7f5ef" stroke-width="4"/>
+</svg>
