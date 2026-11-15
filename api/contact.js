@@ -5,7 +5,7 @@
 //   1. Gmail SMTP  - set GMAIL_USER and GMAIL_APP_PASSWORD in Vercel (Settings > Environment Variables)
 //   2. Resend API  - set RESEND_API_KEY
 //   3. FormSubmit  - no setup, but it may refuse requests coming from servers (HTTP 403)
-const TO = process.env.CONTACT_TO || 'rishum.pashut@gmail.com';
+const TO = process.env.CONTACT_TO || 'hadas@thirdmaster.com';
 const SITE = 'https://www.thirdmaster.com/';
 
 const clean = v => String(v == null ? '' : v).trim().slice(0, 2000);

@@ -319,7 +319,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   function v2render(){const d=v2data[v2dom].steps,box=qs('#v2steps');box.innerHTML=d.map((x,i)=>'<button type="button" class="'+(i===v2step?'active':'')+'" data-step="'+i+'"><b>0'+(i+1)+'</b>'+x.step+'</button>').join('');box.querySelectorAll('button').forEach(b=>b.onclick=()=>{v2step=+b.dataset.step;v2render()});const x=d[v2step];
     qs('#v2beforeTitle').textContent=v2step===0?'מתחילים שוב מההתחלה':'עושים את זה שוב ידנית';qs('#v2beforeDesc').textContent=x.before;qs('#v2afterTitle').textContent=v2step===0?'הידע המקצועי כבר בתהליך':'מומחיות שמנחה את העבודה';qs('#v2afterDesc').textContent=x.after;qs('#v2deliverable').textContent=x.deliverable;qs('#v2benefit').textContent=x.benefit;qs('#v2human').textContent=x.human;qs('#v2next').textContent=v2step===d.length-1?'חזרה להתחלה ↻':'לשלב הבא ←'}
   qsa('[data-domain]').forEach(b=>b.addEventListener('click',()=>{v2dom=b.dataset.domain;track('field_selected',{field:v2dom});v2step=0;qsa('[data-domain]').forEach(n=>n.classList.toggle('active',n===b));v2render()}));qs('#v2next').addEventListener('click',()=>{v2step=(v2step+1)%v2data[v2dom].steps.length;v2render()});v2render();
-  const TO='rishum.pashut@gmail.com';
+  const TO='hadas@thirdmaster.com';
   qs('#lead-form').addEventListener('focusin',()=>track('form_start'),{once:true});
   qs('#lead-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;
     const st=qs('#form-status'),btn=qs('#form-submit');st.innerHTML='';
