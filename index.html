@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f5ef">
 <!-- Microsoft Clarity -->
-<script>
-(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window,document,"clarity","script","CLARITY_ID");
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "zdrks4j2zj");
 </script>
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-65N1ZX56D5"></script>
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-XXXXXXX');
+gtag('js',new Date());gtag('config','G-65N1ZX56D5');
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
@@ -331,7 +332,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value});
     // first through our own domain (/api/contact on Vercel), and only if that endpoint does not exist, directly
     send('/api/contact',data).catch(err=>send('https://formsubmit.co/ajax/'+TO,data).catch(err2=>{if(/activat/i.test(err.message))throw err;throw new Error('site: '+err.message+' | direct: '+err2.message)}))
-    .then(()=>{track('form_submit',{field:data['תחום עבודה'],role:data['אני']});ctrack('form_submit');f.reset();f.hidden=true;qs('#form-done').hidden=false})
+    .then(()=>{track('generate_lead',{field:data['תחום עבודה'],role:data['אני']});ctrack('form_submit');f.reset();f.hidden=true;qs('#form-done').hidden=false})
     .catch(err=>{const m=String((err&&err.message)||'');let why='';
       if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
       else if(err instanceof TypeError||/fetch|network|load/i.test(m))why='לא הצלחנו להתחבר לשירות השליחה. ייתכן שסינון האינטרנט חוסם אותו.';
