@@ -41,8 +41,13 @@ async function viaFormSubmit(subject, fields) {
     headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: SITE.slice(0, -1), Referer: SITE },
     body: JSON.stringify({ ...fields, _subject: subject, _template: 'table', _captcha: 'false' }),
   });
-  const d = await r.json().catch(() => ({}));
-  if (!(r.ok && (d.success === true || d.success === 'true'))) throw new Error(d.message || 'FormSubmit HTTP ' + r.status);
+  // FormSubmit sometimes answers a server request with a non-JSON page even though the email was sent,
+  // so a 2xx answer counts as sent unless it explicitly says it failed.
+  const text = await r.text().catch(() => '');
+  let d = {};
+  try { d = JSON.parse(text); } catch {}
+  if (!r.ok) { console.error('FormSubmit HTTP', r.status, text.slice(0, 300)); throw new Error('FormSubmit HTTP ' + r.status); }
+  if (d.success === false || d.success === 'false') { console.error('FormSubmit refused:', text.slice(0, 300)); throw new Error(d.message || 'FormSubmit refused'); }
 }
 
 module.exports = async function handler(req, res) {

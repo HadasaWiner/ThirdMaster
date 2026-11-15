@@ -331,7 +331,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       'שם':qs('#fullname').value.trim(),'טלפון':qs('#phone').value.trim(),'מייל':qs('#email').value.trim(),'אני':qs('#audience').value,'תחום עבודה':qs('#industry').value||'לא צוין','תהליך שמעניין אותי':qs('#process').value.trim()||'לא צוין',
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value});
     // first through our own domain (/api/contact on Vercel), and only if that endpoint does not exist, directly
-    send('/api/contact',data).catch(err=>send('https://formsubmit.co/ajax/'+TO,data).catch(err2=>{if(/activat/i.test(err.message))throw err;throw new Error('site: '+err.message+' | direct: '+err2.message)}))
+    send('/api/contact',data).catch(err=>{if(!(err instanceof TypeError||/^HTTP 40[45]$/.test(err.message)))throw err;return send('https://formsubmit.co/ajax/'+TO,data)})
     .then(()=>{track('generate_lead',{field:data['תחום עבודה'],role:data['אני']});ctrack('form_submit');f.reset();f.hidden=true;qs('#form-done').hidden=false})
     .catch(err=>{const m=String((err&&err.message)||'');let why='';
       if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
