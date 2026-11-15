@@ -331,7 +331,14 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       'שם':qs('#fullname').value.trim(),'טלפון':qs('#phone').value.trim(),'מייל':qs('#email').value.trim(),'אני':qs('#audience').value,'תחום עבודה':qs('#industry').value||'לא צוין','תהליך שמעניין אותי':qs('#process').value.trim()||'לא צוין',
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value});
     // first through our own domain (/api/contact on Vercel), and only if that endpoint does not exist, directly
-    send('/api/contact',data).catch(err=>{if(!(err instanceof TypeError||/^HTTP 40[45]$/.test(err.message)))throw err;return send('https://formsubmit.co/ajax/'+TO,data)})
+    // FormSubmit refuses requests from servers (HTTP 403), so the browser sends directly.
+    // 1) AJAX, which tells us whether it worked. 2) If the browser can't read FormSubmit's answer
+    //    (some content filters block it), post the same data as a regular form into a hidden frame.
+    const postViaFrame=d=>new Promise(res=>{let fr=document.getElementById('fs-frame');if(!fr){fr=document.createElement('iframe');fr.name='fs-frame';fr.id='fs-frame';fr.hidden=true;fr.setAttribute('aria-hidden','true');document.body.appendChild(fr)}
+      const fm=document.createElement('form');fm.method='POST';fm.action='https://formsubmit.co/'+TO;fm.target='fs-frame';fm.hidden=true;
+      Object.entries(Object.assign({},d,{_captcha:'false'})).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;fm.appendChild(i)});
+      document.body.appendChild(fm);let done=false;const fin=()=>{if(done)return;done=true;fm.remove();res()};fr.onload=fin;setTimeout(fin,5000);fm.submit()});
+    send('https://formsubmit.co/ajax/'+TO,data).catch(err=>{if(err instanceof TypeError||err.message==='timeout')return postViaFrame(data);throw err})
     .then(()=>{track('generate_lead',{field:data['תחום עבודה'],role:data['אני']});ctrack('form_submit');f.reset();f.hidden=true;qs('#form-done').hidden=false})
     .catch(err=>{const m=String((err&&err.message)||'');let why='';
       if(m==='timeout')why='השרת לא ענה בזמן. ייתכן שהפנייה בכל זאת התקבלה.';else if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
