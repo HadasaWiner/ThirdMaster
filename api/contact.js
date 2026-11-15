@@ -38,6 +38,7 @@ async function viaResend(subject, fields, replyTo) {
 async function viaFormSubmit(subject, fields) {
   const r = await fetch('https://formsubmit.co/ajax/' + TO, {
     method: 'POST',
+    signal: AbortSignal.timeout(8000), // stay under the platform's function time limit
     headers: { 'Content-Type': 'application/json', Accept: 'application/json', Origin: SITE.slice(0, -1), Referer: SITE },
     body: JSON.stringify({ ...fields, _subject: subject, _template: 'table', _captcha: 'false' }),
   });

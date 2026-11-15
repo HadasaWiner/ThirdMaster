@@ -325,8 +325,8 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     const st=qs('#form-status'),btn=qs('#form-submit');st.innerHTML='';
     if(f.elements._honey.value){f.hidden=true;qs('#form-done').hidden=false;return}
     const label=btn.innerHTML;btn.disabled=true;btn.textContent='שולח...';
-    const send=(url,data)=>fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
-      .then(r=>r.json().catch(()=>({})).then(d=>{if(!r.ok||!(d.success===true||d.success==='true'))throw new Error(d.message||'HTTP '+r.status)}));
+    const send=(url,data)=>{const ac=new AbortController();const tm=setTimeout(()=>ac.abort(),15000);return fetch(url,{method:'POST',signal:ac.signal,headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).catch(e=>{throw e&&e.name==='AbortError'?new Error('timeout'):e}).finally(()=>clearTimeout(tm))
+      .then(r=>r.json().catch(()=>({})).then(d=>{if(!r.ok||!(d.success===true||d.success==='true'))throw new Error(d.message||'HTTP '+r.status)}))};
     const data=({
       'שם':qs('#fullname').value.trim(),'טלפון':qs('#phone').value.trim(),'מייל':qs('#email').value.trim(),'אני':qs('#audience').value,'תחום עבודה':qs('#industry').value||'לא צוין','תהליך שמעניין אותי':qs('#process').value.trim()||'לא צוין',
       _subject:'פנייה חדשה מאתר המאסטר השלישי',_template:'table',_honey:f.elements._honey.value});
@@ -334,7 +334,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     send('/api/contact',data).catch(err=>{if(!(err instanceof TypeError||/^HTTP 40[45]$/.test(err.message)))throw err;return send('https://formsubmit.co/ajax/'+TO,data)})
     .then(()=>{track('generate_lead',{field:data['תחום עבודה'],role:data['אני']});ctrack('form_submit');f.reset();f.hidden=true;qs('#form-done').hidden=false})
     .catch(err=>{const m=String((err&&err.message)||'');let why='';
-      if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
+      if(m==='timeout')why='השרת לא ענה בזמן. ייתכן שהפנייה בכל זאת התקבלה.';else if(/activat/i.test(m))why='הטופס ממתין להפעלה: נשלח מייל אימות ל־'+TO+' (כדאי לבדוק גם בספאם).';
       else if(err instanceof TypeError||/fetch|network|load/i.test(m))why='לא הצלחנו להתחבר לשירות השליחה. ייתכן שסינון האינטרנט חוסם אותו.';
       st.innerHTML='השליחה לא הצליחה. '+why+' אפשר לנסות שוב, או להתקשר: <a href="tel:+972548497089" dir="ltr">054-849-7089</a>'+(m?'<br><small dir="ltr" style="opacity:.7">'+m.replace(/[<>&]/g,'')+'</small>':'')})
     .finally(()=>{btn.disabled=false;btn.innerHTML=label});
