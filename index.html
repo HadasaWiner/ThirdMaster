@@ -228,6 +228,14 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
  .s3-client blockquote{font-size:15.5px}.s3-client figcaption{font-size:12px}.s3-built{font-size:13px;padding-top:6px}
  .s3-path h3{font-size:14px;margin-bottom:6px}.s3-path ol{grid-template-columns:1fr 1fr;gap:6px}.s3-path li{font-size:12.5px;padding:7px 9px;border-radius:10px;gap:6px}.s3-num{font-size:10.5px}
  .s3-safety{font-size:12px;margin-top:6px;padding:5px 10px}.s3-founder p{font-size:12.5px;line-height:1.45}.s3-label{font-size:10px;margin-bottom:2px}}
+/* screen 03 v2 */
+.s3-proof{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}.s3-proof p{margin:6px 0 0;font-size:clamp(15px,1.2vw,18px);line-height:1.6;color:#eef2ec;font-weight:500}.s3-proof .s3-label{font-size:clamp(15px,1.25vw,19px);color:var(--gold);letter-spacing:0;margin:0}
+.s3-sample{border:1.5px dashed #ffffff55;border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;line-height:1.5;color:#e3e8e1;font-weight:600}
+.s3-gets{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"h t" "x x" "s s";column-gap:18px;align-items:baseline;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.s3-gets h3{grid-area:h;margin:0}.s3-gets-title{grid-area:t;margin:0;font-size:clamp(17px,1.5vw,22px);font-weight:800;letter-spacing:-.4px}.s3-gets-text{grid-area:x;margin:6px 0 0;font-size:15px;line-height:1.55;color:#3a3f39}.s3-gets .s3-safety{grid-area:s;justify-self:start;margin-top:10px;font-weight:800}
+@media(min-width:901px) and (max-height:700px){.s3-proof p{font-size:14px;line-height:1.45}.s3-sample{font-size:12.5px;padding:10px}.s3-gets{padding:10px 14px}.s3-gets-text{font-size:13.5px}.s3-gets-title{font-size:17px}}
+@media(max-width:900px){.s3-proof{grid-template-columns:1fr;gap:8px}.s3-proof p{font-size:13px;line-height:1.45}.s3-proof .s3-label{font-size:14px}.s3-sample{font-size:11.5px;padding:8px}
+ .s3-gets{grid-template-columns:1fr;grid-template-areas:"h" "t" "x" "s";padding:10px 12px}.s3-gets h3{font-size:13px}.s3-gets-title{font-size:15px;margin-top:2px}.s3-gets-text{font-size:12.5px;line-height:1.45;margin-top:3px}.s3-gets .s3-safety{margin-top:6px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -319,28 +327,26 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <section class="page" id="idea" aria-label="הניסיון שמאחורי השיטה">
       <div class="s3">
         <header class="s3-head">
-          <div class="eyebrow">הניסיון שמאחורי השיטה</div>
-          <h2>לא מתחילים מאפס. <span class="accent-word">מתחילים מבסיס מקצועי.</span></h2>
-          <p class="s3-sub">בסדנה מקבלים סקיל התחלתי מוכן, שנבנה מתוך עבודה אמיתית במשרד פיננסי, ולומדים להתאים אותו לתהליכי העבודה שלכם.</p>
+          <div class="eyebrow">03 / הניסיון שמאחורי השיטה</div>
+          <h2>לא רק לבנות סקיל. <span class="accent-word">לדעת לגרום לו לעבוד באמת.</span></h2>
+          <p class="s3-sub">מאחורי המאסטר השלישי עומד ניסיון טכנולוגי עמוק בפיתוח מערכות מורכבות ובהובלת פתרונות AI בסביבת עבודה אמיתית.</p>
         </header>
-        <figure class="s3-client">
-          <blockquote>"[ציטוט של הלקוחה, מילה במילה, ממתין לאישורה]"<!-- TODO: להחליף בציטוט המאושר של הלקוחה, מילה במילה --></blockquote>
-          <figcaption>יועצת פרישה ובעלת משרד</figcaption>
-          <div class="s3-built"><span class="s3-label">מה היא בנתה</span>כלי שמחשב את העמלות של העובדים במשרד.</div>
-        </figure>
+        <div class="s3-client s3-proof">
+          <div class="s3-proof-text">
+            <span class="s3-label">ההוכחה? כבר עובדת במשרד לייעוץ פרישה.</span>
+            <p>מאסטר מקצועי שהוטמע במשרד, מלווה את הטיפול בתיקי הלקוחות, מבצע בדיקות, מקדם משימות ומפיק תוצרים לפי שיטות העבודה והסטנדרטים של המשרד.</p>
+          </div>
+          <div class="s3-sample">[כאן להציג תוצר אמיתי של המאסטר — למשל סיכום פגישה מקצועי, עם נתונים בדויים]<!-- TODO: להחליף בתוצר אמיתי של המאסטר (סיכום פגישה עם נתונים בדויים) --></div>
+        </div>
         <aside class="s3-founder">
-          <span class="s3-label">מי בנתה את השיטה</span>
-          <p>עשור של ניסיון בבנקים ובביטוח, לצד הובלת תהליכי AI מתקדמים בארגון גדול.</p>
+          <span class="s3-label">הניסיון שמאחורי הפיתוח</span>
+          <p>למעלה מעשור בפיתוח מערכות מורכבות בבנקים ובביטוח, לצד הובלה טכנולוגית של תהליכי AI בארגון גדול.</p>
         </aside>
-        <div class="s3-path">
-          <h3>בסוף הסדנה תדעו</h3>
-          <ol>
-            <li><span class="s3-num" aria-hidden="true">01</span>להפעיל סקיל שעובד על התהליך שלכם</li>
-            <li><span class="s3-num" aria-hidden="true">02</span>לבדוק שהתוצאה עומדת בסטנדרט של המשרד</li>
-            <li><span class="s3-num" aria-hidden="true">03</span>לזהות תקלה ולתקן אותה בעצמכם</li>
-            <li><span class="s3-num" aria-hidden="true">04</span>להמשיך לפתח כלים חדשים לבד</li>
-          </ol>
-          <p class="s3-safety">ואחרי הסדנה: קהילת תמיכה, כדי לוודא שהסקיל עובד אצלכם על תיק אמיתי.</p>
+        <div class="s3-path s3-gets">
+          <h3>ומה מקבלים בסדנה?</h3>
+          <p class="s3-gets-title">לא מתחילים מאפס. מתחילים מבסיס מקצועי.</p>
+          <p class="s3-gets-text">מקבלים סקיל התחלתי שנבנה מתוך ניסיון מעשי, לומדים להתאים אותו לצורכי המשרד, לבדוק את התוצאות ולשפר אותו גם מול מקרים אמיתיים.</p>
+          <p class="s3-safety">והכי חשוב — לא נשארים לבד ביישום הראשון.</p>
         </div>
       </div>
     </section>
