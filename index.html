@@ -236,6 +236,21 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 @media(min-width:901px) and (max-height:700px){.s3-proof p{font-size:14px;line-height:1.45}.s3-sample{font-size:12.5px;padding:10px}.s3-gets{padding:10px 14px}.s3-gets-text{font-size:13.5px}.s3-gets-title{font-size:17px}}
 @media(max-width:900px){.s3-proof{grid-template-columns:1fr;gap:8px}.s3-proof p{font-size:13px;line-height:1.45}.s3-proof .s3-label{font-size:14px}.s3-sample{font-size:11.5px;padding:8px}
  .s3-gets{grid-template-columns:1fr;grid-template-areas:"h" "t" "x" "s";padding:10px 12px}.s3-gets h3{font-size:13px}.s3-gets-title{font-size:15px;margin-top:2px}.s3-gets-text{font-size:12.5px;line-height:1.45;margin-top:3px}.s3-gets .s3-safety{margin-top:6px}}
+/* screen 03: case status demo */
+.case-board{display:block;text-align:right;background:var(--white);color:var(--ink);border:0;padding:12px 14px;border-radius:14px;font-weight:500}
+.cs-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:5px}.cs-head b{font-size:14px;font-weight:800}.cs-head span{font-size:11px;font-weight:700;background:#eae8df;border-radius:20px;padding:2px 9px;color:#3f453e}
+.cs-list{list-style:none;margin:0;padding:0;display:grid;gap:1px}
+.cs-list li{display:grid;grid-template-columns:18px 14px auto 1fr;align-items:baseline;gap:6px;font-size:12px;line-height:1.45;padding:2px 4px;border-radius:6px}
+.cs-ic{font-size:11px}.cs-n{font-weight:800;color:#6d706a;direction:ltr}.cs-list b{font-weight:800;white-space:nowrap}.cs-d{color:#4e544c;font-size:11.5px}.cs-d .bad{color:#b4472e;font-weight:700}
+.cs-list em{grid-column:3/-1;font-style:normal;font-size:11px;font-weight:800;color:#a8761e}
+.cs-now{background:#f3e3bf}.cs-todo{color:#8a8d85}.cs-todo b{font-weight:700}
+.cs-foot{margin-top:6px;padding-top:6px;border-top:1px solid var(--line);font-size:11px;font-weight:700;color:#3f453e}
+@media(min-width:901px) and (max-height:700px){.cs-list li{font-size:11px;line-height:1.3;padding:1px 4px}.cs-d{font-size:10.5px}.cs-head{padding-bottom:4px;margin-bottom:3px}.cs-foot{margin-top:4px;padding-top:4px;font-size:10.5px}.case-board{padding:9px 11px}}
+@media(max-width:900px){.case-board{padding:9px 10px}.cs-list li{font-size:11px;line-height:1.3;padding:1px 3px}.cs-d{font-size:10.5px}.cs-head b{font-size:12.5px}.cs-foot{font-size:10.5px}}
+@media(min-width:901px) and (max-height:820px){#idea .s3{gap:10px 24px}.s3-head h2{margin:6px 0 4px}.s3-sub{font-size:15px;line-height:1.5}.s3-gets{padding:9px 14px}.s3-gets-text{font-size:14px;margin-top:3px}.s3-gets .s3-safety{margin-top:6px;padding:5px 12px}.s3-proof{padding-top:16px;padding-bottom:16px}}
+@media(max-width:900px){.s3-sub,.s3-proof p,.s3-founder,.s3-gets-text{display:none!important}#idea .s3{gap:8px}.s3-proof{padding:12px}}
+@media(max-width:900px) and (max-height:740px){.cs-foot,.s3-gets h3{display:none}.cs-list li{line-height:1.2}.s3-head h2{font-size:24px!important}}
+@media(max-width:900px) and (max-height:660px){.cs-todo .cs-d{display:none}.s3-gets .s3-safety{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -336,7 +351,11 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
             <span class="s3-label">ההוכחה? כבר עובדת במשרד לייעוץ פרישה.</span>
             <p>מאסטר מקצועי שהוטמע במשרד, מלווה את הטיפול בתיקי הלקוחות, מבצע בדיקות, מקדם משימות ומפיק תוצרים לפי שיטות העבודה והסטנדרטים של המשרד.</p>
           </div>
-          <div class="s3-sample">[כאן להציג תוצר אמיתי של המאסטר — למשל סיכום פגישה מקצועי, עם נתונים בדויים]<!-- TODO: להחליף בתוצר אמיתי של המאסטר (סיכום פגישה עם נתונים בדויים) --></div>
+          <div class="s3-sample case-board" aria-label="הדגמה: מצב תיק במאסטר">
+            <div class="cs-head"><b>תיק TEST-רחל-לוי</b><span>טרם סווג</span></div>
+            <ol class="cs-list"><li class="cs-done"><span class="cs-ic" aria-hidden="true">✅</span><span class="cs-n">1</span><b>פתיחת תיק</b><span class="cs-d">17/11</span></li><li class="cs-done"><span class="cs-ic" aria-hidden="true">✅</span><span class="cs-n">2</span><b>מסמכים</b><span class="cs-d">תלוש · ת"ז · הר ביטוח  (חסר: —)</span></li><li class="cs-done"><span class="cs-ic" aria-hidden="true">✅</span><span class="cs-n">3</span><b>בדיקות הר הביטוח</b><span class="cs-d"><span class="bad">1 נספח קצבה ✗</span> · 2 צבירה ✓ · 3 גיל ✓ · 4 ליד ✓</span></li><li class="cs-now"><span class="cs-ic" aria-hidden="true">⏳</span><span class="cs-n">4</span><b>סיווג</b><span class="cs-d">מחכה לך</span><em>← אנחנו כאן</em></li><li class="cs-todo"><span class="cs-ic" aria-hidden="true">⬜</span><span class="cs-n">5</span><b>שאלות לפגישה</b><span class="cs-d"></span></li><li class="cs-todo"><span class="cs-ic" aria-hidden="true">⬜</span><span class="cs-n">6</span><b>פגישה</b><span class="cs-d">טרם נקבעה</span></li><li class="cs-todo"><span class="cs-ic" aria-hidden="true">⬜</span><span class="cs-n">7</span><b>סיכום</b><span class="cs-d"></span></li><li class="cs-todo"><span class="cs-ic" aria-hidden="true">⬜</span><span class="cs-n">8</span><b>מכתב ללקוח</b><span class="cs-d"></span></li><li class="cs-todo"><span class="cs-ic" aria-hidden="true">⬜</span><span class="cs-n">9</span><b>תיוק</b><span class="cs-d">Surense: ✗ (ידני)</span></li></ol>
+            <div class="cs-foot">פתוחים: 1 · BLOCKER: 0 · פעולות ממתינות: 1 (נספח קצבה)</div>
+          </div>
         </div>
         <aside class="s3-founder">
           <span class="s3-label">הניסיון שמאחורי הפיתוח</span>
