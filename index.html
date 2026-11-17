@@ -206,6 +206,28 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 @media(min-width:901px) and (max-height:700px){.ws-closing{min-height:0;padding:22px 26px}.ws-closing p{font-size:14.5px;margin-top:8px}.ws-closing .wsc-strong{font-size:15px}}
 @media(max-width:900px){.ws-closing h3{font-size:19px!important}.ws-closing p{font-size:13px;margin-top:7px;line-height:1.5}.ws-closing .wsc-strong{font-size:13.5px}}
 @media(max-width:900px) and (max-height:740px){.ws-closing .wsc-p:first-of-type{display:none}}
+/* screen 03: experience behind the method */
+#idea .s3{flex:1;display:grid;grid-template-columns:2fr 1fr;grid-template-areas:"head head" "client founder" "path path";gap:clamp(14px,2.2vh,26px) clamp(18px,2.4vw,40px);align-content:center}
+.s3-head{grid-area:head}.s3-head h2{margin:12px 0 10px}.s3-sub{margin:0;font-size:clamp(15px,1.25vw,19px);line-height:1.6;color:#3a3f39;max-width:820px}
+.s3-client{grid-area:client;margin:0;background:var(--dark);color:var(--white);border-radius:20px;padding:clamp(20px,2.6vh,30px) clamp(22px,2.4vw,34px);box-shadow:10px 11px 0 #e2dfd5;display:flex;flex-direction:column;gap:10px}
+.s3-client blockquote{margin:0;font-size:clamp(19px,1.8vw,27px);font-weight:800;line-height:1.4;letter-spacing:-.4px}
+.s3-client figcaption{font-size:14px;color:#e3e8e1;font-weight:600}.s3-client figcaption:before{content:"— "}
+.s3-built{border-top:1px solid #ffffff2c;padding-top:10px;font-size:15px;font-weight:700;color:#fff}.s3-client .s3-label{color:var(--gold)}
+.s3-label{display:block;font-size:11px;font-weight:800;letter-spacing:.4px;color:#5d625a;margin-bottom:4px}
+.s3-founder{grid-area:founder;align-self:center;border-right:3px solid var(--line);padding:4px 16px 4px 0}.s3-founder p{margin:0;font-size:15px;line-height:1.6;color:#3a3f39}
+.s3-path{grid-area:path}.s3-path h3{margin:0 0 10px;font-size:17px;letter-spacing:-.3px}
+.s3-path ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.s3-path li{display:flex;gap:10px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:15px;font-weight:700;line-height:1.4}
+.s3-num{font-size:12px;font-weight:900;color:#a8761e;direction:ltr;flex:0 0 auto;padding-top:2px}
+.s3-safety{margin:12px 0 0;display:inline-block;font-size:14px;font-weight:600;color:#2a2f29;border:1px solid var(--gold);border-radius:12px;padding:8px 14px;background:#fffdf7}
+.org-link{display:block;margin:4px auto 0;background:none;border:0;padding:2px;font-size:12px;line-height:1.3;color:#5d625a;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+@media(min-width:901px) and (max-height:820px){#idea .s3{gap:12px 28px}.s3-head h2{margin:8px 0 6px}.s3-client{gap:6px}.s3-path h3{margin-bottom:6px}.s3-path li{padding:9px 12px;font-size:14px}.s3-safety{margin-top:8px;padding:6px 12px;font-size:13px}}
+@media(min-width:901px) and (max-height:700px){.s3-head h2{font-size:clamp(28px,3vw,44px)}.s3-sub{font-size:14px}.s3-client blockquote{font-size:18px}.s3-built,.s3-founder p{font-size:13.5px}.s3-path li{font-size:13px;padding:7px 10px}}
+@media(max-width:900px){#idea .s3{display:flex;flex-direction:column;gap:10px;justify-content:center}.s3-head{order:1}.s3-client{order:2;padding:14px 16px;gap:5px;box-shadow:6px 7px 0 #e2dfd5;border-radius:15px}.s3-path{order:3}.s3-founder{order:4;padding:2px 12px 2px 0}
+ .s3-head h2{font-size:clamp(25px,7vw,34px)!important;margin:6px 0 4px}.s3-sub{font-size:13px;line-height:1.45}
+ .s3-client blockquote{font-size:15.5px}.s3-client figcaption{font-size:12px}.s3-built{font-size:13px;padding-top:6px}
+ .s3-path h3{font-size:14px;margin-bottom:6px}.s3-path ol{grid-template-columns:1fr 1fr;gap:6px}.s3-path li{font-size:12.5px;padding:7px 9px;border-radius:10px;gap:6px}.s3-num{font-size:10.5px}
+ .s3-safety{font-size:12px;margin-top:6px;padding:5px 10px}.s3-founder p{font-size:12.5px;line-height:1.45}.s3-label{font-size:10px;margin-bottom:2px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -219,7 +241,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <nav class="nav" aria-label="ניווט ראשי">
       <button class="nav-link is-active" data-goto="home">העתיד מתחיל כאן</button>
       <button class="nav-link" data-goto="demo">תראו איך זה עובד</button>
-      <button class="nav-link" data-goto="idea">מה באמת משתנה?</button>
+      <button class="nav-link" data-goto="idea">הניסיון שמאחורי השיטה</button>
       <button class="nav-link" data-goto="workshop">הסדנה</button>
     </nav>
     <div class="header-actions"><button class="top-cta" data-goto="register"><span class="cta-long">להצטרפות לסדנה</span><span class="cta-short" style="display:none">להצטרפות</span><span aria-hidden="true">↗</span></button><button class="mobile-menu" id="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false">☰</button></div>
@@ -227,7 +249,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   <div class="mobile-drawer" id="drawer" aria-label="ניווט בנייד">
     <button class="drawer-link" data-goto="home">01 / העתיד מתחיל כאן</button>
     <button class="drawer-link" data-goto="demo">02 / תראו איך זה עובד</button>
-    <button class="drawer-link" data-goto="idea">03 / מה באמת משתנה?</button>
+    <button class="drawer-link" data-goto="idea">03 / הניסיון שמאחורי השיטה</button>
     <button class="drawer-link" data-goto="workshop">04 / הסדנה</button>
     <button class="drawer-link" data-goto="register">05 / בואו נתחיל</button>
   </div>
@@ -294,18 +316,31 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       </div>
     </section>
     <!-- 3: IDEA -->
-    <section class="page" id="idea" aria-label="השיטה שמאחורי המאסטר השלישי">
-      <div class="story">
-        <div>
-          <div class="eyebrow">03 / הסיפור האמיתי</div>
-          <h2>לשאול AI זו התחלה. <em>ללמד אותו איך אתם עובדים</em> — זה כבר סיפור אחר.</h2>
-          <div class="story-copy">אחרי שנים של ניסיון, לאנשי המקצוע הטובים יש משהו שאין בשום מדריך: דרך לחשוב, לשאול, לבדוק ולהחליט. המאסטר השלישי עוזר להפוך אותה לשיטה שאפשר לעבוד לפיה.</div>
-          <div class="story-quote">המטרה היא לא להחליף את המומחה. היא לאפשר ליותר אנשים לעבוד לפי הסטנדרטים שלו.</div>
-          <div class="promise"><div><span>✓</span>פחות תלות במומחה יחיד.</div><div><span>✓</span>פחות עבודה ידנית.</div><div><span>✓</span>צוות שמסוגל לבצע הרבה יותר.</div></div>
-        </div>
-        <div class="comparison">
-          <div class="cmp-box"><div class="cmp-header"><span class="cmp-pill">היום</span> כשמשתמשים ב־AI כמו בצ׳אט</div><div class="cmp-lines">״תבדוק לי את התיק ותראה אם חסר משהו״</div><div class="cmp-sub">כל פעם מתחילים מחדש. כל אחד מסביר אחרת. הידע של המשרד לא באמת עובר הלאה.</div></div>
-          <div class="cmp-box good"><div class="cmp-header"><span class="cmp-pill">מחר</span> כשעובדים עם המאסטר השלישי</div><div class="cmp-lines">״בוא נעבור על התיק לפי 7 בדיקות החובה של המשרד״</div><div class="cmp-sub">שלבים קבועים, שאלות מדויקות, בקרות איכות ומקום ברור לבדיקה ולאישור של איש המקצוע.</div></div>
+    <section class="page" id="idea" aria-label="הניסיון שמאחורי השיטה">
+      <div class="s3">
+        <header class="s3-head">
+          <div class="eyebrow">הניסיון שמאחורי השיטה</div>
+          <h2>לא מתחילים מאפס. <span class="accent-word">מתחילים מבסיס מקצועי.</span></h2>
+          <p class="s3-sub">בסדנה מקבלים סקיל התחלתי מוכן, שנבנה מתוך עבודה אמיתית במשרד פיננסי, ולומדים להתאים אותו לתהליכי העבודה שלכם.</p>
+        </header>
+        <figure class="s3-client">
+          <blockquote>"[ציטוט של הלקוחה, מילה במילה, ממתין לאישורה]"<!-- TODO: להחליף בציטוט המאושר של הלקוחה, מילה במילה --></blockquote>
+          <figcaption>יועצת פרישה ובעלת משרד</figcaption>
+          <div class="s3-built"><span class="s3-label">מה היא בנתה</span>כלי שמחשב את העמלות של העובדים במשרד.</div>
+        </figure>
+        <aside class="s3-founder">
+          <span class="s3-label">מי בנתה את השיטה</span>
+          <p>10 שנים בבנקים ובביטוח, והיום מובילה הטמעת AI בארגון ממשלתי.</p>
+        </aside>
+        <div class="s3-path">
+          <h3>בסוף הסדנה תדעו</h3>
+          <ol>
+            <li><span class="s3-num" aria-hidden="true">01</span>להפעיל סקיל שעובד על התהליך שלכם</li>
+            <li><span class="s3-num" aria-hidden="true">02</span>לבדוק שהתוצאה עומדת בסטנדרט של המשרד</li>
+            <li><span class="s3-num" aria-hidden="true">03</span>לזהות תקלה ולתקן אותה בעצמכם</li>
+            <li><span class="s3-num" aria-hidden="true">04</span>להמשיך לפתח כלים חדשים לבד</li>
+          </ol>
+          <p class="s3-safety">ואחרי הסדנה: קהילת תמיכה, כדי לוודא שהסקיל עובד אצלכם על תיק אמיתי.</p>
         </div>
       </div>
     </section>
@@ -320,7 +355,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <section class="page" id="register" aria-label="התעניינות והרשמה לסדנה">
       <div class="registration">
         <div class="reg-copy"><div class="eyebrow">05 / אתם בפנים?</div><h2>הגיע הזמן לבנות <span class="accent-word">את המאסטר שלכם.</span></h2><div class="reg-meta">סדנה מעשית בזום · 150 דקות · ללא צורך בתכנות</div><p>לא צריך להקים מחלקת AI כדי להתחיל לחשוב אחרת. צריך תהליך אחד, סקרנות, ונכונות לעשות את הצעד הראשון.</p><div class="reg-benefits"><div class="reg-benefit"><span class="tick">✓</span> סדנה מעשית בזום, בעברית</div><div class="reg-benefit"><span class="tick">✓</span> לרואי חשבון, יועצי מס, חשבות שכר, יועצי פרישה ויועצי משכנתאות</div><div class="reg-benefit"><span class="tick">✓</span> לבעלי משרדים וגם לעובדים שרוצים להוביל שינוי</div><div class="reg-benefit"><span class="tick">✓</span> מבוססת על ניסיון במערכות פיננסיות ובהטמעת AI</div></div></div>
-        <div class="reg-form"><div class="form-top"><h3>הצעד הראשון שלכם מתחיל כאן</h3><span class="form-tag">ללא התחייבות</span></div><form id="lead-form"><div class="form-grid"><div class="field"><label for="fullname">איך קוראים לכם? *</label><input id="fullname" name="fullname" placeholder="שם מלא" autocomplete="name" required maxlength="80"></div><div class="field"><label for="phone">מספר טלפון *</label><input id="phone" name="phone" placeholder="05X-XXXXXXX" autocomplete="tel" inputmode="tel" required pattern="[+0-9() -]{9,20}" title="יש להזין מספר טלפון תקין"></div><div class="field"><label for="email">מייל</label><input id="email" name="email" type="email" placeholder="you@mail.com" autocomplete="email" dir="ltr" required title="יש להזין כתובת מייל תקינה"></div></div><div class="form-grid"><div class="field"><label for="audience">אני...</label><select id="audience" name="audience"><option value="עובד/ת שמעוניין/ת להוביל הטמעת AI">רוצה להוביל AI במקום העבודה</option><option value="בעל/ת משרד או מנהל/ת צוות">מנהל/ת משרד או צוות</option></select></div><div class="field"><label for="industry">תחום העבודה</label><select id="industry" name="industry"><option value="">בחרו תחום</option><option>ייעוץ משכנתאות</option><option>ייעוץ פרישה</option><option>ראיית חשבון / מיסים</option><option>חשבות שכר</option><option>בנקאות / ביטוח</option><option>תחום מקצועי אחר</option></select></div></div><div class="field"><label for="process">איזו עבודה הייתם רוצים לעשות אחרת?</label><textarea id="process" name="process" placeholder="למשל: בדיקת תיק, הכנת פגישה, איסוף מסמכים..."></textarea></div><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><button type="submit" class="primary gold-btn form-submit" id="form-submit">אני רוצה להצטרף לסדנה <span class="arr">↗</span></button><div class="form-status" id="form-status" role="status" aria-live="polite"></div><div class="form-foot">לקבלת פרטים על הסדנה, ללא התחייבות. נחזור אליכם בהקדם.</div></form><div class="form-done" id="form-done" hidden><span class="done-tick" aria-hidden="true">✓</span><h3>קיבלנו, תודה!</h3><p>נחזור אליכם בהקדם עם כל הפרטים על הסדנה.</p></div></div>
+        <div class="reg-form"><div class="form-top"><h3>הצעד הראשון שלכם מתחיל כאן</h3><span class="form-tag">ללא התחייבות</span></div><form id="lead-form"><div class="form-grid"><div class="field"><label for="fullname">איך קוראים לכם? *</label><input id="fullname" name="fullname" placeholder="שם מלא" autocomplete="name" required maxlength="80"></div><div class="field"><label for="phone">מספר טלפון *</label><input id="phone" name="phone" placeholder="05X-XXXXXXX" autocomplete="tel" inputmode="tel" required pattern="[+0-9() -]{9,20}" title="יש להזין מספר טלפון תקין"></div><div class="field"><label for="email">מייל</label><input id="email" name="email" type="email" placeholder="you@mail.com" autocomplete="email" dir="ltr" required title="יש להזין כתובת מייל תקינה"></div></div><div class="form-grid"><div class="field"><label for="audience">אני...</label><select id="audience" name="audience"><option value="עובד/ת שמעוניין/ת להוביל הטמעת AI">רוצה להוביל AI במקום העבודה</option><option value="בעל/ת משרד או מנהל/ת צוות">מנהל/ת משרד או צוות</option></select></div><div class="field"><label for="industry">תחום העבודה</label><select id="industry" name="industry"><option value="">בחרו תחום</option><option>ייעוץ משכנתאות</option><option>ייעוץ פרישה</option><option>ראיית חשבון / מיסים</option><option>חשבות שכר</option><option>בנקאות / ביטוח</option><option>תחום מקצועי אחר</option></select></div></div><div class="field"><label for="process">איזו עבודה הייתם רוצים לעשות אחרת?</label><textarea id="process" name="process" placeholder="למשל: בדיקת תיק, הכנת פגישה, איסוף מסמכים..."></textarea></div><input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><button type="submit" class="primary gold-btn form-submit" id="form-submit">אני רוצה להצטרף לסדנה <span class="arr">↗</span></button><button type="button" class="org-link" id="org-link">לארגונים: ליווי הטמעה מלא ←</button><div class="form-status" id="form-status" role="status" aria-live="polite"></div><div class="form-foot">לקבלת פרטים על הסדנה, ללא התחייבות. נחזור אליכם בהקדם.</div></form><div class="form-done" id="form-done" hidden><span class="done-tick" aria-hidden="true">✓</span><h3>קיבלנו, תודה!</h3><p>נחזור אליכם בהקדם עם כל הפרטים על הסדנה.</p></div></div>
       </div>
     </section>
   </main>
@@ -329,7 +364,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 <script>
 (function(){
   const pages=['home','demo','idea','workshop','register'];
-  const titles=['העתיד מתחיל כאן','תראו איך זה עובד','מה באמת משתנה?','הסדנה','בואו נתחיל'];
+  const titles=['העתיד מתחיל כאן','תראו איך זה עובד','הניסיון שמאחורי השיטה','הסדנה','בואו נתחיל'];
   let current=0, persona='employee', caseType='mortgage', demoStep=0;
   const qs=(s)=>document.querySelector(s),qsa=(s)=>[...document.querySelectorAll(s)];
   // ---- measurement (no names, phones, emails or free text are ever sent) ----
@@ -352,6 +387,8 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     qs('#v2beforeTitle').textContent=v2step===0?'מתחילים שוב מההתחלה':'עושים את זה שוב ידנית';qs('#v2beforeDesc').textContent=x.before;qs('#v2afterTitle').textContent=v2step===0?'הידע המקצועי כבר בתהליך':'מומחיות שמנחה את העבודה';qs('#v2afterDesc').textContent=x.after;qs('#v2deliverable').textContent=x.deliverable;qs('#v2benefit').textContent=x.benefit;qs('#v2human').textContent=x.human;qs('#v2next').textContent=v2step===d.length-1?'חזרה להתחלה ↻':'לשלב הבא ←'}
   qsa('[data-domain]').forEach(b=>b.addEventListener('click',()=>{v2dom=b.dataset.domain;track('field_selected',{field:v2dom});v2step=0;qsa('[data-domain]').forEach(n=>n.classList.toggle('active',n===b));v2render()}));qs('#v2next').addEventListener('click',()=>{v2step=(v2step+1)%v2data[v2dom].steps.length;v2render()});v2render();
   const TO='hadas@thirdmaster.com';
+  // 'for organisations' opens the existing contact form, marked as a manager/organisation enquiry
+  qs('#org-link').addEventListener('click',()=>{qs('#audience').value='בעל/ת משרד או מנהל/ת צוות';track('cta_click',{label:'לארגונים: ליווי הטמעה מלא',screen:pages[current]});qs('#fullname').focus()});
   qs('#lead-form').addEventListener('focusin',()=>track('form_start'),{once:true});
   qs('#lead-form').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget;if(!f.reportValidity())return;
     const st=qs('#form-status'),btn=qs('#form-submit');st.innerHTML='';
