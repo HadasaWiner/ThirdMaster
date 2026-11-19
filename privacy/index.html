@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5ef">
+<meta name="robots" content="noindex">
+<title>מדיניות פרטיות · המאסטר השלישי</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f5ef;--ink:#171a18;--muted:#5d625a;--line:#d9d7ce;--accent:#fc693f;--green:#d9eec3;--dark:#202522;--white:#fffdf7;--gold:#e3aa3f;--gold-deep:#a8761e;--err:#a8341c;--font:"Heebo","Noto Sans Hebrew",Arial,sans-serif}
+*{box-sizing:border-box}[hidden]{display:none!important}html,body{margin:0}body{font-family:var(--font);font-weight:500;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit}button,input,select,textarea{font:inherit}:focus-visible{outline:3px solid var(--gold-deep);outline-offset:3px}
+.skip{position:absolute;right:-9999px}.skip:focus{right:16px;top:10px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;z-index:9}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;height:76px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:18px;letter-spacing:-.5px}.brand svg{width:34px;height:34px}
+.back{font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line)}
+.hero{padding:40px 0 18px}.eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:#3f443d}.eyebrow:before{content:"";width:22px;height:3px;background:var(--accent);border-radius:3px}
+h1{font-size:clamp(34px,5vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.1;margin:14px 0 10px}.sub{font-size:clamp(16px,1.6vw,20px);color:#3a3f39;margin:0}
+.track{list-style:none;margin:26px 0 8px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.track li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:700}.track li span{display:block;font-size:12px;font-weight:900;color:var(--gold-deep);direction:ltr;text-align:right}
+.track li.key{background:var(--dark);color:#fff;border-color:var(--dark)}.track li.key span{color:var(--gold)}
+.community{font-size:14px;color:var(--muted);margin:10px 0 0;border:1.5px dashed #c9ccc2;border-radius:12px;padding:10px 14px}.community b{color:var(--ink)}
+.ph{background:#f3e3bf;border:1px dashed var(--gold-deep);border-radius:6px;padding:0 6px;font-weight:700}
+.grid{display:grid;grid-template-columns:1.35fr .9fr;gap:28px;align-items:start;padding:22px 0 60px}
+fieldset{border:1px solid var(--line);border-radius:16px;background:var(--white);padding:18px 20px 8px;margin:0 0 16px}legend{font-weight:800;font-size:17px;padding:0 6px}
+.note{font-size:13.5px;color:var(--muted);margin:2px 0 12px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label,.lbl{font-size:14px;font-weight:700}.req{color:var(--err)}
+input[type=text],input[type=email],input[type=tel],select{border:1px solid #bfc2b8;border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink);width:100%}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 2px #a8341c22}
+.err{font-size:13px;color:var(--err);font-weight:700;min-height:0}.err:empty{display:none}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;border:1.5px solid #bfc2b8;border-radius:12px;padding:12px 14px;cursor:pointer;background:#fff}.choice input:checked+label{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);background:#f3f1e8}.choice input:focus-visible+label{outline:3px solid var(--gold-deep);outline-offset:2px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;font-size:14.5px}.check input{width:18px;height:18px;margin-top:3px;flex:0 0 auto;accent-color:var(--dark)}
+.sub-box{border-top:1px solid var(--line);margin-top:4px;padding-top:12px}
+.btn-add{background:none;border:1.5px solid var(--ink);border-radius:30px;padding:8px 16px;font-weight:800;cursor:pointer;margin-bottom:12px}.btn-rm{background:none;border:0;color:var(--err);font-weight:700;cursor:pointer;text-decoration:underline}
+.pp{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+aside.summary{position:sticky;top:16px;background:var(--dark);color:#fff;border-radius:18px;padding:22px}
+aside h2{margin:0 0 12px;font-size:20px}.srow{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ffffff22;font-size:14.5px}.srow span:first-child{color:#d9dfd7}.srow b{text-align:left}
+.total{font-size:18px;font-weight:900;border-bottom:0}.small{font-size:13px;color:#d9dfd7;margin:10px 0 0}.links{font-size:13px;margin:10px 0 0;color:#d9dfd7}.links a{color:#fff}
+.pay{width:100%;margin-top:16px;border:0;border-radius:40px;padding:15px 18px;background:var(--gold);color:#1b1a14;font-weight:900;font-size:16px;cursor:pointer;box-shadow:0 4px 0 var(--gold-deep)}.pay:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}
+.status{margin-top:12px;font-size:14px;font-weight:700;color:#ffd9cf}.status:empty{display:none}
+.closed{background:#f3e3bf;color:#2a2f29;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;margin-top:12px}
+.mock{background:#e4efda;color:#24361f;border-radius:10px;padding:6px 10px;font-size:12.5px;font-weight:800;margin-bottom:10px;display:inline-block}
+@media(max-width:860px){.grid{grid-template-columns:1fr}aside.summary{position:static}.track{grid-template-columns:1fr}.row2,.choices{grid-template-columns:1fr}}
+</style>
+<style>.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;margin:36px 0 60px;max-width:720px}.card h1{font-size:clamp(28px,4vw,44px)}.card p{font-size:17px;color:#3a3f39}.legal h2{font-size:20px;margin:22px 0 6px}.legal p,.legal li{font-size:16px}.btn{display:inline-block;margin-top:14px;text-decoration:none;border-radius:40px;padding:12px 20px;background:var(--gold);color:#1b1a14;font-weight:900;box-shadow:0 4px 0 var(--gold-deep)}.btn.ghost{background:none;box-shadow:none;border:1.5px solid var(--ink)}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="המאסטר השלישי — חזרה לדף הבית"><svg viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(-9 50 52)"><circle cx="50" cy="52" r="40" fill="none" stroke="#171a18" stroke-width="6"/><rect x="44" y="32" width="15" height="34" fill="#171a18"/></g><circle cx="22" cy="22" r="9" fill="#fc693f" stroke="#f7f5ef" stroke-width="4"/></svg>המאסטר השלישי</a>
+    <a class="back" href="/">חזרה לאתר</a>
+  </header>
+  <main class="card legal">
+    <div class="eyebrow">מסמך משפטי</div>
+    <h1>מדיניות פרטיות</h1>
+    <p class="ph" style="display:inline-block">[טקסט ממתין לניסוח ולאישור של יועצת המס או עורך הדין]</p><!-- TODO: להחליף בנוסח המאושר -->
+    <h2>איזה מידע נאסף</h2>
+    <p>בטופס ההרשמה נאספים: שם, אימייל, טלפון, תחום עיסוק, שם המשרד (רשות), העדפת מועד, ופרטי חשבונית אם ביקשתם חשבונית על שם העסק.</p>
+    <h2>למה הוא משמש</h2>
+    <p>לרישום לסדנה, לתיאום המועד, להפקת חשבונית ולשליחת פרטי הסדנה. עדכונים שיווקיים נשלחים רק למי שסימן הסכמה לכך.</p>
+    <h2>מי מעבד את המידע</h2>
+    <p>התשלום והחשבונית מתבצעים דרך SUMIT. פרטי כרטיס האשראי מוזנים בדף התשלום של SUMIT ואינם עוברים באתר.</p>
+    <h2>כמה זמן הוא נשמר ואיך פונים אלינו</h2>
+    <p class="ph">[להשלים: תקופת שמירה, זכות עיון ותיקון, ופרטי יצירת קשר]</p>
+    <a class="btn ghost" href="/register/">חזרה להרשמה</a>
+  </main>
+</div>
+
+</body>
+</html>

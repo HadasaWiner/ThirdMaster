@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5ef">
+<meta name="robots" content="noindex">
+<title>הרשמה לסדנה · המאסטר השלישי</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f5ef;--ink:#171a18;--muted:#5d625a;--line:#d9d7ce;--accent:#fc693f;--green:#d9eec3;--dark:#202522;--white:#fffdf7;--gold:#e3aa3f;--gold-deep:#a8761e;--err:#a8341c;--font:"Heebo","Noto Sans Hebrew",Arial,sans-serif}
+*{box-sizing:border-box}[hidden]{display:none!important}html,body{margin:0}body{font-family:var(--font);font-weight:500;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit}button,input,select,textarea{font:inherit}:focus-visible{outline:3px solid var(--gold-deep);outline-offset:3px}
+.skip{position:absolute;right:-9999px}.skip:focus{right:16px;top:10px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;z-index:9}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;height:76px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:18px;letter-spacing:-.5px}.brand svg{width:34px;height:34px}
+.back{font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--line)}
+.hero{padding:40px 0 18px}.eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:#3f443d}.eyebrow:before{content:"";width:22px;height:3px;background:var(--accent);border-radius:3px}
+h1{font-size:clamp(34px,5vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.1;margin:14px 0 10px}.sub{font-size:clamp(16px,1.6vw,20px);color:#3a3f39;margin:0}
+.track{list-style:none;margin:26px 0 8px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.track li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:700}.track li span{display:block;font-size:12px;font-weight:900;color:var(--gold-deep);direction:ltr;text-align:right}
+.track li.key{background:var(--dark);color:#fff;border-color:var(--dark)}.track li.key span{color:var(--gold)}
+.community{font-size:14px;color:var(--muted);margin:10px 0 0;border:1.5px dashed #c9ccc2;border-radius:12px;padding:10px 14px}.community b{color:var(--ink)}
+.ph{background:#f3e3bf;border:1px dashed var(--gold-deep);border-radius:6px;padding:0 6px;font-weight:700}
+.grid{display:grid;grid-template-columns:1.35fr .9fr;gap:28px;align-items:start;padding:22px 0 60px}
+fieldset{border:1px solid var(--line);border-radius:16px;background:var(--white);padding:18px 20px 8px;margin:0 0 16px}legend{font-weight:800;font-size:17px;padding:0 6px}
+.note{font-size:13.5px;color:var(--muted);margin:2px 0 12px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label,.lbl{font-size:14px;font-weight:700}.req{color:var(--err)}
+input[type=text],input[type=email],input[type=tel],select{border:1px solid #bfc2b8;border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink);width:100%}
+input[aria-invalid=true],select[aria-invalid=true]{border-color:var(--err);box-shadow:0 0 0 2px #a8341c22}
+.err{font-size:13px;color:var(--err);font-weight:700;min-height:0}.err:empty{display:none}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}.choice{position:relative}.choice input{position:absolute;opacity:0;inset:0}
+.choice label{display:block;border:1.5px solid #bfc2b8;border-radius:12px;padding:12px 14px;cursor:pointer;background:#fff}.choice input:checked+label{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink);background:#f3f1e8}.choice input:focus-visible+label{outline:3px solid var(--gold-deep);outline-offset:2px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:0 0 12px;font-size:14.5px}.check input{width:18px;height:18px;margin-top:3px;flex:0 0 auto;accent-color:var(--dark)}
+.sub-box{border-top:1px solid var(--line);margin-top:4px;padding-top:12px}
+.btn-add{background:none;border:1.5px solid var(--ink);border-radius:30px;padding:8px 16px;font-weight:800;cursor:pointer;margin-bottom:12px}.btn-rm{background:none;border:0;color:var(--err);font-weight:700;cursor:pointer;text-decoration:underline}
+.pp{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+aside.summary{position:sticky;top:16px;background:var(--dark);color:#fff;border-radius:18px;padding:22px}
+aside h2{margin:0 0 12px;font-size:20px}.srow{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #ffffff22;font-size:14.5px}.srow span:first-child{color:#d9dfd7}.srow b{text-align:left}
+.total{font-size:18px;font-weight:900;border-bottom:0}.small{font-size:13px;color:#d9dfd7;margin:10px 0 0}.links{font-size:13px;margin:10px 0 0;color:#d9dfd7}.links a{color:#fff}
+.pay{width:100%;margin-top:16px;border:0;border-radius:40px;padding:15px 18px;background:var(--gold);color:#1b1a14;font-weight:900;font-size:16px;cursor:pointer;box-shadow:0 4px 0 var(--gold-deep)}.pay:disabled{opacity:.55;cursor:not-allowed;box-shadow:none}
+.status{margin-top:12px;font-size:14px;font-weight:700;color:#ffd9cf}.status:empty{display:none}
+.closed{background:#f3e3bf;color:#2a2f29;border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;margin-top:12px}
+.mock{background:#e4efda;color:#24361f;border-radius:10px;padding:6px 10px;font-size:12.5px;font-weight:800;margin-bottom:10px;display:inline-block}
+@media(max-width:860px){.grid{grid-template-columns:1fr}aside.summary{position:static}.track{grid-template-columns:1fr}.row2,.choices{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#form">דילוג לטופס ההרשמה</a>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="המאסטר השלישי — חזרה לדף הבית"><svg viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(-9 50 52)"><circle cx="50" cy="52" r="40" fill="none" stroke="#171a18" stroke-width="6"/><rect x="44" y="32" width="15" height="34" fill="#171a18"/></g><circle cx="22" cy="22" r="9" fill="#fc693f" stroke="#f7f5ef" stroke-width="4"/></svg>המאסטר השלישי</a>
+    <a class="back" href="/">חזרה לאתר</a>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">הרשמה לסדנה</div>
+    <h1>המאסטר השלישי מתחיל כאן</h1>
+    <p class="sub">נרשמים לסדנה, מתנסים בעבודה וממשיכים למפגש הטמעה.</p>
+    <ol class="track" aria-label="שלבי המסלול">
+      <li><span>01</span>סדנה מעשית</li>
+      <li><span>02</span>שבועיים של התנסות במשרד</li>
+      <li class="key"><span>03</span>מפגש הטמעה לפתרון אתגרי היישום <span class="ph" style="color:#1b1a14;display:inline">[להכריע: קבוצתי או אישי]</span><!-- TODO: לקבוע אם מפגש ההטמעה קבוצתי או אישי --></li>
+    </ol>
+    <p class="community"><b>קהילת הבוגרים</b> היא אפשרות המשך נפרדת, ואינה כלולה במחיר הסדנה.</p>
+  </section>
+
+  <div class="grid">
+    <form id="form" novalidate aria-describedby="form-status">
+      <fieldset>
+        <legend>העדפת מועד <span class="req" aria-hidden="true">*</span></legend>
+        <div class="choices" role="radiogroup" aria-required="true" aria-describedby="err-preference date-note">
+          <div class="choice"><input type="radio" name="preference" id="pref-m" value="morning"><label for="pref-m">סדנת בוקר</label></div>
+          <div class="choice"><input type="radio" name="preference" id="pref-e" value="evening"><label for="pref-e">סדנת ערב</label></div>
+        </div>
+        <p class="note" id="date-note">זו העדפה בלבד. המועד המדויק יימסר בהמשך, בהתאם לפתיחת הסדנאות ולתיאום.</p>
+        <div class="err" id="err-preference" role="alert"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>פרטי הנרשם</legend>
+        <div class="row2">
+          <div class="field"><label for="fullName">שם מלא <span class="req" aria-hidden="true">*</span></label><input type="text" id="fullName" name="fullName" autocomplete="name" required aria-describedby="err-fullName"><div class="err" id="err-fullName"></div></div>
+          <div class="field"><label for="phone">טלפון <span class="req" aria-hidden="true">*</span></label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" dir="ltr" required aria-describedby="err-phone"><div class="err" id="err-phone"></div></div>
+        </div>
+        <div class="field"><label for="email">אימייל <span class="req" aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" dir="ltr" required aria-describedby="err-email"><div class="err" id="err-email"></div></div>
+        <div class="row2">
+          <div class="field"><label for="occupation">תחום עיסוק <span class="req" aria-hidden="true">*</span></label><select id="occupation" name="occupation" required aria-describedby="err-occupation"><option value="">בחרו תחום</option><option>ייעוץ פרישה</option><option>ייעוץ משכנתאות</option><option>ראיית חשבון / ייעוץ מס</option><option>חשבות שכר</option><option>ייעוץ פיננסי</option><option>אחר</option></select><div class="err" id="err-occupation"></div></div>
+          <div class="field"><label for="office">שם משרד / עסק</label><input type="text" id="office" name="office" autocomplete="organization"></div>
+        </div>
+        <div class="field" id="other-wrap" hidden><label for="occupationOther">פרטו את תחום העיסוק <span class="req" aria-hidden="true">*</span></label><input type="text" id="occupationOther" name="occupationOther" aria-describedby="err-occupationOther"><div class="err" id="err-occupationOther"></div></div>
+      </fieldset>
+
+      <fieldset id="participants-box" hidden>
+        <legend>משתתפים נוספים מאותו משרד</legend>
+        <p class="note">כל משתתף יקבל את פרטי הסדנה למייל שלו.</p>
+        <div id="participants"></div>
+        <button type="button" class="btn-add" id="add-p">הוספת משתתף</button>
+        <div class="err" id="err-participants" role="alert"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>חשבונית</legend>
+        <div class="check"><input type="checkbox" id="invoiceToBusiness" name="invoiceToBusiness" aria-controls="invoice-fields"><label for="invoiceToBusiness">חשבונית על שם העסק</label></div>
+        <div id="invoice-fields" class="sub-box" hidden>
+          <div class="row2">
+            <div class="field"><label for="businessName">שם העסק לחשבונית <span class="req" aria-hidden="true">*</span></label><input type="text" id="businessName" name="businessName" aria-describedby="err-businessName"><div class="err" id="err-businessName"></div></div>
+            <div class="field"><label for="taxId">ח.פ / ע.מ <span class="req" aria-hidden="true">*</span></label><input type="text" id="taxId" name="taxId" inputmode="numeric" dir="ltr" aria-describedby="err-taxId"><div class="err" id="err-taxId"></div></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="address">כתובת</label><input type="text" id="address" name="address" autocomplete="street-address"></div>
+            <div class="field"><label for="invoiceEmail">אימייל לחשבונית</label><input type="email" id="invoiceEmail" name="invoiceEmail" dir="ltr" placeholder="ברירת מחדל: האימייל שלכם" aria-describedby="err-invoiceEmail"><div class="err" id="err-invoiceEmail"></div></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>אישורים</legend>
+        <div class="check"><input type="checkbox" id="acceptTerms" name="acceptTerms" required aria-describedby="err-acceptTerms"><label for="acceptTerms">קראתי ואני מאשר/ת את <a href="/terms/" target="_blank">תנאי ההרשמה ומדיניות הביטולים</a> <span class="req" aria-hidden="true">*</span></label></div>
+        <div class="err" id="err-acceptTerms"></div>
+        <div class="check"><input type="checkbox" id="acceptPrivacy" name="acceptPrivacy" required aria-describedby="err-acceptPrivacy"><label for="acceptPrivacy">קראתי ואני מאשר/ת את <a href="/privacy/" target="_blank">מדיניות הפרטיות</a> <span class="req" aria-hidden="true">*</span></label></div>
+        <div class="err" id="err-acceptPrivacy"></div>
+        <div class="check"><input type="checkbox" id="marketing" name="marketing"><label for="marketing">אשמח לקבל עדכונים על סדנאות ותכנים חדשים (לא חובה)</label></div>
+      </fieldset>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;right:-9999px;width:1px;height:1px">
+    </form>
+
+    <aside class="summary" aria-labelledby="sum-title">
+      <div class="mock" id="mock-note" hidden>מצב בדיקה · ללא חיוב אמיתי</div>
+      <h2 id="sum-title">סיכום הרשמה</h2>
+      <div class="srow"><span>הסדנה</span><b id="s-name">סדנת המאסטר השלישי</b></div>
+      <div class="srow"><span>העדפה</span><b id="s-pref">טרם נבחרה</b></div>
+      <div class="srow"><span>מפגש הטמעה</span><b>כלול במחיר</b></div>
+      <div class="srow"><span>מחיר למשתתף</span><b id="s-price"><span class="ph">[מחיר: להגדיר]</span></b></div>
+      <div class="srow"><span>משתתפים</span><b id="s-qty">1</b></div>
+      <div class="srow total"><span>סה״כ</span><b id="s-total">—</b></div>
+      <p class="small" id="s-vat"></p>
+      <p class="small">מועד הסדנה עדיין לא נקבע. נעדכן אתכם במייל.</p>
+      <p class="links"><a href="/terms/" target="_blank">תנאי ההרשמה</a> · <a href="/terms/#cancel" target="_blank">מדיניות ביטולים</a> · <a href="/privacy/" target="_blank">מדיניות פרטיות</a></p>
+      <button type="button" class="pay" id="pay" disabled aria-describedby="pay-hint">מעבר לתשלום מאובטח</button>
+      <p class="small" id="pay-hint">הכפתור יופעל אחרי מילוי שדות החובה וסימון האישורים.</p>
+      <div class="closed" id="closed" hidden>ההרשמה בתשלום תיפתח בקרוב. בינתיים אפשר <a href="/#register">להשאיר פרטים</a> ונחזור אליכם.</div>
+      <div class="status" id="form-status" role="status" aria-live="polite"></div>
+    </aside>
+  </div>
+</div>
+<script>
+(function(){
+  const $=id=>document.getElementById(id), form=$('form');
+  let cfg={open:false,price:null,vatIncluded:true,vatRate:0.18,allowMultiple:false,maxParticipants:1,workshopName:'סדנת המאסטר השלישי'};
+  const fmt=n=>'₪'+Number(n).toLocaleString('he-IL',{maximumFractionDigits:2});
+  const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+  const phoneOk=v=>{const p=v.replace(/[\s\-().]/g,'');return /^0(?:5\d|7\d|[23489])\d{7}$/.test(p)||/^\+972(?:5\d|7\d|[23489])\d{7}$/.test(p)||/^\+(?!972)\d{8,15}$/.test(p)};
+  const taxIdOk=v=>{const d=v.replace(/\D/g,'');if(!d||d.length>9)return false;const s=d.padStart(9,'0');let sum=0;for(let i=0;i<9;i++){let x=+s[i]*((i%2)+1);if(x>9)x-=9;sum+=x}return sum%10===0};
+  const extra=()=>[...document.querySelectorAll('#participants .pp')].map(p=>({name:p.querySelector('[data-k=name]').value.trim(),email:p.querySelector('[data-k=email]').value.trim()}));
+  function data(){const f=form.elements;return{preference:(form.querySelector('[name=preference]:checked')||{}).value||'',fullName:f.fullName.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),occupation:f.occupation.value,occupationOther:f.occupationOther.value.trim(),office:f.office.value.trim(),invoiceToBusiness:f.invoiceToBusiness.checked,businessName:f.businessName.value.trim(),taxId:f.taxId.value.trim(),address:f.address.value.trim(),invoiceEmail:f.invoiceEmail.value.trim(),acceptTerms:f.acceptTerms.checked,acceptPrivacy:f.acceptPrivacy.checked,marketing:f.marketing.checked,participants:extra(),_honey:f._honey.value}}
+  function check(d){const e={};
+    if(!d.preference)e.preference='נא לבחור סדנת בוקר או ערב';
+    if(!d.fullName)e.fullName='נא למלא שם מלא';
+    if(!emailOk(d.email))e.email='נא למלא כתובת מייל תקינה';
+    if(!phoneOk(d.phone))e.phone='נא למלא מספר טלפון תקין (לדוגמה 050-1234567 או ‎+972)';
+    if(!d.occupation)e.occupation='נא לבחור תחום עיסוק';
+    if(d.occupation==='אחר'&&!d.occupationOther)e.occupationOther='נא לפרט את תחום העיסוק';
+    if(d.invoiceToBusiness){if(!d.businessName)e.businessName='נא למלא את שם העסק לחשבונית';if(!taxIdOk(d.taxId))e.taxId='מספר ח.פ / ע.מ לא תקין';if(d.invoiceEmail&&!emailOk(d.invoiceEmail))e.invoiceEmail='כתובת המייל לחשבונית לא תקינה'}
+    if(!d.acceptTerms)e.acceptTerms='נדרש אישור תנאי ההרשמה ומדיניות הביטולים';
+    if(!d.acceptPrivacy)e.acceptPrivacy='נדרש אישור מדיניות הפרטיות';
+    d.participants.forEach((p,i)=>{if(!p.name)e['p'+i+'name']='נא למלא שם משתתף';if(!emailOk(p.email))e['p'+i+'email']='נא למלא מייל תקין למשתתף'});
+    return e}
+  const touched=new Set();
+  function show(e,all){document.querySelectorAll('.err').forEach(el=>{const k=el.id.replace('err-','');const msg=(all||touched.has(k))?(e[k]||''):'';el.textContent=msg;const inp=document.getElementById(k);if(inp&&inp.tagName!=='DIV')inp.setAttribute('aria-invalid',msg?'true':'false')})}
+  function summary(){const d=data(),q=1+d.participants.length;$('s-pref').textContent=d.preference==='morning'?'סדנת בוקר':d.preference==='evening'?'סדנת ערב':'טרם נבחרה';$('s-qty').textContent=q;
+    if(cfg.price){$('s-price').textContent=fmt(cfg.price);const t=cfg.price*q;if(cfg.vatIncluded){$('s-total').textContent=fmt(t);$('s-vat').textContent='המחיר כולל מע״מ.'}else{$('s-total').textContent=fmt(t*(1+cfg.vatRate));$('s-vat').textContent='המחיר למשתתף לפני מע״מ. מע״מ ('+Math.round(cfg.vatRate*100)+'%): '+fmt(t*cfg.vatRate)+'.'}}
+    const e=check(d);$('pay').disabled=!cfg.open||Object.keys(e).length>0;return e}
+  form.addEventListener('input',ev=>{if(ev.target.id)touched.add(ev.target.id);if(ev.target.name==='preference')touched.add('preference');if(ev.target.dataset.k)touched.add(ev.target.id);show(summary(),false)});
+  form.addEventListener('change',ev=>{if(ev.target.id==='occupation')$('other-wrap').hidden=ev.target.value!=='אחר';if(ev.target.id==='invoiceToBusiness')$('invoice-fields').hidden=!ev.target.checked;if(ev.target.id)touched.add(ev.target.id);if(ev.target.name==='preference')touched.add('preference');show(summary(),false)});
+  form.addEventListener('focusout',ev=>{if(ev.target.id){touched.add(ev.target.id);show(summary(),false)}});
+  // extra participants (only when enabled in settings)
+  let pn=0;
+  $('add-p').addEventListener('click',()=>{if(1+extra().length>=cfg.maxParticipants)return;const i=pn++;const n=document.querySelectorAll('#participants .pp').length;const div=document.createElement('div');div.className='pp';
+    div.innerHTML='<div class="row2"><div class="field"><label for="p'+n+'name">שם משתתף</label><input type="text" id="p'+n+'name" data-k="name"><div class="err" id="err-p'+n+'name"></div></div><div class="field"><label for="p'+n+'email">אימייל משתתף</label><input type="email" id="p'+n+'email" data-k="email" dir="ltr"><div class="err" id="err-p'+n+'email"></div></div></div><button type="button" class="btn-rm">הסרה</button>';
+    div.querySelector('.btn-rm').onclick=()=>{div.remove();renumber();summary()};$('participants').appendChild(div);div.querySelector('input').focus();summary()});
+  function renumber(){document.querySelectorAll('#participants .pp').forEach((p,n)=>{const [a,b]=p.querySelectorAll('input');const [la,lb]=p.querySelectorAll('label');const [ea,eb]=p.querySelectorAll('.err');a.id='p'+n+'name';la.htmlFor=a.id;ea.id='err-'+a.id;b.id='p'+n+'email';lb.htmlFor=b.id;eb.id='err-'+b.id})}
+  // payment
+  $('pay').addEventListener('click',()=>{const d=data(),e=check(d);if(Object.keys(e).length){show(e,true);const first=document.querySelector('[aria-invalid=true]');if(first)first.focus();return}
+    const btn=$('pay'),st=$('form-status');btn.disabled=true;btn.textContent='מעבירים לתשלום...';st.textContent='';
+    // copy of the registration to the business inbox (best effort, does not block payment)
+    try{fetch('https://formsubmit.co/ajax/hadas@thirdmaster.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({'סטטוס':'הרשמה לסדנה — ממתין לתשלום','שם':d.fullName,'מייל':d.email,'טלפון':d.phone,'העדפה':d.preference==='morning'?'בוקר':'ערב','תחום':d.occupation==='אחר'?d.occupationOther:d.occupation,'משרד':d.office||'—','משתתפים':1+d.participants.length,'חשבונית על שם עסק':d.invoiceToBusiness?d.businessName+' / '+d.taxId:'לא','עדכונים שיווקיים':d.marketing?'כן':'לא',_subject:'הרשמה חדשה לסדנה — ממתין לתשלום',_template:'table'}),keepalive:true}).catch(()=>{})}catch(_){}
+    fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(r=>r.json().then(j=>({r,j}))).then(({r,j})=>{
+      if(r.ok&&j.redirectUrl){location.href=j.redirectUrl;return}
+      if(j.errors){show(j.errors,true)}st.textContent=j.message||'לא הצלחנו להתחיל את התשלום. בדקו את הפרטים ונסו שוב.';btn.disabled=false;btn.textContent='מעבר לתשלום מאובטח'})
+    .catch(()=>{st.textContent='אין חיבור לשירות התשלום כרגע. נסו שוב בעוד רגע.';btn.disabled=false;btn.textContent='מעבר לתשלום מאובטח'})});
+  fetch('/api/checkout',{headers:{Accept:'application/json'}}).then(r=>r.json()).then(c=>{cfg=Object.assign(cfg,c);$('s-name').textContent=cfg.workshopName;$('participants-box').hidden=!cfg.allowMultiple;$('mock-note').hidden=cfg.mode!=='mock';$('closed').hidden=!!cfg.open;summary()}).catch(()=>{$('closed').hidden=false;summary()});
+  summary();
+})();
+</script>
+</body>
+</html>
