@@ -313,6 +313,19 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
  .af-community{padding:9px 12px;gap:10px}.af-community .af-ic{width:34px;height:34px;flex:0 0 auto}.af-community h3{font-size:14px}.af-community p{font-size:12px;line-height:1.4}}
 @media(max-width:900px) and (max-height:740px){.af-step p{font-size:11.5px}.af-community p{display:none}}
 #after h3{letter-spacing:-.2px}
+/* Claude Code messaging */
+.cc{font-weight:800;color:var(--ink);white-space:nowrap;unicode-bidi:isolate}
+#home .hero-tech{margin:0 0 18px;max-width:600px;padding-right:14px;border-right:3px solid var(--gold)}
+.hero-tech-title{margin:0 0 4px;font-size:clamp(17px,1.45vw,21px);font-weight:800;letter-spacing:-.3px;line-height:1.35;color:var(--ink)}
+.hero-tech-text{margin:0;font-size:14.5px;line-height:1.55;color:#3a3f39}
+.ws-claude{margin:4px 0 14px;max-width:570px;padding-right:14px;border-right:3px solid var(--gold)}.ws-claude-title{display:block;font-size:15px;font-weight:800;margin-bottom:4px}.ws-claude p{margin:0!important;font-size:14.5px!important;line-height:1.6!important;color:#3a3f39!important;max-width:none!important}
+@media(max-height:820px) and (min-width:901px){#home .hero-tech{margin-bottom:12px}.hero-tech-text{font-size:13.5px;line-height:1.45}#home .hero .lead#hero-lead{margin-bottom:10px}.ws-claude{margin:2px 0 10px}.ws-claude p{font-size:13.5px!important;line-height:1.5!important}}
+@media(min-width:901px) and (max-height:700px){.hero-tech-text{display:none}.hero-tech-title{font-size:16px}.ws-claude p{font-size:12.5px!important;line-height:1.4!important}}
+@media(max-width:900px){#home .hero-tech{margin-bottom:12px;padding-right:10px}.hero-tech-title{font-size:15px}.hero-tech-text{font-size:12.5px;line-height:1.45}.ws-claude{margin:8px 0 8px;padding-right:10px}.ws-claude-title{font-size:13px}.ws-claude p{font-size:12px!important;line-height:1.45!important}}
+@media(max-width:900px) and (max-height:740px){.hero-tech-text{display:none}.ws-claude p{display:none}}
+@media(min-width:901px){#workshop .workshop-text h2{font-size:clamp(32px,3.5vw,54px);margin:10px 0 14px}#workshop .workshop-text>p{margin-bottom:8px;line-height:1.6}#workshop .workshop-cards{margin:14px 0 0}#workshop .workshop-cards .value{padding:12px 13px}#workshop .value b{font-size:clamp(22px,2.3vw,32px)}}
+@media(min-width:901px) and (max-height:820px){#workshop .workshop-text h2{font-size:clamp(30px,3.1vw,46px);margin:6px 0 10px}#workshop .workshop-text>p{font-size:14.5px;line-height:1.5;margin-bottom:6px}#workshop .ws-cta{margin:8px 0 0}#workshop .workshop-cards .value{padding:9px 11px}#workshop .value span{margin-top:4px}}
+@media(min-width:901px) and (max-height:700px){#workshop .workshop-cards{display:none}#workshop .workshop-text>p{font-size:13.5px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -346,6 +359,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
           <div class="eyebrow">סדנה למשרדים פיננסיים · לא עוד כלי AI, דרך חדשה לעבוד</div>
           <h1 class="h1-new"><span class="line">המומחיות של הטובים ביותר.</span><span class="line">היכולת של <span class="accent-word">כל העובדים.</span></span></h1>
           <p class="lead" id="hero-lead">להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.</p>
+          <div class="hero-tech"><p class="hero-tech-title">הדרך שבה עובדים בהייטק — מגיעה עכשיו לעולם הפיננסים.</p><p class="hero-tech-text">עם <span class="cc" dir="ltr" lang="en">Claude Code</span> והמאסטר השלישי, גם אנשי פיננסים יכולים לרתום את יכולות ה־AI המתקדמות של עולם הפיתוח לתהליכי העבודה שלהם — בלי לדעת לתכנת.</p></div>
           <p class="hero-for">לרואי חשבון, יועצי מס, יועצי פרישה, יועצי משכנתאות, חשבות שכר וארגונים פיננסיים</p>
           <div class="hero-buttons"><button class="primary gold-btn" data-goto="register">אני רוצה להצטרף לסדנה <span class="arr">↗</span></button><button class="hero-link" data-goto="demo">תראו איך זה עובד</button></div>
           <p class="hero-meta">סדנת זום מעשית · שעתיים וחצי · בלי לתכנת · המידע נשאר אצלכם</p>
@@ -425,7 +439,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <!-- 4: WORKSHOP -->
     <section class="page" id="workshop" aria-label="פרטי הסדנה">
       <div class="workshop">
-        <div class="workshop-text"><div class="eyebrow">04 / ועכשיו עושים את זה</div><h2>שעתיים וחצי. תהליך שלכם. <span class="accent-word">יכולת חדשה למשרד.</span></h2><p>סדנה מעשית שבה תגלו איך לרתום את הידע והניסיון של המשרד לעבודה חכמה עם AI.</p><p>מגיעים עם אתגר אמיתי מהעבודה, מתנסים בבניית פתרון ראשון ויוצאים עם בסיס שאפשר להמשיך לפתח.</p><div class="req-note">נדרש מנוי Claude Pro (כ־20$ לחודש)</div><div class="ws-cta"><button type="button" class="primary gold-btn" data-goto="register">אני רוצה להצטרף לסדנה <span class="arr">↗</span></button></div><div class="workshop-cards"><div class="value"><b>2.5</b><span>שעות בזום<br>עבודה מעשית</span></div><div class="value"><b>0</b><span>שורות קוד<br>שצריך לכתוב</span></div><div class="value"><b>1</b><span>תהליך אמיתי<br>שמתחילים לבנות</span></div></div></div>
+        <div class="workshop-text"><div class="eyebrow">04 / ועכשיו עושים את זה</div><h2>שעתיים וחצי. תהליך שלכם. <span class="accent-word">יכולת חדשה למשרד.</span></h2><p>סדנה מעשית שבה תגלו איך לרתום את הידע והניסיון של המשרד לעבודה חכמה עם AI.</p><p>מגיעים עם אתגר אמיתי מהעבודה, מתנסים בבניית פתרון ראשון ויוצאים עם בסיס שאפשר להמשיך לפתח.</p><div class="ws-claude"><span class="ws-claude-title">עובדים עם <span class="cc" dir="ltr" lang="en">Claude Code</span></span><p><span class="cc" dir="ltr" lang="en">Claude Code</span> מבית <span dir="ltr" lang="en">Anthropic</span> מביא יכולות AI מתקדמות מעולם הפיתוח גם לאנשי מקצוע שאינם מתכנתים. בסדנה תלמדו להשתמש בו כדי להתחיל לבנות כלי עבודה המבוססים על הידע, השיטות והצרכים המקצועיים של המשרד שלכם.</p></div><div class="req-note">נדרש מנוי Claude Pro (כ־20$ לחודש)</div><div class="ws-cta"><button type="button" class="primary gold-btn" data-goto="register">אני רוצה להצטרף לסדנה <span class="arr">↗</span></button></div><div class="workshop-cards"><div class="value"><b>2.5</b><span>שעות בזום<br>עבודה מעשית</span></div><div class="value"><b>0</b><span>שורות קוד<br>שצריך לכתוב</span></div><div class="value"><b>1</b><span>תהליך אמיתי<br>שמתחילים לבנות</span></div></div></div>
         <div class="workshop-program ws-closing"><div class="program-eyebrow">THE WORKSHOP / 150 MINUTES</div><h3>שעתיים וחצי. והעבודה במשרד כבר לא תיראה אותו דבר.</h3><p class="wsc-p">סדנה מעשית שבה תלמדו להפוך את הידע והניסיון של המשרד לכלי עבודה חכמים עם AI.</p><p class="wsc-strong">לא צריך ידע טכנולוגי ולא מתחילים מאפס.</p><p class="wsc-p">מגיעים עם משימה מהעבודה, מקבלים בסיס מקצועי מוכן ומתחילים להתאים אותו למשרד שלכם — בליווי צמוד.</p></div>
       </div>
     </section>
