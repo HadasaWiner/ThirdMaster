@@ -492,7 +492,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   qsa('[data-domain]').forEach(b=>b.addEventListener('click',()=>{v2dom=b.dataset.domain;track('field_selected',{field:v2dom});v2step=0;qsa('[data-domain]').forEach(n=>n.classList.toggle('active',n===b));v2render()}));qs('#v2next').addEventListener('click',()=>{v2step=(v2step+1)%v2data[v2dom].steps.length;v2render()});v2render();
   const TO='hadas@thirdmaster.com';
   // Public link to the SUMIT payment page. Paste the link here. Never put API keys or passwords in this file.
-  const SUMIT_PAY_URL='https://pay.sumit.co.il/17knisd/a/doc/179zowy-0fd68f1197-17l8zmk/';
+  const SUMIT_PAY_URL='https://pay.sumit.co.il/17knisd/17lfuvi/17lfv86/payment/';
   // 'for organisations' opens the existing contact form, marked as a manager/organisation enquiry
   qs('#org-link').addEventListener('click',()=>{qs('#lead-form').dataset.org='1';qs('#audience').value='בעל/ת משרד או מנהל/ת צוות';track('cta_click',{label:'לארגונים: ליווי הטמעה מלא',screen:pages[current]});qs('#fullname').focus()});
   qs('#lead-form').addEventListener('focusin',()=>track('form_start'),{once:true});
