@@ -567,6 +567,29 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
  .fz:not(.in) .fz-line{transform:scaleY(0)}.fz-node{width:96px;height:96px}.fz-node b{font-size:14px}.fz-conv{height:28px}.fz-conv path:not(.mid){display:none}
  .fz:not(.in) .fz-human,.fz:not(.in) .fz-ai{transform:translateY(12px)}.fz-result{flex-direction:column;text-align:center;gap:10px;padding:16px}.fz-result b{font-size:32px}
  .m2-two{flex-direction:column;gap:6px}.m2-two span{display:none}.m2-head h2{font-size:clamp(30px,8vw,46px)}}
+/* ===== 03 the master: three capabilities ===== */
+.m3{grid-template-columns:.8fr 1.2fr!important;align-items:center}
+.m3-copy h2{font-size:clamp(38px,4vw,66px);line-height:1.1;margin:12px 0 16px}
+.m3-trio{margin:0;display:flex;flex-direction:column;gap:6px}
+.m3-trio span{font-size:clamp(18px,1.6vw,24px);font-weight:800;color:var(--ink);padding-right:14px;border-right:3px solid var(--accent);line-height:1.35}
+.m3-card{background:var(--dark);color:var(--white);border-radius:26px;padding:clamp(20px,2.4vw,32px);box-shadow:14px 15px 0 #dcdcd2}
+.m3-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-bottom:16px;border-bottom:1px solid #3c463e}
+.m3-tabs button{background:transparent;border:1px solid #485349;border-radius:14px;padding:12px 10px;font-size:15px;font-weight:800;color:#b8c2b6;transition:background .25s,color .25s,border-color .25s;cursor:pointer}
+.m3-tabs button b{color:#e6b75d;font-weight:900;margin-left:4px}
+.m3-tabs button:hover{color:#fff;border-color:#6a776c}
+.m3-tabs button.active{background:var(--white);border-color:var(--white);color:var(--ink)}.m3-tabs button.active b{color:#c2492b}
+.m3-panels{display:grid;padding-top:clamp(16px,2.6vh,26px)}
+.m3-panel{grid-area:1/1;display:flex!important;flex-direction:column;visibility:hidden;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s,visibility 0s .35s}
+.m3-panel.on{visibility:visible;opacity:1;transform:none;transition:opacity .35s,transform .35s,visibility 0s}
+.m3-num{font-size:12px;font-weight:900;color:#e6b75d;letter-spacing:.05em}
+.m3-panel h3{font-size:clamp(24px,2.3vw,36px);font-weight:900;letter-spacing:-.8px;line-height:1.2;margin:8px 0 14px;color:#fff}
+.m3-panel p{margin:0 0 10px;font-size:clamp(15px,1.2vw,17px);line-height:1.7;color:#d3dbd1}
+.m3-result{margin-top:auto;padding:14px 18px;border-radius:14px;background:#ffffff0d;border-right:4px solid var(--accent);font-size:clamp(16px,1.35vw,19px);font-weight:800;line-height:1.5;color:#fff}
+.m3-panel p:last-of-type{margin-bottom:16px}
+@media(min-width:901px) and (max-height:760px){.m3-panel p{font-size:14.5px;line-height:1.6}.m3-panel h3{margin:6px 0 10px}.m3-result{padding:11px 15px}}
+@media(max-width:900px){.m3{grid-template-columns:1fr!important}.m3-copy h2{font-size:clamp(30px,8vw,46px)}.m3-trio{flex-direction:row;flex-wrap:wrap;gap:6px 12px}.m3-trio span{font-size:15px;padding-right:8px}
+ .m3-card{border-radius:20px;box-shadow:7px 8px 0 #dcdcd2;padding:16px}.m3-tabs{gap:6px}.m3-tabs button{font-size:13px;padding:10px 4px}.m3-tabs button b{display:block;margin:0 0 2px}
+ .m3-panel h3{font-size:22px}.m3-panel p{font-size:14.5px}.m3-result{font-size:15px}}
 .pay-note{margin:6px 0 0;text-align:center;font-size:11.5px;line-height:1.3;color:var(--muted);font-weight:600}
 #thanks{justify-content:center}.thanks-box{max-width:640px;margin:auto 0;padding:clamp(24px,4vh,44px) 0}.thanks-box h2{margin:12px 0 12px}.thanks-box p{font-size:clamp(16px,1.4vw,19px);line-height:1.7;color:#3a3f39;margin:0 0 24px;max-width:560px}.thanks-box .done-tick{margin-bottom:16px}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -582,7 +605,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <nav class="nav" aria-label="ניווט ראשי">
       <button class="nav-link is-active" data-goto="home">האתגר</button>
       <button class="nav-link" data-goto="method">המתודולוגיה</button>
-      <button class="nav-link" data-goto="demo">תראו איך זה עובד</button>
+      <button class="nav-link" data-goto="demo">המאסטר</button>
       <button class="nav-link" data-goto="idea">הניסיון שמאחורי השיטה</button>
       <button class="nav-link" data-goto="workshop">הסדנה</button>
     </nav>
@@ -591,7 +614,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   <div class="mobile-drawer" id="drawer" aria-label="ניווט בנייד">
     <button class="drawer-link" data-goto="home">01 / האתגר</button>
     <button class="drawer-link" data-goto="method">02 / המתודולוגיה</button>
-    <button class="drawer-link" data-goto="demo">03 / תראו איך זה עובד</button>
+    <button class="drawer-link" data-goto="demo">03 / המאסטר</button>
     <button class="drawer-link" data-goto="idea">04 / הניסיון שמאחורי השיטה</button>
     <button class="drawer-link" data-goto="workshop">05 / הסדנה</button>
     <button class="drawer-link" data-goto="register">06 / מתחילים אצלכם במשרד</button>
@@ -640,14 +663,16 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       </div>
     </section>
     <!-- 3: DEMO -->
-    <section class="page" id="demo" aria-label="הדגמה: לפני ואחרי">
-      <div class="p-demo">
-        <div class="p-demo-copy"><div class="eyebrow">03 / תראו איך זה עובד</div><h2>אותו תיק.<br><span class="accent-word">דרך עבודה אחרת.</span></h2><p class="p-intro">זה לא לוח משימות. זה מאסטר מקצועי שמכיר את שיטת המשרד, מנחה את העובד בביצוע התהליך ומעביר לו את ההחלטות שדורשות שיקול דעת.</p><div class="p-metric">מינימום זמן לתכנון.<br>מקסימום זמן למומחיות.<small>המאסטר מביא את התהליך, הבקרה וההכנה המקצועית לתוך העבודה עצמה.</small></div></div>
-        <div class="p-board">
-          <div class="p-board-top"><strong>THE THIRD MASTER / BEFORE &amp; AFTER</strong><span>המחשה · תיק פרישה</span></div>
-          <div class="p-tabs" role="tablist" aria-label="שלבי העבודה"><button type="button" role="tab" id="pt1" aria-selected="true" aria-controls="pDemoBody" data-pstep="0" class="active">01 / התהליך</button><button type="button" role="tab" id="pt2" aria-selected="false" aria-controls="pDemoBody" data-pstep="1">02 / הבקרה</button><button type="button" role="tab" id="pt3" aria-selected="false" aria-controls="pDemoBody" data-pstep="2">03 / היעילות</button></div>
-          <div class="p-cmp-wrap" id="pDemoBody" role="tabpanel" aria-labelledby="pt1" aria-live="polite"><div class="p-cmp b"><span class="badge">לפני / עבודה ללא המאסטר</span><h3 id="pBeforeH"></h3><p id="pBeforeP"></p></div><div class="p-cmp a"><span class="badge">עם המאסטר השלישי</span><h3 id="pAfterH"></h3><p id="pAfterP"></p><div class="p-deliv" id="pOutcome"></div></div></div>
-          <div class="p-board-foot"><span aria-hidden="true">↗</span><div><div id="pBenefitT"></div><small id="pBenefitD"></small></div></div>
+    <section class="page" id="demo" aria-label="המאסטר">
+      <div class="p-demo m3">
+        <div class="m3-copy"><div class="eyebrow">03 / המאסטר</div><h2>העוצמה של AI.<br><span class="accent-word">היכולת של המאסטר.</span></h2><p class="m3-trio"><span>הובלה מקצועית.</span> <span>ביצוע מתקדם.</span> <span>בקרה שיטתית.</span></p></div>
+        <div class="m3-card">
+          <div class="m3-tabs" role="tablist" aria-label="שלוש היכולות של המאסטר"><button type="button" role="tab" id="m3t0" aria-selected="true" aria-controls="m3p0" data-m3="0" class="active"><b>01</b> ההובלה</button><button type="button" role="tab" id="m3t1" aria-selected="false" aria-controls="m3p1" data-m3="1" tabindex="-1"><b>02</b> הביצוע</button><button type="button" role="tab" id="m3t2" aria-selected="false" aria-controls="m3p2" data-m3="2" tabindex="-1"><b>03</b> הבקרה</button></div>
+          <div class="m3-panels">
+            <div class="m3-panel on" id="m3p0" role="tabpanel" aria-labelledby="m3t0"><span class="m3-num">01 / ההובלה</span><h3>המומחיות של המשרד. ההובלה של המאסטר.</h3><p>בכל משרד קיים ידע מקצועי ייחודי, המבוסס על ניסיון, הבנה עסקית ושיטות עבודה שגובשו לאורך שנים.</p><p>המאסטר הופך את שיטת העבודה של המומחה להנחיה מקצועית פעילה, ומוביל כל עובד לאורך התהליך — בלי צורך להכשיר אותו כמומחה או לחשוף בפניו את מלוא הידע שמאחורי השיטה.</p><div class="m3-result">המומחיות נשמרת כנכס ארגוני. היכולת ליישם אותה מתרחבת לכלל העובדים.</div></div>
+            <div class="m3-panel" id="m3p1" role="tabpanel" aria-labelledby="m3t1" hidden><span class="m3-num">02 / הביצוע</span><h3>מתכנון התיק ועד לביצוע בפועל.</h3><p>המאסטר מלווה את הטיפול בתיק מקצה לקצה — מתכנון התהליך בהתאם לנהלי המשרד, דרך ביצוע הבדיקות והפעולות הנדרשות ועד להפקת התוצרים המקצועיים.</p><p>כל זאת תחת סמכות העובד או המומחה, ובהתאם להנחיות ולהחלטות המקצועיות שלהם.</p><div class="m3-result">התוצאה: מקסימום מקצועיות במינימום זמן.</div></div>
+            <div class="m3-panel" id="m3p2" role="tabpanel" aria-labelledby="m3t2" hidden><span class="m3-num">03 / הבקרה</span><h3>טעויות אפשר לצמצם. וצריך לתקן.</h3><p>המאסטר מפעיל בקרה מקצועית לאורך כל התהליך, מוודא עמידה בנהלי המשרד, מזהה חריגות ומציף טעויות הדורשות תיקון.</p><div class="m3-result">התוצאה: פחות טעויות בתהליך. יותר ביטחון בתוצאה.</div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -688,7 +713,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 <script>
 (function(){
   const pages=['home','method','demo','idea','workshop','register'];
-  const titles=['האתגר','המתודולוגיה','תראו איך זה עובד','הניסיון שמאחורי השיטה','הסדנה','מתחילים אצלכם במשרד'];
+  const titles=['האתגר','המתודולוגיה','המאסטר','הניסיון שמאחורי השיטה','הסדנה','מתחילים אצלכם במשרד'];
   let current=0, persona='employee', caseType='mortgage', demoStep=0;
   const qs=(s)=>document.querySelector(s),qsa=(s)=>[...document.querySelectorAll(s)];
   // ---- measurement (no names, phones, emails or free text are ever sent) ----
@@ -698,7 +723,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   function trackScreen(id){if(seenScreens.has(id))return;seenScreens.add(id);track('screen_reached',{screen:id});ctrack('screen_'+id)}
   document.addEventListener('click',e=>{const b=e.target.closest('.top-cta,.primary,.secondary');if(!b||b.type==='submit')return;
     track('cta_click',{label:b.textContent.replace(/[↗←→↻]/g,'').replace(/\s+/g,' ').trim(),screen:pages[current]})},true);
-  function show(id, updateHash=true){const idx=pages.indexOf(id);if(idx<0)return; current=idx;trackScreen(id);onScreen(id);qsa('.page').forEach((el,i)=>{el.classList.toggle('active',i===idx);el.setAttribute('aria-hidden',i===idx?'false':'true')});qsa('.nav-link,.drawer-link').forEach(el=>el.classList.toggle('is-active',el.dataset.goto===id));qs('#page-count').innerHTML=String(idx+1).padStart(2,'0')+' <span>/ '+String(pages.length).padStart(2,'0')+'</span>';qs('#progress-fill').style.width=((idx+1)/pages.length*100)+'%';qs('#prev-btn').disabled=idx===0;qs('#next-btn').disabled=idx===pages.length-1;qs('#next-label').textContent=idx<pages.length-1?titles[idx+1]:'הצעד הבא שלכם';qs('#footer-caption').textContent=['ל־AI יש יכולות. לנו יש את המומחיות.','המאסטר עובד בשבילך. ההחלטות הן שלך.','נסו את ההדמיה — לחצו על השלבים.','מומחיות טכנולוגית. מתודולוגיה שעובדת.','הסדנה היא רק ההתחלה.','THE THIRD MASTER · מתחילים במשימה אחת.'][idx];qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});if(updateHash)history.replaceState(null,'','#'+id)}
+  function show(id, updateHash=true){const idx=pages.indexOf(id);if(idx<0)return; current=idx;trackScreen(id);onScreen(id);qsa('.page').forEach((el,i)=>{el.classList.toggle('active',i===idx);el.setAttribute('aria-hidden',i===idx?'false':'true')});qsa('.nav-link,.drawer-link').forEach(el=>el.classList.toggle('is-active',el.dataset.goto===id));qs('#page-count').innerHTML=String(idx+1).padStart(2,'0')+' <span>/ '+String(pages.length).padStart(2,'0')+'</span>';qs('#progress-fill').style.width=((idx+1)/pages.length*100)+'%';qs('#prev-btn').disabled=idx===0;qs('#next-btn').disabled=idx===pages.length-1;qs('#next-label').textContent=idx<pages.length-1?titles[idx+1]:'הצעד הבא שלכם';qs('#footer-caption').textContent=['ל־AI יש יכולות. לנו יש את המומחיות.','המאסטר עובד בשבילך. ההחלטות הן שלך.','הובלה מקצועית. ביצוע מתקדם. בקרה שיטתית.','מומחיות טכנולוגית. מתודולוגיה שעובדת.','הסדנה היא רק ההתחלה.','THE THIRD MASTER · מתחילים במשימה אחת.'][idx];qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});if(updateHash)history.replaceState(null,'','#'+id)}
   qsa('[data-goto]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.goto)}));qs('#prev-btn').addEventListener('click',()=>show(pages[Math.max(0,current-1)]));qs('#next-btn').addEventListener('click',()=>show(pages[Math.min(pages.length-1,current+1)]));qs('#menu-btn').addEventListener('click',()=>{const d=qs('#drawer');const state=!d.classList.contains('show');d.classList.toggle('show',state);qs('#menu-btn').setAttribute('aria-expanded',state?'true':'false')});
   qsa('[data-persona]').forEach(btn=>btn.addEventListener('click',()=>{persona=btn.dataset.persona;qsa('[data-persona]').forEach(b=>{const on=b.dataset.persona===persona;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on))});qs('#hero-lead').textContent=persona==='employee'?'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.':'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.';qs('#audience').value=persona==='employee'?'עובד/ת שמעוניין/ת להוביל הטמעת AI':'בעל/ת משרד או מנהל/ת צוות'}));
   const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -712,14 +737,9 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
   const fz=qs('#fz');function fzPlay(){fz.classList.remove('in');if(reduceMotion){fz.classList.add('in');return}void fz.offsetWidth;requestAnimationFrame(()=>fz.classList.add('in'))}
   const playedScreens=new Set();
   function onScreen(id){if(playedScreens.has(id))return;playedScreens.add(id);if(id==='home')chatPlay();if(id==='method')fzPlay()}
-  const pdemo=[
-   {pBeforeH:'כל תיק. מתכננים מחדש.',pBeforeP:'מאתרים נהלים, מגדירים שלבי טיפול ובונים תהליך עבודה פרטני לכל תיק.',pAfterH:'המומחיות מתווה את הדרך.',pAfterP:'המאסטר הופך את שיטת המומחה לתהליך פעיל: מגדיר מה נדרש ומנחה את העובד שלב אחר שלב.',pOutcome:'התוצר: תהליך מקצועי שמנוהל בליווי המאסטר.',pBenefitT:'מינימום זמן לתכנון. מקסימום זמן למומחיות.',pBenefitD:'הידע כבר מוטמע בתהליך — לא צריך להמציא את הדרך בכל פעם.'},
-   {pBeforeH:'כל שלב. צריך לזכור ולבדוק.',pBeforeP:'עוקבים ידנית אחר ההתקדמות, בודקים פעולות שבוצעו ומוודאים שלא נשכחו דרישות.',pAfterH:'בקרה מקצועית לאורך כל הדרך.',pAfterP:'המאסטר בודק התקדמות מול שיטת העבודה, מציף השלמות ומעביר לעובד נקודות שדורשות אישור והחלטה.',pOutcome:'התוצר: תהליך מקצועי מבוקר, בהובלת המאסטר ובאחריות העובד.',pBenefitT:'פחות בדיקות חוזרות. יותר שליטה בתהליך.',pBenefitD:'הבינה מסייעת בבקרה; האחריות וההחלטות נשארות אצל העובד.'},
-   {pBeforeH:'כל פגישה. אינספור פרטים לזכור.',pBeforeP:'אוספים מידע ממקורות שונים, מרכיבים מהלך פגישה ומנסים לזכור את כל השאלות המקצועיות.',pAfterH:'פגישה מובנית. שאלות מדויקות.',pAfterP:'המאסטר מארגן את המידע, בונה מהלך פגישה מותאם ללקוח וממקד את השיח בשאלות החשובות.',pOutcome:'התוצר: פגישה מקצועית וממוקדת, עם שאלות מותאמות לנתוני התיק.',pBenefitT:'מינימום זמן. מקסימום ערך מקצועי.',pBenefitD:'לא רק חיסכון בהכנה — גם ניהול פגישה שיטתי ומדויק יותר, למומחה ולעובד.'}];
-  const ptabs=qsa('[data-pstep]');
-  function pStep(i){const d=pdemo[i];Object.keys(d).forEach(k=>{const e=document.getElementById(k);if(e)e.textContent=d[k]});ptabs.forEach((b,k)=>{const on=k===i;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1});qs('#pDemoBody').setAttribute('aria-labelledby','pt'+(i+1))}
-  ptabs.forEach((b,i)=>{b.addEventListener('click',()=>{pStep(i);track('demo_step',{step:i+1})});b.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();const n=(i+(e.key==='ArrowLeft'?1:2))%3;ptabs[n].focus();pStep(n)}})});
-  pStep(0);
+  const m3tabs=qsa('[data-m3]'),m3panels=qsa('.m3-panel');
+  function m3show(i,focus){m3tabs.forEach((b,k)=>{const on=k===i;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1});m3panels.forEach((pn,k)=>{const on=k===i;pn.hidden=!on;pn.classList.toggle('on',on)});if(focus)m3tabs[i].focus()}
+  m3tabs.forEach((b,i)=>{b.addEventListener('click',()=>{m3show(i);track('demo_step',{step:i+1})});b.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();m3show((i+(e.key==='ArrowLeft'?1:2))%3,true)}})});
   const TO='hadas@thirdmaster.com';
   // Public link to the SUMIT payment page. Paste the link here. Never put API keys or passwords in this file.
   const SUMIT_PAY_URL='https://pay.sumit.co.il/17knisd/17lfuvi/17lfv86/payment/';
