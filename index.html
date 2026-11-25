@@ -567,36 +567,34 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
  .fz:not(.in) .fz-line{transform:scaleY(0)}.fz-node{width:96px;height:96px}.fz-node b{font-size:14px}.fz-conv{height:28px}.fz-conv path:not(.mid){display:none}
  .fz:not(.in) .fz-human,.fz:not(.in) .fz-ai{transform:translateY(12px)}.fz-result{flex-direction:column;text-align:center;gap:10px;padding:16px}.fz-result b{font-size:32px}
  .m2-two{flex-direction:column;gap:6px}.m2-two span{display:none}.m2-head h2{font-size:clamp(30px,8vw,46px)}}
-/* ===== 03 the master: editorial layout ===== */
-.m3{grid-template-columns:.82fr 1.18fr!important;align-items:center;gap:clamp(30px,4vw,72px)!important}
-.m3-copy h2{font-size:clamp(40px,4.4vw,74px);line-height:1.06;margin:12px 0 22px}
-.m3-trio{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:0;padding-top:16px;border-top:1px solid var(--line);max-width:520px}
-.m3-trio span{font-size:clamp(15px,1.2vw,18px);font-weight:700;color:#3a3f39;line-height:1.4;padding:0 14px;border-left:1px solid var(--line)}
-.m3-trio span:first-child{padding-right:0}.m3-trio span:last-child{border-left:0}
-.m3-card{position:relative;padding:clamp(4px,1vh,10px) clamp(24px,3vw,52px) clamp(4px,1vh,10px) 0;border-right:1px solid var(--line)}
-.m3-tabs{display:flex;gap:clamp(20px,3vw,44px);border-bottom:1px solid var(--line);margin-bottom:clamp(18px,3vh,32px)}
-.m3-tabs button{background:none;border:0;border-radius:0;padding:0 0 14px;margin-bottom:-1px;font-size:clamp(15px,1.25vw,18px);font-weight:800;color:#9a9d95;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;cursor:pointer}
-.m3-tabs button .m3-tn{font-variant-numeric:tabular-nums}
-.m3-tabs button:hover{color:#4d564e}
-.m3-tabs button.active{color:var(--ink);border-bottom-color:var(--accent)}
+/* ===== 03 the master: capabilities with presence ===== */
+.m3{grid-template-columns:.86fr 1.14fr!important;align-items:center;gap:clamp(30px,4vw,72px)!important;align-content:center}
+.m3-copy h2{font-size:clamp(40px,4.4vw,74px);line-height:1.06;margin:12px 0 clamp(22px,3.4vh,34px)}
+.m3-trio{margin:0;display:flex;flex-direction:column;gap:clamp(10px,1.6vh,16px)}
+.m3-trio span{display:flex;align-items:center;gap:14px;font-size:clamp(22px,2vw,31px);font-weight:800;color:var(--ink);letter-spacing:-.6px;line-height:1.2}
+.m3-trio span:before{content:"";width:clamp(18px,1.6vw,26px);height:3px;background:var(--accent);flex-shrink:0}
+.m3-card{position:relative;background:var(--white);border:1px solid #e3e0d6;border-radius:26px;padding:clamp(22px,2.6vw,38px);box-shadow:14px 15px 0 #e4e1d8}
+.m3-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,1.4vw,20px);margin-bottom:clamp(20px,3.2vh,32px)}
+.m3-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:none;border:0;border-top:3px solid #e2ded2;border-radius:0;padding:14px 0 0;text-align:right;cursor:pointer;transition:border-color .25s}
+.m3-tn{font-size:clamp(26px,2.4vw,38px);font-weight:900;letter-spacing:-1px;line-height:1;color:#c7c3b6;transition:color .25s;font-variant-numeric:tabular-nums}
+.m3-tl{font-size:clamp(14px,1.15vw,17px);font-weight:800;color:#8e9189;transition:color .25s}
+.m3-tabs button:hover .m3-tn,.m3-tabs button:hover .m3-tl{color:#4d564e}
+.m3-tabs button.active{border-top-color:var(--accent)}
+.m3-tabs button.active .m3-tn{color:var(--ink)}.m3-tabs button.active .m3-tl{color:var(--ink)}
 .m3-tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:4px}
 .m3-panels{display:grid;position:relative}
-.m3-panel{grid-area:1/1;position:relative;display:flex!important;flex-direction:column;visibility:hidden;opacity:0;transform:translateY(6px);transition:opacity .28s,transform .28s,visibility 0s .28s}
-.m3-panel.on{visibility:visible;opacity:1;transform:none;transition:opacity .28s,transform .28s,visibility 0s}
-.m3-num{position:absolute;top:clamp(-34px,-3vh,-14px);left:0;font-size:clamp(110px,11vw,190px);font-weight:900;line-height:1;letter-spacing:-6px;color:#ebe7dc;pointer-events:none;z-index:0;direction:ltr}
-.m3-panel h3,.m3-panel p,.m3-result{position:relative;z-index:1}
-@media(min-width:901px){.m3-panel h3,.m3-panel p,.m3-result{max-width:calc(100% - clamp(120px,11vw,190px))!important}.m3-num{top:-6px}}
-.m3{align-content:center}
-.m3-panel h3{font-size:clamp(26px,2.5vw,40px);font-weight:900;letter-spacing:-1px;line-height:1.15;margin:0 0 16px;color:var(--ink);max-width:640px}
-.m3-panel p{margin:0 0 12px;font-size:clamp(15px,1.2vw,17.5px);line-height:1.75;color:#4d564e;max-width:600px}
-.m3-result{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:clamp(17px,1.5vw,22px);font-weight:800;line-height:1.45;color:var(--ink);max-width:640px}
-.m3-result:before{content:"";display:inline-block;width:18px;height:2px;background:var(--accent);vertical-align:middle;margin-left:12px}
-.m3-panel p:last-of-type{margin-bottom:20px}
-@media(min-width:901px) and (max-height:760px){.m3-panel p{font-size:14.5px;line-height:1.6}.m3-panel h3{margin-bottom:10px}.m3-tabs{margin-bottom:16px}.m3-num{font-size:120px}}
-@media(max-width:900px){.m3{grid-template-columns:1fr!important;gap:22px!important}.m3-copy h2{font-size:clamp(32px,8.6vw,48px);margin-bottom:14px}
- .m3-trio{padding-top:12px}.m3-trio span{font-size:14px;padding:0 10px}
- .m3-card{border-right:0;padding:0}.m3-tabs{gap:18px;margin-bottom:18px}.m3-tabs button{font-size:14.5px;padding-bottom:11px;white-space:nowrap}
- .m3-num{position:static;font-size:56px;letter-spacing:-2px;margin-bottom:4px;color:#e3ded0}.m3-result{margin-top:8px}.m3-panel p:last-of-type{margin-bottom:14px}.m3-panel h3{font-size:24px}.m3-panel p{font-size:15px;line-height:1.65}.m3-result{font-size:17px}}
+.m3-panel{grid-area:1/1;position:relative;display:flex!important;flex-direction:column;justify-content:center;visibility:hidden;opacity:0;transform:translateX(-10px);transition:opacity .3s,transform .3s,visibility 0s .3s}
+.m3-panel.on{visibility:visible;opacity:1;transform:none;transition:opacity .3s,transform .3s,visibility 0s}
+.m3-num{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:var(--dark);color:#e8ece6;border-radius:30px;padding:5px 13px 5px 12px;font-size:12.5px;font-weight:800;margin-bottom:14px}
+.m3-num i{font-style:normal;color:var(--accent);font-weight:900}
+.m3-panel h3{font-size:clamp(28px,2.7vw,44px);font-weight:900;letter-spacing:-1.2px;line-height:1.12;margin:0 0 14px;color:var(--ink)}
+.m3-panel p{margin:0 0 10px;font-size:clamp(15.5px,1.25vw,18px);line-height:1.7;color:#2f352f;font-weight:500}
+.m3-result{margin-top:clamp(10px,1.8vh,18px);padding:2px 18px 2px 0;border-right:4px solid var(--accent);font-size:clamp(19px,1.75vw,26px);font-weight:900;line-height:1.35;letter-spacing:-.4px;color:var(--ink)}
+@media(min-width:901px) and (max-height:760px){.m3-panel p{font-size:14.5px;line-height:1.6}.m3-panel h3{margin-bottom:10px}.m3-tabs{margin-bottom:16px}.m3-num{margin-bottom:10px}.m3-trio span{font-size:clamp(20px,1.8vw,26px)}}
+@media(max-width:900px){.m3{grid-template-columns:1fr!important;gap:24px!important}.m3-copy h2{font-size:clamp(32px,8.6vw,48px);margin-bottom:16px}
+ .m3-trio{gap:8px}.m3-trio span{font-size:clamp(19px,5.4vw,24px);gap:10px}
+ .m3-card{padding:20px 18px;border-radius:20px;box-shadow:7px 8px 0 #e4e1d8}.m3-tabs{gap:10px;margin-bottom:18px}.m3-tn{font-size:24px}.m3-tl{font-size:13.5px}
+ .m3-panel h3{font-size:24px}.m3-panel p{font-size:15px;line-height:1.65}.m3-result{font-size:18px}}
 /* ===== 01 v2 heading ===== */
 .ch-h1b{font-size:clamp(41px,4.7vw,79px)!important;line-height:1.08!important;margin-bottom:40px!important}
 .ch-h1b .accent-word:after{height:clamp(9px,1vw,15px);bottom:5px}
@@ -719,11 +717,11 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
       <div class="p-demo m3">
         <div class="m3-copy"><div class="eyebrow">03 / המאסטר</div><h2>העוצמה של AI.<br><span class="accent-word">היכולת של המאסטר.</span></h2><p class="m3-trio"><span>הובלה מקצועית.</span> <span>ביצוע מתקדם.</span> <span>בקרה שיטתית.</span></p></div>
         <div class="m3-card">
-          <div class="m3-tabs" role="tablist" aria-label="שלוש היכולות של המאסטר"><button type="button" role="tab" id="m3t0" aria-selected="true" aria-controls="m3p0" data-m3="0" class="active"><span class="m3-tn">01</span> / ההובלה</button><button type="button" role="tab" id="m3t1" aria-selected="false" aria-controls="m3p1" data-m3="1" tabindex="-1"><span class="m3-tn">02</span> / הביצוע</button><button type="button" role="tab" id="m3t2" aria-selected="false" aria-controls="m3p2" data-m3="2" tabindex="-1"><span class="m3-tn">03</span> / הבקרה</button></div>
+          <div class="m3-tabs" role="tablist" aria-label="שלוש היכולות של המאסטר"><button type="button" role="tab" id="m3t0" aria-selected="true" aria-controls="m3p0" data-m3="0" class="active"><span class="m3-tn">01</span><span class="m3-tl">ההובלה</span></button><button type="button" role="tab" id="m3t1" aria-selected="false" aria-controls="m3p1" data-m3="1" tabindex="-1"><span class="m3-tn">02</span><span class="m3-tl">הביצוע</span></button><button type="button" role="tab" id="m3t2" aria-selected="false" aria-controls="m3p2" data-m3="2" tabindex="-1"><span class="m3-tn">03</span><span class="m3-tl">הבקרה</span></button></div>
           <div class="m3-panels">
-            <div class="m3-panel on" id="m3p0" role="tabpanel" aria-labelledby="m3t0"><span class="m3-num" aria-hidden="true">01</span><h3>המומחיות של המשרד. ההובלה של המאסטר.</h3><p>בכל משרד קיים ידע מקצועי ייחודי, המבוסס על ניסיון, הבנה עסקית ושיטות עבודה שגובשו לאורך שנים.</p><p>המאסטר הופך את שיטת העבודה של המומחה להנחיה מקצועית פעילה, ומוביל כל עובד לאורך התהליך — בלי צורך להכשיר אותו כמומחה או לחשוף בפניו את מלוא הידע שמאחורי השיטה.</p><div class="m3-result">המומחיות נשמרת כנכס ארגוני. היכולת ליישם אותה מתרחבת לכלל העובדים.</div></div>
-            <div class="m3-panel" id="m3p1" role="tabpanel" aria-labelledby="m3t1" hidden><span class="m3-num" aria-hidden="true">02</span><h3>מתכנון התיק ועד לביצוע בפועל.</h3><p>המאסטר מלווה את הטיפול בתיק מקצה לקצה — מתכנון התהליך בהתאם לנהלי המשרד, דרך ביצוע הבדיקות והפעולות הנדרשות ועד להפקת התוצרים המקצועיים.</p><p>כל זאת תחת סמכות העובד או המומחה, ובהתאם להנחיות ולהחלטות המקצועיות שלהם.</p><div class="m3-result">מקסימום מקצועיות במינימום זמן.</div></div>
-            <div class="m3-panel" id="m3p2" role="tabpanel" aria-labelledby="m3t2" hidden><span class="m3-num" aria-hidden="true">03</span><h3>טעויות אפשר לצמצם. וצריך לתקן.</h3><p>המאסטר מפעיל בקרה מקצועית לאורך כל התהליך, מוודא עמידה בנהלי המשרד, מזהה חריגות ומציף טעויות הדורשות תיקון.</p><div class="m3-result">פחות טעויות בתהליך. יותר ביטחון בתוצאה.</div></div>
+            <div class="m3-panel on" id="m3p0" role="tabpanel" aria-labelledby="m3t0"><span class="m3-num" aria-hidden="true"><i>01</i> ההובלה</span><h3>המומחיות של המשרד. ההובלה של המאסטר.</h3><p>בכל משרד קיים ידע מקצועי ייחודי, המבוסס על ניסיון, הבנה עסקית ושיטות עבודה שגובשו לאורך שנים.</p><p>המאסטר הופך את שיטת העבודה של המומחה להנחיה מקצועית פעילה, ומוביל כל עובד לאורך התהליך — בלי צורך להכשיר אותו כמומחה או לחשוף בפניו את מלוא הידע שמאחורי השיטה.</p><div class="m3-result">המומחיות נשמרת כנכס ארגוני. היכולת ליישם אותה מתרחבת לכלל העובדים.</div></div>
+            <div class="m3-panel" id="m3p1" role="tabpanel" aria-labelledby="m3t1" hidden><span class="m3-num" aria-hidden="true"><i>02</i> הביצוע</span><h3>מתכנון התיק ועד לביצוע בפועל.</h3><p>המאסטר מלווה את הטיפול בתיק מקצה לקצה — מתכנון התהליך בהתאם לנהלי המשרד, דרך ביצוע הבדיקות והפעולות הנדרשות ועד להפקת התוצרים המקצועיים.</p><p>כל זאת תחת סמכות העובד או המומחה, ובהתאם להנחיות ולהחלטות המקצועיות שלהם.</p><div class="m3-result">מקסימום מקצועיות במינימום זמן.</div></div>
+            <div class="m3-panel" id="m3p2" role="tabpanel" aria-labelledby="m3t2" hidden><span class="m3-num" aria-hidden="true"><i>03</i> הבקרה</span><h3>טעויות צריך לצמצם. וחייבים לתקן.</h3><p>המאסטר מפעיל בקרה מקצועית לאורך כל התהליך, מוודא עמידה בנהלי המשרד, מזהה חריגות ומציף טעויות הדורשות תיקון.</p><div class="m3-result">פחות טעויות בתהליך. יותר ביטחון בתוצאה.</div></div>
           </div>
         </div>
       </div>
