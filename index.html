@@ -603,28 +603,28 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 #home .ch-desc{margin-bottom:0}
 /* entrance (only until the screen is first shown) */
 /* ===== 02 methodology: two columns, two separate forces, methodology axis, result ===== */
-.m2c{display:grid!important;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,4vw,70px);align-items:center}
+.m2c{display:grid!important;grid-template-columns:.88fr 1.12fr;gap:clamp(28px,4vw,70px);align-items:center}
 .m2c .m2-head{margin:0;max-width:600px}
 .m2c .m2-head h2{font-size:clamp(36px,3.8vw,62px)}
 .m2c .m2-two{display:block;margin-top:clamp(18px,3vh,30px);padding-top:16px;border-top:1px solid var(--line)}
 .m2c .m2-two p{margin:0 0 6px;font-size:clamp(15px,1.2vw,18px);font-weight:800}
 .m2c .m2-two p:before{content:"";display:inline-block;width:14px;height:2px;background:var(--accent);vertical-align:middle;margin-left:10px}
-.cv{position:relative;width:100%;max-width:600px;margin:0 auto;aspect-ratio:600/560}
+.cv{position:relative;width:100%;max-width:660px;margin:0 auto;aspect-ratio:660/552}
 .cv-lines{position:absolute;inset:0;width:100%;height:100%}
 .cv-m{display:none}
 .cv-lines path{fill:none;stroke-width:2;stroke-linecap:round}
 .cv-lines .ax{stroke:var(--accent);stroke-width:2.2}.cv-lines .ah{stroke:#cdb98f}.cv-lines .aa{stroke:#2a312c}
 .cv-lines .dt,.cv-lines .nd{fill:var(--accent)}
-.cv-force{position:absolute;top:8.04%;width:31.67%;height:33.93%;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;transition:opacity .8s,transform .8s}
+.cv-force{position:absolute;top:3.62%;width:31.82%;height:38.04%;padding:0 22px;box-sizing:border-box;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;transition:opacity .8s,transform .8s}
 .cv-force b{font-size:clamp(28px,2.6vw,40px);font-weight:900;letter-spacing:-1px;line-height:1;margin-bottom:8px}
-.cv-force span{font-size:clamp(11px,.85vw,13px);font-weight:700;line-height:1.5}
-.cv-h{left:60.83%;background:radial-gradient(circle at 35% 30%,#fffdf7,#f1e8d4);color:var(--ink);box-shadow:inset 0 0 0 1px #e1d6bd,inset 0 0 0 9px #fbf6ea,inset 0 0 0 10px #e7dcc3,10px 12px 0 #e7e3d8}
+.cv-force span{font-size:clamp(11px,.85vw,13px);font-weight:700;line-height:1.5;white-space:nowrap}
+.cv-h{left:66.97%;background:radial-gradient(circle at 35% 30%,#fffdf7,#f1e8d4);color:var(--ink);box-shadow:inset 0 0 0 1px #e1d6bd,inset 0 0 0 9px #fbf6ea,inset 0 0 0 10px #e7dcc3,10px 12px 0 #e7e3d8}
 .cv-h span{color:#5a5340}
-.cv-a{left:7.5%;background:#1b201d;color:#f3f1ea;box-shadow:10px 12px 0 #dcdcd2;background-image:repeating-radial-gradient(circle at 50% 50%,transparent 0 13px,#ffffff0d 13px 14px)}
+.cv-a{left:1.21%;background:#1b201d;color:#f3f1ea;box-shadow:10px 12px 0 #dcdcd2;background-image:repeating-radial-gradient(circle at 50% 50%,transparent 0 13px,#ffffff0d 13px 14px)}
 .cv-a:after{content:"";position:absolute;inset:9px;border-radius:50%;border:1px dashed #ffffff26;pointer-events:none}
 .cv-a span{color:#aeb9ad}
-.cv-label{position:absolute;left:50%;top:29.5%;transform:translate(-50%,-50%);background:var(--paper);padding:3px 8px;font-size:clamp(12px,.95vw,14px);font-weight:900;color:#c2492b;letter-spacing:.3px;white-space:nowrap;transition:opacity .6s 1s}
-.cv-result{position:absolute;top:67.86%;left:2%;right:2%;bottom:0;border-radius:22px;background:#171b19;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;transition:opacity .9s 1.7s,transform .9s 1.7s}
+.cv-label{position:absolute;left:50%;top:22.64%;transform:translate(-50%,-50%);background:var(--paper);padding:3px 8px;font-size:clamp(12px,.95vw,14px);font-weight:900;color:#c2492b;letter-spacing:.3px;white-space:nowrap;transition:opacity .6s 1s}
+.cv-result{position:absolute;top:67.39%;left:2%;right:2%;bottom:0;border-radius:22px;background:#171b19;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;transition:opacity .9s 1.7s,transform .9s 1.7s}
 .cv-result:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3a423c,var(--accent) 50%,#e3cf9f)}
 .cv-result:after{content:"";position:absolute;inset:9px;border:1px solid #ffffff12;border-radius:15px;pointer-events:none}
 .cv-ring{position:absolute;top:-1px;left:50%;transform:translate(-50%,-55%);width:40px;height:40px;border-radius:50%;background:var(--white);display:none}
@@ -636,10 +636,11 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 .cv:not(.in) .cv-lines path,.cv:not(.in) .cv-lines circle,.cv:not(.in) .cv-lines rect{opacity:0}
 .cv:not(.in) .cv-label{opacity:0}.cv:not(.in) .cv-result{opacity:0;transform:translateY(14px)}
 @media(prefers-reduced-motion:reduce){.cv *{transition:none!important}}
-@media(min-width:901px) and (max-height:760px){.cv{max-width:min(600px,calc((100vh - 200px) * 600 / 560))}.m2c .m2-head h2{font-size:clamp(32px,3.2vw,50px)}.m2c .m2-two{margin-top:14px;padding-top:12px}}
+@media(min-width:901px) and (max-height:760px){.cv{max-width:min(660px,calc((100vh - 200px) * 660 / 552))}.m2c .m2-head h2{font-size:clamp(32px,3.2vw,50px)}.m2c .m2-two{margin-top:14px;padding-top:12px}}
 @media(max-width:900px){.m2c{grid-template-columns:1fr;gap:26px}
  .cv{aspect-ratio:360/470;max-width:420px}.cv-d{display:none}.cv-m{display:block}
- .cv-force{top:2.98%;width:40%;height:30.64%}.cv-h{left:56.11%}.cv-a{left:3.89%}
+ .cv-force{top:2.13%;width:46%;height:35.2%;padding:0 14px}.cv-h{left:54%}.cv-a{left:0}
+ .cv-force span{font-size:clamp(10px,2.75vw,11.5px)!important}
  .cv-force b{font-size:26px;margin-bottom:6px}.cv-force span{font-size:11px}
  .cv-label{top:53.6%;font-size:13px}.cv-result{top:59.6%;left:0;right:0;border-radius:18px}.cv-result b{font-size:clamp(30px,9vw,40px)}.cv-result p{font-size:13px}}
 .pay-note{margin:6px 0 0;text-align:center;font-size:11.5px;line-height:1.3;color:var(--muted);font-weight:600}
@@ -700,11 +701,11 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
     <!-- 2: METHOD -->
     <section class="page" id="method" aria-label="המתודולוגיה">
       <div class="p-method m2 m2c">
-        <header class="m2-head"><div class="eyebrow">02 / המתודולוגיה</div><h2>המאסטר עובד בשבילך.<br><span class="accent-word">ההחלטות הן שלך.</span></h2><p class="m2-sub">המאסטר השלישי הופך את הידע ושיטת העבודה של מומחה המשרד ליכולת מקצועית פעילה באמצעות טכנולוגיית AI מתקדמת.</p><p class="m2-sub2">כך נוצר שותף מקצועי שמוביל את העובד לאורך התהליך, מנחה אותו, מבצע בדיקות ומפיק תוצרים — כאשר שיקול הדעת וההחלטות המקצועיות נשארים בידי האדם.</p>
+        <header class="m2-head"><div class="eyebrow">02 / המתודולוגיה</div><h2>המאסטר עובד בשבילך.<br><span class="accent-word">ההחלטות הן שלך.</span></h2><p class="m2-sub">המאסטר השלישי הופך את הידע ושיטת העבודה של מומחה המשרד ליכולת מקצועית פעילה באמצעות טכנולוגיית AI מתקדמת.</p><p class="m2-sub2">כך נוצר שותף מקצועי שמוביל תהליכים, מנחה עובדים, מבצע בדיקות ומפיק תוצרים — בהתאם למומחיות ולשיטת העבודה של המשרד, תוך שמירה על הסמכות, השליטה ושיקול הדעת המקצועי של המשרד.</p>
           <div class="m2-two"><p>לעובד — מומחיות שמנחה אותו.</p><p>למומחה — מומחיות שעובדת בשבילו.</p></div></header>
         <figure class="fz cv" id="fz" aria-label="המחשה: האדם וה־AI, שני כוחות נפרדים, מתחברים דרך המתודולוגיה, ומהחיבור נוצר המאסטר השלישי">
-          <svg class="cv-lines cv-d" viewBox="0 0 600 560" aria-hidden="true"><path class="ax" d="M247 140 H353"/><circle class="dt" cx="247" cy="140" r="3.5"/><circle class="dt" cx="353" cy="140" r="3.5"/><path class="ax v" d="M300 140 V326"/><path class="ah" d="M460 243 C460 296 360 300 304 328"/><path class="aa" d="M140 243 C140 296 240 300 296 328"/><rect class="nd" x="294" y="324" width="12" height="12" transform="rotate(45 300 330)"/><path class="ax dn" d="M300 340 V380"/></svg>
-          <svg class="cv-lines cv-m" viewBox="0 0 360 470" aria-hidden="true"><path class="ax" d="M166 86 H194"/><circle class="dt" cx="166" cy="86" r="3"/><circle class="dt" cx="194" cy="86" r="3"/><path class="ax v" d="M180 86 V222"/><path class="ah" d="M274 158 C274 196 222 206 184 226"/><path class="aa" d="M86 158 C86 196 138 206 176 226"/><rect class="nd" x="175" y="225" width="10" height="10" transform="rotate(45 180 230)"/><path class="ax dn" d="M180 240 V280"/></svg>
+          <svg class="cv-lines cv-d" viewBox="0 0 660 552" aria-hidden="true"><path class="ax" d="M236 125 H272"/><path class="ax" d="M388 125 H424"/><circle class="dt" cx="236" cy="125" r="3.5"/><circle class="dt" cx="424" cy="125" r="3.5"/><path class="ax v" d="M330 142 V318"/><path class="ah" d="M547 238 C547 292 410 300 334 322"/><path class="aa" d="M113 238 C113 292 250 300 326 322"/><rect class="nd" x="324" y="320" width="12" height="12" transform="rotate(45 330 326)"/><path class="ax dn" d="M330 336 V372"/></svg>
+          <svg class="cv-lines cv-m" viewBox="0 0 360 470" aria-hidden="true"><path class="ax v" d="M180 96 V222"/><circle class="dt" cx="180" cy="96" r="3"/><path class="ah" d="M277 176 C277 206 222 210 184 226"/><path class="aa" d="M83 176 C83 206 138 210 176 226"/><rect class="nd" x="175" y="225" width="10" height="10" transform="rotate(45 180 230)"/><path class="ax dn" d="M180 240 V280"/></svg>
           <div class="cv-force cv-h"><b>האדם</b><span>ידע מקצועי · ניסיון</span><span>הבנה עסקית · שיקול דעת</span></div>
           <div class="cv-force cv-a"><b>AI</b><span>עיבוד מידע · ניתוח</span><span>יכולות ביצוע מתקדמות</span></div>
           <div class="cv-label">המתודולוגיה</div>
