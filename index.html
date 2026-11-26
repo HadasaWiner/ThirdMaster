@@ -609,7 +609,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 .m2c .m2-two{display:block;margin-top:clamp(18px,3vh,30px);padding-top:16px;border-top:1px solid var(--line)}
 .m2c .m2-two p{margin:0 0 6px;font-size:clamp(15px,1.2vw,18px);font-weight:800}
 .m2c .m2-two p:before{content:"";display:inline-block;width:14px;height:2px;background:var(--accent);vertical-align:middle;margin-left:10px}
-.cv{position:relative;width:100%;max-width:660px;margin:0 auto;aspect-ratio:660/552}
+.cv{position:relative;width:100%;max-width:580px;margin:0 auto;aspect-ratio:660/552}
 .cv-lines{position:absolute;inset:0;width:100%;height:100%}
 .cv-m{display:none}
 .cv-lines path{fill:none;stroke-width:2;stroke-linecap:round}
@@ -636,7 +636,7 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 .cv:not(.in) .cv-lines path,.cv:not(.in) .cv-lines circle,.cv:not(.in) .cv-lines rect{opacity:0}
 .cv:not(.in) .cv-label{opacity:0}.cv:not(.in) .cv-result{opacity:0;transform:translateY(14px)}
 @media(prefers-reduced-motion:reduce){.cv *{transition:none!important}}
-@media(min-width:901px) and (max-height:760px){.cv{max-width:min(660px,calc((100vh - 200px) * 660 / 552))}.m2c .m2-head h2{font-size:clamp(32px,3.2vw,50px)}.m2c .m2-two{margin-top:14px;padding-top:12px}}
+@media(min-width:901px) and (max-height:760px){.cv{max-width:min(580px,calc((100vh - 200px) * 581 / 552))}.m2c .m2-head h2{font-size:clamp(32px,3.2vw,50px)}.m2c .m2-two{margin-top:14px;padding-top:12px}}
 @media(max-width:900px){.m2c{grid-template-columns:1fr;gap:26px}
  .cv{aspect-ratio:360/470;max-width:420px}.cv-d{display:none}.cv-m{display:block}
  .cv-force{top:2.13%;width:46%;height:35.2%;padding:0 14px}.cv-h{left:54%}.cv-a{left:0}
@@ -647,27 +647,32 @@ h1,.hero-copy h1{letter-spacing:-2.6px}h2{letter-spacing:-1.6px}
 #thanks{justify-content:center}.thanks-box{max-width:640px;margin:auto 0;padding:clamp(24px,4vh,44px) 0}.thanks-box h2{margin:12px 0 12px}.thanks-box p{font-size:clamp(16px,1.4vw,19px);line-height:1.7;color:#3a3f39;margin:0 0 24px;max-width:560px}.thanks-box .done-tick{margin-bottom:16px}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-/* ===== continuous scroll (all sections in one page) ===== */
+/* ===== one page at a time; a long page scrolls normally ===== */
 html,body{height:auto!important}
 html{overflow-x:hidden!important;overflow-y:auto!important}
 body{overflow:visible!important}
-html{scroll-behavior:smooth}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .shell{height:auto!important;min-height:100dvh;overflow:visible!important}
 .site-header{position:sticky;top:0;background:rgba(247,245,239,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .stage{display:block!important;overflow:visible!important;min-height:0!important;flex:none!important}
-.page,.page.active{display:flex!important;flex-direction:column;justify-content:center;height:auto!important;min-height:calc(100svh - 94px);overflow:visible!important;animation:none!important;scroll-margin-top:94px;padding:clamp(40px,7vh,84px) 0!important;border-bottom:1px solid #ebe8df}
+.page{display:none!important}
+.page.active{display:flex!important;flex-direction:column;justify-content:center;height:auto!important;min-height:calc(100svh - 94px);overflow:visible!important;padding:clamp(28px,5vh,64px) 0 clamp(20px,3vh,36px)!important;animation:pgfade .22s ease both!important}
+@keyframes pgfade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none!important}}
 .page>.p-hero,.page>.p-method,.page>.p-demo,.page>.p-proof,.page>.p-ws,.page>.registration{flex:none!important}
-#register{border-bottom:0}
-#thanks{display:none!important}
-body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
-#home{position:relative}
-.scroll-cue{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;display:grid;place-items:center;cursor:pointer}
-.scroll-cue span{width:8px;height:8px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateY(-2px) rotate(-45deg)}
-@media(prefers-reduced-motion:no-preference){.scroll-cue span{animation:cue 2.4s ease-in-out infinite}}
-@keyframes cue{50%{transform:translateY(2px) rotate(-45deg)}}
-@media(max-width:900px){.page,.page.active{min-height:0;scroll-margin-top:76px;padding:36px 0 44px!important}.scroll-cue{display:none}}
-@media(min-width:901px) and (max-height:820px){.page,.page.active{scroll-margin-top:76px;min-height:calc(100svh - 76px)}}
+body.paid .page.active:not(#thanks){display:none!important}
+@media(max-width:900px){.page.active{min-height:0;padding:28px 0 40px!important}}
+@media(min-width:901px) and (max-height:820px){.page.active{min-height:calc(100svh - 76px)}}
+/* ===== next-page circle ===== */
+.np-row{display:flex;justify-content:flex-end;margin-top:clamp(26px,3.6vh,38px)}
+.next-page{width:clamp(120px,9vw,132px);height:clamp(120px,9vw,132px);border-radius:50%;background:var(--dark);color:#f5f2ea;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px;padding:16px;text-decoration:none;box-shadow:0 0 0 6px #20252212;transition:transform .22s ease,box-shadow .22s ease}
+.next-page .np-num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+.next-page .np-name{font-size:16px;font-weight:700;line-height:1.2;max-width:100%}
+.next-page .np-arr{font-size:17px;color:var(--accent);line-height:1;transition:transform .22s ease}
+.next-page:hover{transform:scale(1.03);box-shadow:0 0 0 7px #fc693f1f}
+.next-page:hover .np-arr{transform:translate(-3px,3px)}
+.next-page:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.next-page,.next-page .np-arr{transition:none}.next-page:hover{transform:none}.next-page:hover .np-arr{transform:none}}
+@media(max-width:900px){.np-row{margin-top:26px}.next-page{width:104px;height:104px;padding:12px}.next-page .np-name{font-size:14.5px}}
 </style>
 </head>
 <body>
@@ -719,7 +724,7 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
           <div class="p-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>מידע הלקוחות מוצפן ונשאר בשליטת המשרד.</span></div>
         </div>
       </div>
-      <button type="button" class="scroll-cue" data-goto="method" aria-label="המשך למתודולוגיה"><span></span></button>
+      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#method" data-goto="method"><span class="np-num">02</span><span class="np-name">המתודולוגיה</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 2: METHOD -->
     <section class="page" id="method" aria-label="המתודולוגיה">
@@ -735,6 +740,7 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
           <div class="cv-result"><span class="cv-ring" aria-hidden="true"><span class="brand-mark">III</span></span><b>המאסטר השלישי</b><p>מומחיות אנושית. עוצמה טכנולוגית. יכולת מקצועית חדשה.</p></div>
         </figure>
       </div>
+      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#demo" data-goto="demo"><span class="np-num">03</span><span class="np-name">המאסטר</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 3: DEMO -->
     <section class="page" id="demo" aria-label="המאסטר">
@@ -749,6 +755,7 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
           </div>
         </div>
       </div>
+      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#idea" data-goto="idea"><span class="np-num">04</span><span class="np-name">הניסיון</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 4: IDEA -->
     <section class="page" id="idea" aria-label="הניסיון שמאחורי השיטה">
@@ -756,6 +763,7 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
         <div class="p-proof-copy"><div class="eyebrow">04 / הניסיון שמאחורי השיטה</div><h2>מומחיות טכנולוגית.<br><span class="accent-word">מתודולוגיה שעובדת.</span></h2><div class="p-claim">המתודולוגיה פותחה בעולם הטכנולוגי והוטמעה בהצלחה בעולם העסקי־פיננסי, תוך הובלת שינוי טכנולוגי ועסקי משמעותי בשיטות העבודה ובתהליכים המקצועיים.</div><p class="p-desc">המאסטר שהוטמע במשרד מנחה את הטיפול בכל תיק, מסייע בביצוע בדיקות ומכין תוצרים מקצועיים בהתאם לשיטת העבודה של המשרד.</p><div class="p-exp"><strong>הניסיון שמאחורי הפיתוח</strong>למעלה מעשור בפיתוח מערכות ליבה בבנקאות ובביטוח, לצד הובלת הטמעת AI בארגון גדול — שילוב של מומחיות טכנולוגית והבנה מעמיקה של תהליכים עסקיים.</div></div>
         <div class="p-case"><span class="p-kicker">כך נראית מומחיות בפעולה</span><h3>תיק פרישה / המאסטר מלווה את העבודה</h3><div class="p-cstep"><span class="num">01</span><div><b>תהליך מקצועי מותאם לתיק</b><p>המאסטר הגדיר את שלבי הטיפול בהתאם לשיטת המשרד.</p></div></div><div class="p-cstep"><span class="num">02</span><div><b>בדיקה ובקרה לפי הכללים</b><p>אותר נספח חסר, והוכנה בקשת השלמה לטיפול העובד.</p></div></div><div class="p-cstep sel"><span class="num">03</span><div><b>החלטה מקצועית — אצל העובד</b><p>הבקשה וממצאי הבדיקה ממתינים לאישור לפני המשך התהליך.</p></div></div><div class="p-cstep"><span class="num">04</span><div><b>הכנה מקצועית לפגישה</b><p>מהלך הפגישה והשאלות מותאמים לנתונים ולסוגיות שבתיק.</p></div></div><div class="p-human">המאסטר מנחה ומכין. העובד בוחן, מחליט ומאשר.</div><div class="p-cap">תיק לדוגמה · הנתונים בדויים ונועדו להמחשת שיטת העבודה</div></div>
       </div>
+      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#workshop" data-goto="workshop"><span class="np-num">05</span><span class="np-name">הסדנה</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 5: WORKSHOP -->
     <section class="page" id="workshop" aria-label="פרטי הסדנה">
@@ -799,7 +807,7 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
     track('cta_click',{label:b.textContent.replace(/[↗←→↻]/g,'').replace(/\s+/g,' ').trim(),screen:pages[current]})},true);
   const navReduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   function setActive(id){const idx=pages.indexOf(id);if(idx<0)return;current=idx;trackScreen(id);onScreen(id);qsa('.nav-link,.drawer-link').forEach(el=>el.classList.toggle('is-active',el.dataset.goto===id))}
-  function show(id, updateHash=true, instant=false){const el=document.getElementById(id);if(!el||!pages.includes(id))return;qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');el.scrollIntoView({behavior:(instant||navReduce)?'auto':'smooth',block:'start'});if(updateHash)history.replaceState(null,'','#'+id)}
+  function show(id, push=true){if(!pages.includes(id))return;qsa('.page').forEach(el=>{const on=el.id===id;el.classList.toggle('active',on);el.setAttribute('aria-hidden',on?'false':'true')});setActive(id);qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});if(push&&location.hash!=='#'+id)history.pushState(null,'','#'+id)}
   qsa('[data-goto]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.goto)}));qs('#prev-btn').addEventListener('click',()=>show(pages[Math.max(0,current-1)]));qs('#next-btn').addEventListener('click',()=>show(pages[Math.min(pages.length-1,current+1)]));qs('#menu-btn').addEventListener('click',()=>{const d=qs('#drawer');const state=!d.classList.contains('show');d.classList.toggle('show',state);qs('#menu-btn').setAttribute('aria-expanded',state?'true':'false')});
   qsa('[data-persona]').forEach(btn=>btn.addEventListener('click',()=>{persona=btn.dataset.persona;qsa('[data-persona]').forEach(b=>{const on=b.dataset.persona===persona;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on))});qs('#hero-lead').textContent=persona==='employee'?'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.':'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.';qs('#audience').value=persona==='employee'?'עובד/ת שמעוניין/ת להוביל הטמעת AI':'בעל/ת משרד או מנהל/ת צוות'}));
   const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -849,12 +857,12 @@ body.paid .page{display:none!important}body.paid #thanks{display:flex!important}
       st.innerHTML='השליחה לא הצליחה. '+why+' אפשר לנסות שוב, או להתקשר: <a href="tel:+972548497089" dir="ltr">054-849-7089</a>'+(m?'<br><small dir="ltr" style="opacity:.7">'+m.replace(/[<>&]/g,'')+'</small>':'')+(SUMIT_PAY_URL&&!f.dataset.org?'<br><a href="'+SUMIT_PAY_URL+'">להמשיך לתשלום בכל זאת ←</a>':'')})
     .finally(()=>{btn.disabled=false;btn.innerHTML=label});
   });
-  // continuous scroll: the section crossing the middle of the screen is the active one
-  if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){setActive(e.target.id);if(!document.body.classList.contains('paid'))history.replaceState(null,'','#'+e.target.id)}})},{rootMargin:'-45% 0px -50% 0px'});pages.forEach(id=>io.observe(document.getElementById(id)))}else{pages.forEach(setActive)}
-  window.addEventListener('hashchange',()=>show(location.hash.replace('#',''),false));
+  // one page at a time; browser Back/Forward move between pages
+  window.addEventListener('popstate',()=>{const h=location.hash.slice(1);show(pages.includes(h)?h:'home',false)});
+  window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(pages.includes(h))show(h,false)});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false')}});
-  if(new URLSearchParams(location.search).get('paid')==='1'){document.body.classList.add('paid');qsa('.nav-link,.drawer-link').forEach(el=>el.classList.remove('is-active'))}
-  else{setActive('home');const h=location.hash.slice(1);if(pages.includes(h)&&h!=='home'){const go=()=>show(h,false,true);requestAnimationFrame(go);window.addEventListener('load',go,{once:true});document.fonts&&document.fonts.ready.then(go)}}
+  if(new URLSearchParams(location.search).get('paid')==='1'){document.body.classList.add('paid');qsa('.page').forEach(el=>{const on=el.id==='thanks';el.classList.toggle('active',on);el.setAttribute('aria-hidden',on?'false':'true')});qsa('.nav-link,.drawer-link').forEach(el=>el.classList.remove('is-active'))}
+  else{const h=location.hash.slice(1);show(pages.includes(h)?h:'home',false)}
 })();
 </script>
 </body>
