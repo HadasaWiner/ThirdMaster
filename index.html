@@ -662,22 +662,6 @@ body{overflow:visible!important}
 body.paid .page.active:not(#thanks){display:none!important}
 @media(max-width:900px){.page.active{min-height:0;padding:28px 0 40px!important}}
 @media(min-width:901px) and (max-height:820px){.page.active{min-height:calc(100svh - 76px)}}
-/* ===== next-page circle (one shared size; placed into free space on the left) ===== */
-:root{--np-d:104px}
-@media(max-width:900px){:root{--np-d:92px}}
-.page.active{position:relative}
-.np-row{position:absolute;margin:0;z-index:3;visibility:hidden}
-.np-row.placed{visibility:visible}
-.np-row.np-flow{position:static;display:flex;justify-content:flex-end;margin-top:26px;visibility:visible}
-.next-page{width:var(--np-d);height:var(--np-d);border-radius:50%;background:var(--dark);color:#f5f2ea;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px;padding:10px;text-decoration:none;box-shadow:0 0 0 5px #20252212;transition:transform .22s ease,box-shadow .22s ease}
-.next-page .np-num{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:.08em;line-height:1}
-.next-page .np-name{font-size:14px;font-weight:700;line-height:1.15;white-space:nowrap}
-.next-page .np-arr{font-size:15px;color:var(--accent);line-height:1;transition:transform .22s ease}
-.next-page:hover{transform:scale(1.03);box-shadow:0 0 0 6px #fc693f1f}
-.next-page:hover .np-arr{transform:translate(-3px,3px)}
-.next-page:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
-@media(prefers-reduced-motion:reduce){.next-page,.next-page .np-arr{transition:none}.next-page:hover{transform:none}.next-page:hover .np-arr{transform:none}}
-@media(max-width:900px){.next-page .np-name{font-size:13px}.next-page .np-num{font-size:10.5px}}
 </style>
 </head>
 <body>
@@ -729,7 +713,6 @@ body.paid .page.active:not(#thanks){display:none!important}
           <div class="p-secure"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>מידע הלקוחות מוצפן ונשאר בשליטת המשרד.</span></div>
         </div>
       </div>
-      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#method" data-goto="method"><span class="np-num">02</span><span class="np-name">המתודולוגיה</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 2: METHOD -->
     <section class="page" id="method" aria-label="המתודולוגיה">
@@ -745,7 +728,6 @@ body.paid .page.active:not(#thanks){display:none!important}
           <div class="cv-result"><span class="cv-ring" aria-hidden="true"><span class="brand-mark">III</span></span><b>המאסטר השלישי</b><p>מומחיות אנושית. עוצמה טכנולוגית. יכולת מקצועית חדשה.</p></div>
         </figure>
       </div>
-      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#demo" data-goto="demo"><span class="np-num">03</span><span class="np-name">המאסטר</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 3: DEMO -->
     <section class="page" id="demo" aria-label="המאסטר">
@@ -760,7 +742,6 @@ body.paid .page.active:not(#thanks){display:none!important}
           </div>
         </div>
       </div>
-      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#idea" data-goto="idea"><span class="np-num">04</span><span class="np-name">הניסיון</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 4: IDEA -->
     <section class="page" id="idea" aria-label="הניסיון שמאחורי השיטה">
@@ -768,7 +749,6 @@ body.paid .page.active:not(#thanks){display:none!important}
         <div class="p-proof-copy"><div class="eyebrow">04 / הניסיון שמאחורי השיטה</div><h2>מומחיות טכנולוגית.<br><span class="accent-word">מתודולוגיה שעובדת.</span></h2><div class="p-claim">המתודולוגיה פותחה בעולם הטכנולוגי והוטמעה בהצלחה בעולם העסקי־פיננסי, תוך הובלת שינוי טכנולוגי ועסקי משמעותי בשיטות העבודה ובתהליכים המקצועיים.</div><p class="p-desc">המאסטר שהוטמע במשרד מנחה את הטיפול בכל תיק, מסייע בביצוע בדיקות ומכין תוצרים מקצועיים בהתאם לשיטת העבודה של המשרד.</p><div class="p-exp"><strong>הניסיון שמאחורי הפיתוח</strong>למעלה מעשור בפיתוח מערכות ליבה בבנקאות ובביטוח, לצד הובלת הטמעת AI בארגון גדול — שילוב של מומחיות טכנולוגית והבנה מעמיקה של תהליכים עסקיים.</div></div>
         <div class="p-case"><span class="p-kicker">כך נראית מומחיות בפעולה</span><h3>תיק פרישה / המאסטר מלווה את העבודה</h3><div class="p-cstep"><span class="num">01</span><div><b>תהליך מקצועי מותאם לתיק</b><p>המאסטר הגדיר את שלבי הטיפול בהתאם לשיטת המשרד.</p></div></div><div class="p-cstep"><span class="num">02</span><div><b>בדיקה ובקרה לפי הכללים</b><p>אותר נספח חסר, והוכנה בקשת השלמה לטיפול העובד.</p></div></div><div class="p-cstep sel"><span class="num">03</span><div><b>החלטה מקצועית — אצל העובד</b><p>הבקשה וממצאי הבדיקה ממתינים לאישור לפני המשך התהליך.</p></div></div><div class="p-cstep"><span class="num">04</span><div><b>הכנה מקצועית לפגישה</b><p>מהלך הפגישה והשאלות מותאמים לנתונים ולסוגיות שבתיק.</p></div></div><div class="p-human">המאסטר מנחה ומכין. העובד בוחן, מחליט ומאשר.</div><div class="p-cap">תיק לדוגמה · הנתונים בדויים ונועדו להמחשת שיטת העבודה</div></div>
       </div>
-      <nav class="np-row" aria-label="הדף הבא"><a class="next-page" href="#workshop" data-goto="workshop"><span class="np-num">05</span><span class="np-name">הסדנה</span><span class="np-arr" aria-hidden="true">↙</span></a></nav>
     </section>
     <!-- 5: WORKSHOP -->
     <section class="page" id="workshop" aria-label="פרטי הסדנה">
@@ -812,7 +792,7 @@ body.paid .page.active:not(#thanks){display:none!important}
     track('cta_click',{label:b.textContent.replace(/[↗←→↻]/g,'').replace(/\s+/g,' ').trim(),screen:pages[current]})},true);
   const navReduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   function setActive(id){const idx=pages.indexOf(id);if(idx<0)return;current=idx;trackScreen(id);onScreen(id);qsa('.nav-link,.drawer-link').forEach(el=>el.classList.toggle('is-active',el.dataset.goto===id))}
-  function show(id, push=true){if(!pages.includes(id))return;qsa('.page').forEach(el=>{const on=el.id===id;el.classList.toggle('active',on);el.setAttribute('aria-hidden',on?'false':'true')});setActive(id);npLater();qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});if(push&&location.hash!=='#'+id)history.pushState(null,'','#'+id)}
+  function show(id, push=true){if(!pages.includes(id))return;qsa('.page').forEach(el=>{const on=el.id===id;el.classList.toggle('active',on);el.setAttribute('aria-hidden',on?'false':'true')});setActive(id);qs('#drawer').classList.remove('show');qs('#menu-btn').setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'instant'});if(push&&location.hash!=='#'+id)history.pushState(null,'','#'+id)}
   qsa('[data-goto]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.goto)}));qs('#prev-btn').addEventListener('click',()=>show(pages[Math.max(0,current-1)]));qs('#next-btn').addEventListener('click',()=>show(pages[Math.min(pages.length-1,current+1)]));qs('#menu-btn').addEventListener('click',()=>{const d=qs('#drawer');const state=!d.classList.contains('show');d.classList.toggle('show',state);qs('#menu-btn').setAttribute('aria-expanded',state?'true':'false')});
   qsa('[data-persona]').forEach(btn=>btn.addEventListener('click',()=>{persona=btn.dataset.persona;qsa('[data-persona]').forEach(b=>{const on=b.dataset.persona===persona;b.classList.toggle('selected',on);b.setAttribute('aria-pressed',String(on))});qs('#hero-lead').textContent=persona==='employee'?'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.':'להפוך את הידע, הניסיון ושיטות העבודה של המומחים שלכם ליכולת של כל הצוות.';qs('#audience').value=persona==='employee'?'עובד/ת שמעוניין/ת להוביל הטמעת AI':'בעל/ת משרד או מנהל/ת צוות'}));
   const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -862,23 +842,6 @@ body.paid .page.active:not(#thanks){display:none!important}
       st.innerHTML='השליחה לא הצליחה. '+why+' אפשר לנסות שוב, או להתקשר: <a href="tel:+972548497089" dir="ltr">054-849-7089</a>'+(m?'<br><small dir="ltr" style="opacity:.7">'+m.replace(/[<>&]/g,'')+'</small>':'')+(SUMIT_PAY_URL&&!f.dataset.org?'<br><a href="'+SUMIT_PAY_URL+'">להמשיך לתשלום בכל זאת ←</a>':'')})
     .finally(()=>{btn.disabled=false;btn.innerHTML=label});
   });
-  // next-page circle: put it into real free space on the left of the visible page; never over content
-  function placeNP(){const sec=qs('.page.active'),row=sec&&sec.querySelector('.np-row');if(!row)return;
-    row.classList.remove('placed','np-flow');row.style.left=row.style.top='';sec.style.justifyContent='';
-    const D=row.firstElementChild.offsetWidth,M=18;
-    if(innerWidth<=900){row.classList.add('np-flow');return}
-    const grid=[...sec.children].find(e=>!e.classList.contains('np-row'));
-    const tryFit=side=>{const sr=sec.getBoundingClientRect(),bottom=Math.min(sr.bottom,innerHeight)-8;const cols=[...grid.children].map(c=>c.getBoundingClientRect()).filter(r=>r.width&&r.height);
-      const col=side==='left'?cols.reduce((a,c)=>c.left<a.left?c:a,cols[0]):cols.reduce((a,c)=>c.right>a.right?c:a,cols[0]);
-      const free=bottom-col.bottom;if(free<D+2*M)return false;row.style.left=(col.left-sr.left)+'px';row.style.top=(col.bottom-sr.top+Math.min(M+(free-D-2*M)/2,40))+'px';return true};
-    // 1) under the left column; 2) same, with the content lifted to the top of the page; 3) under the text column, at its left edge; 4) after the content
-    const steps=[['','left'],['flex-start','left'],['','right'],['flex-start','right']];let ok=false;
-    for(const [j,side] of steps){sec.style.justifyContent=j;if(tryFit(side)){ok=true;break}}
-    if(!ok){sec.style.justifyContent='';row.classList.add('np-flow');return}
-    row.classList.add('placed')}
-  let npT;const npLater=()=>{cancelAnimationFrame(npT);npT=requestAnimationFrame(placeNP)};
-  addEventListener('resize',npLater);document.fonts&&document.fonts.ready.then(npLater);addEventListener('load',npLater);
-  if('ResizeObserver' in window){const ro=new ResizeObserver(npLater);qsa('.page').forEach(pg=>{const g=pg.firstElementChild;g&&ro.observe(g)})}
   // one page at a time; browser Back/Forward move between pages
   window.addEventListener('popstate',()=>{const h=location.hash.slice(1);show(pages.includes(h)?h:'home',false)});
   window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(pages.includes(h))show(h,false)});
